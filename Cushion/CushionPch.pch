@@ -1,0 +1,21 @@
+//
+//  CushionPch.pch
+//  Cushion
+//
+//  Created by QUAN on 16/6/21.
+//  Copyright © 2016年 QUAN. All rights reserved.
+//
+
+#ifndef CushionPch_pch
+#define CushionPch_pch
+#ifdef __OBJC__
+
+#define RGBA(A, B, C, D) [UIColor colorWithRed:A/255.0 green:B/255.0 blue:C/255.0 alpha:D/1.0]
+
+#define kScreenWidth        [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight       [UIScreen mainScreen].bounds.size.height
+
+#import "UIView+Extension.h"
+
+#endif
+#endif /* CushionPch_pch */

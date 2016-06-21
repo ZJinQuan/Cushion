@@ -1,0 +1,659 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14DD0C661D18DF0A0079D68D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DD0C651D18DF0A0079D68D /* main.m */; };
+		14DD0C691D18DF0A0079D68D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DD0C681D18DF0A0079D68D /* AppDelegate.m */; };
+		14DD0C711D18DF0A0079D68D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14DD0C701D18DF0A0079D68D /* Assets.xcassets */; };
+		14DD0C741D18DF0A0079D68D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14DD0C721D18DF0A0079D68D /* LaunchScreen.storyboard */; };
+		14DD0C7F1D18DF0A0079D68D /* CushionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DD0C7E1D18DF0A0079D68D /* CushionTests.m */; };
+		14DD0C8A1D18DF0A0079D68D /* CushionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DD0C891D18DF0A0079D68D /* CushionUITests.m */; };
+		14DD0C991D18DFA90079D68D /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DD0C981D18DFA90079D68D /* TabBarViewController.m */; };
+		14DD0C9C1D18E0540079D68D /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DD0C9B1D18E0540079D68D /* BaseViewController.m */; };
+		14DD0CA11D18E1240079D68D /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DD0CA01D18E1240079D68D /* UIView+Extension.m */; };
+		14DD0CB41D18E53B0079D68D /* PostureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DD0CB21D18E53B0079D68D /* PostureViewController.m */; };
+		14DD0CB51D18E53B0079D68D /* PostureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14DD0CB31D18E53B0079D68D /* PostureViewController.xib */; };
+		14DD0CB91D18E55A0079D68D /* DriveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DD0CB71D18E55A0079D68D /* DriveViewController.m */; };
+		14DD0CBA1D18E55A0079D68D /* DriveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14DD0CB81D18E55A0079D68D /* DriveViewController.xib */; };
+		14DD0CBE1D18E5970079D68D /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DD0CBC1D18E5970079D68D /* FriendsViewController.m */; };
+		14DD0CBF1D18E5970079D68D /* FriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14DD0CBD1D18E5970079D68D /* FriendsViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14DD0C7B1D18DF0A0079D68D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14DD0C591D18DF0A0079D68D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14DD0C601D18DF0A0079D68D;
+			remoteInfo = Cushion;
+		};
+		14DD0C861D18DF0A0079D68D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14DD0C591D18DF0A0079D68D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14DD0C601D18DF0A0079D68D;
+			remoteInfo = Cushion;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14DD0C611D18DF0A0079D68D /* Cushion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cushion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14DD0C651D18DF0A0079D68D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		14DD0C671D18DF0A0079D68D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		14DD0C681D18DF0A0079D68D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		14DD0C701D18DF0A0079D68D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		14DD0C731D18DF0A0079D68D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		14DD0C751D18DF0A0079D68D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14DD0C7A1D18DF0A0079D68D /* CushionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CushionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14DD0C7E1D18DF0A0079D68D /* CushionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CushionTests.m; sourceTree = "<group>"; };
+		14DD0C801D18DF0A0079D68D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14DD0C851D18DF0A0079D68D /* CushionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CushionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14DD0C891D18DF0A0079D68D /* CushionUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CushionUITests.m; sourceTree = "<group>"; };
+		14DD0C8B1D18DF0A0079D68D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14DD0C971D18DFA90079D68D /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		14DD0C981D18DFA90079D68D /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		14DD0C9A1D18E0540079D68D /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		14DD0C9B1D18E0540079D68D /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		14DD0C9D1D18E0820079D68D /* CushionPch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CushionPch.pch; sourceTree = "<group>"; };
+		14DD0C9F1D18E1240079D68D /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		14DD0CA01D18E1240079D68D /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		14DD0CB11D18E53B0079D68D /* PostureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostureViewController.h; sourceTree = "<group>"; };
+		14DD0CB21D18E53B0079D68D /* PostureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostureViewController.m; sourceTree = "<group>"; };
+		14DD0CB31D18E53B0079D68D /* PostureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostureViewController.xib; sourceTree = "<group>"; };
+		14DD0CB61D18E55A0079D68D /* DriveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DriveViewController.h; sourceTree = "<group>"; };
+		14DD0CB71D18E55A0079D68D /* DriveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriveViewController.m; sourceTree = "<group>"; };
+		14DD0CB81D18E55A0079D68D /* DriveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DriveViewController.xib; sourceTree = "<group>"; };
+		14DD0CBB1D18E5970079D68D /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
+		14DD0CBC1D18E5970079D68D /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
+		14DD0CBD1D18E5970079D68D /* FriendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14DD0C5E1D18DF0A0079D68D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14DD0C771D18DF0A0079D68D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14DD0C821D18DF0A0079D68D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14DD0C581D18DF0A0079D68D = {
+			isa = PBXGroup;
+			children = (
+				14DD0C631D18DF0A0079D68D /* Cushion */,
+				14DD0C7D1D18DF0A0079D68D /* CushionTests */,
+				14DD0C881D18DF0A0079D68D /* CushionUITests */,
+				14DD0C621D18DF0A0079D68D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		14DD0C621D18DF0A0079D68D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14DD0C611D18DF0A0079D68D /* Cushion.app */,
+				14DD0C7A1D18DF0A0079D68D /* CushionTests.xctest */,
+				14DD0C851D18DF0A0079D68D /* CushionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14DD0C631D18DF0A0079D68D /* Cushion */ = {
+			isa = PBXGroup;
+			children = (
+				14DD0C671D18DF0A0079D68D /* AppDelegate.h */,
+				14DD0C681D18DF0A0079D68D /* AppDelegate.m */,
+				14DD0C9A1D18E0540079D68D /* BaseViewController.h */,
+				14DD0C9B1D18E0540079D68D /* BaseViewController.m */,
+				14DD0C971D18DFA90079D68D /* TabBarViewController.h */,
+				14DD0C981D18DFA90079D68D /* TabBarViewController.m */,
+				14DD0C9D1D18E0820079D68D /* CushionPch.pch */,
+				14DD0CAD1D18E4DD0079D68D /* 坐姿 */,
+				14DD0CA51D18E4DD0079D68D /* 驾驶 */,
+				14DD0CA91D18E4DD0079D68D /* 优陌圈 */,
+				14DD0C9E1D18E0FE0079D68D /* Others */,
+				14DD0C701D18DF0A0079D68D /* Assets.xcassets */,
+				14DD0C721D18DF0A0079D68D /* LaunchScreen.storyboard */,
+				14DD0C751D18DF0A0079D68D /* Info.plist */,
+				14DD0C641D18DF0A0079D68D /* Supporting Files */,
+			);
+			path = Cushion;
+			sourceTree = "<group>";
+		};
+		14DD0C641D18DF0A0079D68D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				14DD0C651D18DF0A0079D68D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		14DD0C7D1D18DF0A0079D68D /* CushionTests */ = {
+			isa = PBXGroup;
+			children = (
+				14DD0C7E1D18DF0A0079D68D /* CushionTests.m */,
+				14DD0C801D18DF0A0079D68D /* Info.plist */,
+			);
+			path = CushionTests;
+			sourceTree = "<group>";
+		};
+		14DD0C881D18DF0A0079D68D /* CushionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				14DD0C891D18DF0A0079D68D /* CushionUITests.m */,
+				14DD0C8B1D18DF0A0079D68D /* Info.plist */,
+			);
+			path = CushionUITests;
+			sourceTree = "<group>";
+		};
+		14DD0C9E1D18E0FE0079D68D /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				14DD0C9F1D18E1240079D68D /* UIView+Extension.h */,
+				14DD0CA01D18E1240079D68D /* UIView+Extension.m */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		14DD0CA51D18E4DD0079D68D /* 驾驶 */ = {
+			isa = PBXGroup;
+			children = (
+				14DD0CA71D18E4DD0079D68D /* ViewConreollers */,
+				14DD0CA61D18E4DD0079D68D /* Model */,
+				14DD0CA81D18E4DD0079D68D /* Views */,
+			);
+			path = "驾驶";
+			sourceTree = "<group>";
+		};
+		14DD0CA61D18E4DD0079D68D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		14DD0CA71D18E4DD0079D68D /* ViewConreollers */ = {
+			isa = PBXGroup;
+			children = (
+				14DD0CB61D18E55A0079D68D /* DriveViewController.h */,
+				14DD0CB71D18E55A0079D68D /* DriveViewController.m */,
+				14DD0CB81D18E55A0079D68D /* DriveViewController.xib */,
+			);
+			path = ViewConreollers;
+			sourceTree = "<group>";
+		};
+		14DD0CA81D18E4DD0079D68D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		14DD0CA91D18E4DD0079D68D /* 优陌圈 */ = {
+			isa = PBXGroup;
+			children = (
+				14DD0CAB1D18E4DD0079D68D /* ViewConreollers */,
+				14DD0CAA1D18E4DD0079D68D /* Model */,
+				14DD0CAC1D18E4DD0079D68D /* Views */,
+			);
+			path = "优陌圈";
+			sourceTree = "<group>";
+		};
+		14DD0CAA1D18E4DD0079D68D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		14DD0CAB1D18E4DD0079D68D /* ViewConreollers */ = {
+			isa = PBXGroup;
+			children = (
+				14DD0CBB1D18E5970079D68D /* FriendsViewController.h */,
+				14DD0CBC1D18E5970079D68D /* FriendsViewController.m */,
+				14DD0CBD1D18E5970079D68D /* FriendsViewController.xib */,
+			);
+			path = ViewConreollers;
+			sourceTree = "<group>";
+		};
+		14DD0CAC1D18E4DD0079D68D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		14DD0CAD1D18E4DD0079D68D /* 坐姿 */ = {
+			isa = PBXGroup;
+			children = (
+				14DD0CAF1D18E4DD0079D68D /* ViewConreollers */,
+				14DD0CAE1D18E4DD0079D68D /* Model */,
+				14DD0CB01D18E4DD0079D68D /* Views */,
+			);
+			path = "坐姿";
+			sourceTree = "<group>";
+		};
+		14DD0CAE1D18E4DD0079D68D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		14DD0CAF1D18E4DD0079D68D /* ViewConreollers */ = {
+			isa = PBXGroup;
+			children = (
+				14DD0CB11D18E53B0079D68D /* PostureViewController.h */,
+				14DD0CB21D18E53B0079D68D /* PostureViewController.m */,
+				14DD0CB31D18E53B0079D68D /* PostureViewController.xib */,
+			);
+			path = ViewConreollers;
+			sourceTree = "<group>";
+		};
+		14DD0CB01D18E4DD0079D68D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		14DD0C601D18DF0A0079D68D /* Cushion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14DD0C8E1D18DF0A0079D68D /* Build configuration list for PBXNativeTarget "Cushion" */;
+			buildPhases = (
+				14DD0C5D1D18DF0A0079D68D /* Sources */,
+				14DD0C5E1D18DF0A0079D68D /* Frameworks */,
+				14DD0C5F1D18DF0A0079D68D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cushion;
+			productName = Cushion;
+			productReference = 14DD0C611D18DF0A0079D68D /* Cushion.app */;
+			productType = "com.apple.product-type.application";
+		};
+		14DD0C791D18DF0A0079D68D /* CushionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14DD0C911D18DF0A0079D68D /* Build configuration list for PBXNativeTarget "CushionTests" */;
+			buildPhases = (
+				14DD0C761D18DF0A0079D68D /* Sources */,
+				14DD0C771D18DF0A0079D68D /* Frameworks */,
+				14DD0C781D18DF0A0079D68D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14DD0C7C1D18DF0A0079D68D /* PBXTargetDependency */,
+			);
+			name = CushionTests;
+			productName = CushionTests;
+			productReference = 14DD0C7A1D18DF0A0079D68D /* CushionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		14DD0C841D18DF0A0079D68D /* CushionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14DD0C941D18DF0A0079D68D /* Build configuration list for PBXNativeTarget "CushionUITests" */;
+			buildPhases = (
+				14DD0C811D18DF0A0079D68D /* Sources */,
+				14DD0C821D18DF0A0079D68D /* Frameworks */,
+				14DD0C831D18DF0A0079D68D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14DD0C871D18DF0A0079D68D /* PBXTargetDependency */,
+			);
+			name = CushionUITests;
+			productName = CushionUITests;
+			productReference = 14DD0C851D18DF0A0079D68D /* CushionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14DD0C591D18DF0A0079D68D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = QUAN;
+				TargetAttributes = {
+					14DD0C601D18DF0A0079D68D = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					14DD0C791D18DF0A0079D68D = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 14DD0C601D18DF0A0079D68D;
+					};
+					14DD0C841D18DF0A0079D68D = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 14DD0C601D18DF0A0079D68D;
+					};
+				};
+			};
+			buildConfigurationList = 14DD0C5C1D18DF0A0079D68D /* Build configuration list for PBXProject "Cushion" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 14DD0C581D18DF0A0079D68D;
+			productRefGroup = 14DD0C621D18DF0A0079D68D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14DD0C601D18DF0A0079D68D /* Cushion */,
+				14DD0C791D18DF0A0079D68D /* CushionTests */,
+				14DD0C841D18DF0A0079D68D /* CushionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14DD0C5F1D18DF0A0079D68D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14DD0C741D18DF0A0079D68D /* LaunchScreen.storyboard in Resources */,
+				14DD0CBF1D18E5970079D68D /* FriendsViewController.xib in Resources */,
+				14DD0CBA1D18E55A0079D68D /* DriveViewController.xib in Resources */,
+				14DD0CB51D18E53B0079D68D /* PostureViewController.xib in Resources */,
+				14DD0C711D18DF0A0079D68D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14DD0C781D18DF0A0079D68D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14DD0C831D18DF0A0079D68D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14DD0C5D1D18DF0A0079D68D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14DD0CA11D18E1240079D68D /* UIView+Extension.m in Sources */,
+				14DD0CB41D18E53B0079D68D /* PostureViewController.m in Sources */,
+				14DD0C691D18DF0A0079D68D /* AppDelegate.m in Sources */,
+				14DD0C9C1D18E0540079D68D /* BaseViewController.m in Sources */,
+				14DD0CBE1D18E5970079D68D /* FriendsViewController.m in Sources */,
+				14DD0C991D18DFA90079D68D /* TabBarViewController.m in Sources */,
+				14DD0C661D18DF0A0079D68D /* main.m in Sources */,
+				14DD0CB91D18E55A0079D68D /* DriveViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14DD0C761D18DF0A0079D68D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14DD0C7F1D18DF0A0079D68D /* CushionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14DD0C811D18DF0A0079D68D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14DD0C8A1D18DF0A0079D68D /* CushionUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		14DD0C7C1D18DF0A0079D68D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14DD0C601D18DF0A0079D68D /* Cushion */;
+			targetProxy = 14DD0C7B1D18DF0A0079D68D /* PBXContainerItemProxy */;
+		};
+		14DD0C871D18DF0A0079D68D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14DD0C601D18DF0A0079D68D /* Cushion */;
+			targetProxy = 14DD0C861D18DF0A0079D68D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		14DD0C721D18DF0A0079D68D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14DD0C731D18DF0A0079D68D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		14DD0C8C1D18DF0A0079D68D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		14DD0C8D1D18DF0A0079D68D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		14DD0C8F1D18DF0A0079D68D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Cushion/CushionPch.pch";
+				INFOPLIST_FILE = Cushion/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.QUAN.Cushion;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		14DD0C901D18DF0A0079D68D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Cushion/CushionPch.pch";
+				INFOPLIST_FILE = Cushion/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.QUAN.Cushion;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		14DD0C921D18DF0A0079D68D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CushionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.QUAN.CushionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cushion.app/Cushion";
+			};
+			name = Debug;
+		};
+		14DD0C931D18DF0A0079D68D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CushionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.QUAN.CushionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cushion.app/Cushion";
+			};
+			name = Release;
+		};
+		14DD0C951D18DF0A0079D68D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CushionUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.QUAN.CushionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Cushion;
+			};
+			name = Debug;
+		};
+		14DD0C961D18DF0A0079D68D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CushionUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.QUAN.CushionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Cushion;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14DD0C5C1D18DF0A0079D68D /* Build configuration list for PBXProject "Cushion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14DD0C8C1D18DF0A0079D68D /* Debug */,
+				14DD0C8D1D18DF0A0079D68D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14DD0C8E1D18DF0A0079D68D /* Build configuration list for PBXNativeTarget "Cushion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14DD0C8F1D18DF0A0079D68D /* Debug */,
+				14DD0C901D18DF0A0079D68D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		14DD0C911D18DF0A0079D68D /* Build configuration list for PBXNativeTarget "CushionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14DD0C921D18DF0A0079D68D /* Debug */,
+				14DD0C931D18DF0A0079D68D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		14DD0C941D18DF0A0079D68D /* Build configuration list for PBXNativeTarget "CushionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14DD0C951D18DF0A0079D68D /* Debug */,
+				14DD0C961D18DF0A0079D68D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14DD0C591D18DF0A0079D68D /* Project object */;
+}
