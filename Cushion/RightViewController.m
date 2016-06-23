@@ -1,23 +1,22 @@
 //
-//  DriveViewController.m
+//  RightViewController.m
 //  Cushion
 //
-//  Created by QUAN on 16/6/21.
+//  Created by QUAN on 16/6/22.
 //  Copyright © 2016年 QUAN. All rights reserved.
 //
 
-#import "DriveViewController.h"
-#import "CircleView.h"
+#import "RightViewController.h"
 
-@interface DriveViewController ()
+@interface RightViewController ()
 
 @end
 
-@implementation DriveViewController
+@implementation RightViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {

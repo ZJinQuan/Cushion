@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "LoginViewController.h"
 #import "TabBarViewController.h"
 
 @interface AppDelegate ()
@@ -25,6 +26,8 @@
     [self.window makeKeyAndVisible];
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+    
+//    [UIApplication sharedApplication].keyWindow.tintColor = RGBA(241, 145, 73, 1);
     
     return YES;
 }
