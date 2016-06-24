@@ -7,8 +7,11 @@
 //
 
 #import "FriendsViewController.h"
+#import "FriendsCell.h"
 
-@interface FriendsViewController ()
+@interface FriendsViewController ()<UITableViewDelegate, UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UITableView *friendTableView;
 
 @end
 
@@ -17,21 +20,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [self.friendTableView registerNib:[UINib nibWithNibName:@"FriendsCell" bundle:nil] forCellReuseIdentifier:@"friendsCell"];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark UITableViewDelegate and UITableViewDataSource
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 80;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 7;
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *ID = @"friendsCell";
+    
+    FriendsCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    
+    NSArray *iconArr = @[@"bg_photo2", @"bg_my", @"bg_photo2", @"bg_photo3", @"bg_photo4", @"bg_photo2", @"bg_my"];
+    NSArray *nameArr = @[@"LIM",@"林涛", @"汉诺", @"张三", @"李四" ,@"王五", @"赵六"];
+    
+    cell.rankingLab.text = [NSString stringWithFormat:@"%ld",indexPath.row + 1];
+    cell.iconImage.image = [UIImage imageNamed:iconArr[indexPath.row]];
+    cell.nameLab.text = nameArr[indexPath.row];
+    
+    return cell;
+}
+
 
 @end

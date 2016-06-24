@@ -12,6 +12,7 @@
 #import "FriendsViewController.h"
 #import "LeftViewController.h"
 #import "RightViewController.h"
+#import "RightCell.h"
 
 CGFloat const gestureMinimumTranslation = 20.0 ;
 
@@ -29,7 +30,7 @@ typedef enum : NSInteger {
     
 } CameraMoveDirection ;
 
-@interface TabBarViewController (){
+@interface TabBarViewController ()<UITableViewDataSource, UITableViewDelegate>{
     CameraMoveDirection direction;
 }
 // mainView 的起始位置
@@ -66,7 +67,7 @@ typedef enum : NSInteger {
         _leftBottomView.backgroundColor = [UIColor yellowColor];
         
         LeftViewController *left = [[LeftViewController alloc] init];
-        left.view.frame = CGRectMake(70, 0, _leftBottomView.width - 70, _leftBottomView.height);
+        left.view.frame = CGRectMake(85, 0, _leftBottomView.width - 85, _leftBottomView.height);
         
         [_leftBottomView addSubview:left.view];
     }
@@ -80,10 +81,15 @@ typedef enum : NSInteger {
         _rightBottomView = [[UIView alloc] initWithFrame:CGRectMake(kScreenWidth, 0, kScreenWidth, kScreenHeight)];
         _rightBottomView.backgroundColor = [UIColor redColor];
         
-        RightViewController *left = [[RightViewController alloc] init];
-        left.view.frame = CGRectMake(0, 0, _rightBottomView.width - 70, _rightBottomView.height);
+        RightViewController *right = [[RightViewController alloc] init];
+        right.view.frame = CGRectMake(0, 0, _rightBottomView.width - 85, _rightBottomView.height);
+        right.rightTableVIew.dataSource = self;
+        right.rightTableVIew.delegate = self;
         
-        [_rightBottomView addSubview:left.view];
+        [right.rightTableVIew registerNib:[UINib nibWithNibName:@"RightCell" bundle:nil] forCellReuseIdentifier:@"rightCell"];
+        
+        [_rightBottomView addSubview:right.view];
+        
     }
     return _rightBottomView;
 }
@@ -118,6 +124,8 @@ typedef enum : NSInteger {
     [self.view addGestureRecognizer:pan];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showViewAnima:) name:@"showViewAnima" object:nil];
+    
+    
 }
 
 -(void)showViewAnima:(NSNotification *) noti {
@@ -128,6 +136,32 @@ typedef enum : NSInteger {
         [self showRightWithAnimaTime:0.1];
     }
     
+}
+
+#pragma mark  UITableViewDataSource and UITableViewDelegate
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 80;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 7;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *ID = @"rightCell";
+    
+    RightCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    NSArray *iconArr = @[@"bg_photo2", @"bg_my", @"bg_photo2", @"bg_photo3", @"bg_photo4", @"bg_photo2", @"bg_my"];
+    NSArray *nameArr = @[@"LIM",@"林涛", @"汉诺", @"张三", @"李四" ,@"王五", @"赵六"];
+    
+    cell.iconImage.image = [UIImage imageNamed:iconArr[indexPath.row]];
+    cell.nameLab.text = nameArr[indexPath.row];
+    
+    return cell;
 }
 
 #pragma mark 手势
@@ -166,7 +200,7 @@ typedef enum : NSInteger {
                     [self tapAction];
                     
                 }else{
-                    [self showLeftWithAnimaTime:0.1];
+                    [self showLeftWithAnimaTime:0.3];
                 }
 
                 break ;
@@ -179,7 +213,7 @@ typedef enum : NSInteger {
                     [self tapAction];
                     
                 }else{
-                   [self showRightWithAnimaTime:0.1];
+                   [self showRightWithAnimaTime:0.3];
                 }
                 
                 
@@ -264,10 +298,10 @@ typedef enum : NSInteger {
     
     
     
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:time animations:^{
         
         _rightBottomView.x = kScreenWidth;
-        _leftBottomView.x =  -70;
+        _leftBottomView.x =  -85;
         _bottomView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.2];
         _leftDistance = _leftBottomView.x;
         _bottomView.hidden = NO;
@@ -279,36 +313,20 @@ typedef enum : NSInteger {
  */
 - (void)showRightWithAnimaTime:(CGFloat)time {
     
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:time animations:^{
         
         _leftBottomView.x = -kScreenWidth;
-        _rightBottomView.x =  70;
+        _rightBottomView.x =  85;
         _bottomView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.2];
         _rightDistance = _rightBottomView.x;
         _bottomView.hidden = NO;
     }];
 }
 
-/**
- 隐藏左边视图
- */
-- (void)showHomeWithAnimaTime:(CGFloat)time {
-    
-    [UIView animateWithDuration:0.5 animations:^{
-        
-        _leftBottomView.x =  -kScreenWidth;
-        _rightBottomView.x = kScreenWidth;
-        _leftDistance = _leftBottomView.x;
-        _rightDistance = _rightBottomView.x;
-        _bottomView.hidden = YES;
-        
-    }];
-}
-
 //点击蒙版隐藏视图
 - (void)tapAction {
     
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.2 animations:^{
         _leftBottomView.x =  -kScreenWidth;
         _rightBottomView.x = kScreenWidth;
         _leftDistance = _leftBottomView.x;

@@ -1,22 +1,25 @@
 //
-//  LeftViewController.m
+//  RightViewController.m
 //  Cushion
 //
 //  Created by QUAN on 16/6/22.
 //  Copyright © 2016年 QUAN. All rights reserved.
 //
 
-#import "LeftViewController.h"
+#import "RightViewController.h"
+#import "TabBarViewController.h"
 
-@interface LeftViewController ()
+@interface RightViewController ()
+
 
 @end
 
-@implementation LeftViewController
+@implementation RightViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+
 }
 
 @end

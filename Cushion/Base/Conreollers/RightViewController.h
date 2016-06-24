@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface RightViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITableView *rightTableVIew;
 
 @end

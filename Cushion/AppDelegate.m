@@ -21,13 +21,14 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    self.window.rootViewController = [[TabBarViewController alloc] init];
+    
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:[[LoginViewController alloc] init]];
+    
+    self.window.rootViewController = navVC;
     
     [self.window makeKeyAndVisible];
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
-    
-//    [UIApplication sharedApplication].keyWindow.tintColor = RGBA(241, 145, 73, 1);
     
     return YES;
 }

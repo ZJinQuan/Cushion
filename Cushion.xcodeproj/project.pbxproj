@@ -11,10 +11,6 @@
 		14108EF11D1A8C82008A91C6 /* DALabeledCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14108EEF1D1A8C82008A91C6 /* DALabeledCircularProgressView.m */; };
 		14108EF61D1A9442008A91C6 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14108EF51D1A9442008A91C6 /* CircleView.m */; };
 		143C518E1D1AA50F0091E837 /* ScrollImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 143C518D1D1AA50F0091E837 /* ScrollImage.m */; };
-		144D88201D1A72DB0021755E /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144D881E1D1A72DB0021755E /* LeftViewController.m */; };
-		144D88211D1A72DB0021755E /* LeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 144D881F1D1A72DB0021755E /* LeftViewController.xib */; };
-		144D88251D1A72E90021755E /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144D88231D1A72E90021755E /* RightViewController.m */; };
-		144D88261D1A72E90021755E /* RightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 144D88241D1A72E90021755E /* RightViewController.xib */; };
 		14C8FA381D1A9C3B002A4ABB /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14C8F9F21D1A9C3A002A4ABB /* bg@2x.png */; };
 		14C8FA391D1A9C3B002A4ABB /* bg_my@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14C8F9F31D1A9C3A002A4ABB /* bg_my@2x.png */; };
 		14C8FA3A1D1A9C3B002A4ABB /* bg_photo1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14C8F9F41D1A9C3A002A4ABB /* bg_photo1@2x.png */; };
@@ -83,8 +79,6 @@
 		14DD0C741D18DF0A0079D68D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14DD0C721D18DF0A0079D68D /* LaunchScreen.storyboard */; };
 		14DD0C7F1D18DF0A0079D68D /* CushionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DD0C7E1D18DF0A0079D68D /* CushionTests.m */; };
 		14DD0C8A1D18DF0A0079D68D /* CushionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DD0C891D18DF0A0079D68D /* CushionUITests.m */; };
-		14DD0C991D18DFA90079D68D /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DD0C981D18DFA90079D68D /* TabBarViewController.m */; };
-		14DD0C9C1D18E0540079D68D /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DD0C9B1D18E0540079D68D /* BaseViewController.m */; };
 		14DD0CA11D18E1240079D68D /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DD0CA01D18E1240079D68D /* UIView+Extension.m */; };
 		14DD0CB41D18E53B0079D68D /* PostureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DD0CB21D18E53B0079D68D /* PostureViewController.m */; };
 		14DD0CB51D18E53B0079D68D /* PostureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14DD0CB31D18E53B0079D68D /* PostureViewController.xib */; };
@@ -94,6 +88,28 @@
 		14DD0CC81D1923370079D68D /* FriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14DD0CC51D1923370079D68D /* FriendsViewController.xib */; };
 		14DD0CD11D1924280079D68D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DD0CCF1D1924280079D68D /* LoginViewController.m */; };
 		14DD0CD21D1924280079D68D /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14DD0CD01D1924280079D68D /* LoginViewController.xib */; };
+		14F47CD71D1B803500B81C99 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F47CD51D1B803500B81C99 /* RegisterViewController.m */; };
+		14F47CD81D1B803500B81C99 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F47CD61D1B803500B81C99 /* RegisterViewController.xib */; };
+		14F47CDC1D1B923200B81C99 /* VerificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F47CDA1D1B923200B81C99 /* VerificationViewController.m */; };
+		14F47CDD1D1B923200B81C99 /* VerificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F47CDB1D1B923200B81C99 /* VerificationViewController.xib */; };
+		14F47CE11D1B99BD00B81C99 /* ForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F47CDF1D1B99BD00B81C99 /* ForgetViewController.m */; };
+		14F47CE21D1B99BD00B81C99 /* ForgetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F47CE01D1B99BD00B81C99 /* ForgetViewController.xib */; };
+		14F47CE61D1B9C3200B81C99 /* NewPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F47CE41D1B9C3200B81C99 /* NewPasswordViewController.m */; };
+		14F47CE71D1B9C3200B81C99 /* NewPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F47CE51D1B9C3200B81C99 /* NewPasswordViewController.xib */; };
+		14F47CEB1D1BBC4C00B81C99 /* PostureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F47CE91D1BBC4C00B81C99 /* PostureCell.m */; };
+		14F47CEC1D1BBC4C00B81C99 /* PostureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F47CEA1D1BBC4C00B81C99 /* PostureCell.xib */; };
+		14F47CF01D1BC80600B81C99 /* DriveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F47CEE1D1BC80600B81C99 /* DriveCell.m */; };
+		14F47CF11D1BC80600B81C99 /* DriveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F47CEF1D1BC80600B81C99 /* DriveCell.xib */; };
+		14F47CFA1D1BD34A00B81C99 /* FriendsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F47CF81D1BD34A00B81C99 /* FriendsCell.m */; };
+		14F47CFB1D1BD34A00B81C99 /* FriendsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F47CF91D1BD34A00B81C99 /* FriendsCell.xib */; };
+		14F47D1C1D1BE8CF00B81C99 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F47D111D1BE8CF00B81C99 /* BaseViewController.m */; };
+		14F47D1D1D1BE8CF00B81C99 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F47D131D1BE8CF00B81C99 /* LeftViewController.m */; };
+		14F47D1E1D1BE8CF00B81C99 /* LeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F47D141D1BE8CF00B81C99 /* LeftViewController.xib */; };
+		14F47D1F1D1BE8CF00B81C99 /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F47D161D1BE8CF00B81C99 /* RightViewController.m */; };
+		14F47D201D1BE8CF00B81C99 /* RightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F47D171D1BE8CF00B81C99 /* RightViewController.xib */; };
+		14F47D211D1BE8CF00B81C99 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F47D191D1BE8CF00B81C99 /* TabBarViewController.m */; };
+		14F47D251D1BEA8C00B81C99 /* RightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F47D231D1BEA8C00B81C99 /* RightCell.m */; };
+		14F47D261D1BEA8C00B81C99 /* RightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F47D241D1BEA8C00B81C99 /* RightCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,12 +138,6 @@
 		14108EF51D1A9442008A91C6 /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
 		143C518C1D1AA50F0091E837 /* ScrollImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollImage.h; sourceTree = "<group>"; };
 		143C518D1D1AA50F0091E837 /* ScrollImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollImage.m; sourceTree = "<group>"; };
-		144D881D1D1A72DB0021755E /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
-		144D881E1D1A72DB0021755E /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
-		144D881F1D1A72DB0021755E /* LeftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftViewController.xib; sourceTree = "<group>"; };
-		144D88221D1A72E90021755E /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
-		144D88231D1A72E90021755E /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
-		144D88241D1A72E90021755E /* RightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightViewController.xib; sourceTree = "<group>"; };
 		14C8F9F21D1A9C3A002A4ABB /* bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg@2x.png"; sourceTree = "<group>"; };
 		14C8F9F31D1A9C3A002A4ABB /* bg_my@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_my@2x.png"; sourceTree = "<group>"; };
 		14C8F9F41D1A9C3A002A4ABB /* bg_photo1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_photo1@2x.png"; sourceTree = "<group>"; };
@@ -203,10 +213,6 @@
 		14DD0C851D18DF0A0079D68D /* CushionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CushionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14DD0C891D18DF0A0079D68D /* CushionUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CushionUITests.m; sourceTree = "<group>"; };
 		14DD0C8B1D18DF0A0079D68D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14DD0C971D18DFA90079D68D /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
-		14DD0C981D18DFA90079D68D /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
-		14DD0C9A1D18E0540079D68D /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		14DD0C9B1D18E0540079D68D /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		14DD0C9D1D18E0820079D68D /* CushionPch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CushionPch.pch; sourceTree = "<group>"; };
 		14DD0C9F1D18E1240079D68D /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		14DD0CA01D18E1240079D68D /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
@@ -222,6 +228,40 @@
 		14DD0CCE1D1924280079D68D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		14DD0CCF1D1924280079D68D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		14DD0CD01D1924280079D68D /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		14F47CD41D1B803500B81C99 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		14F47CD51D1B803500B81C99 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		14F47CD61D1B803500B81C99 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		14F47CD91D1B923200B81C99 /* VerificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerificationViewController.h; sourceTree = "<group>"; };
+		14F47CDA1D1B923200B81C99 /* VerificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerificationViewController.m; sourceTree = "<group>"; };
+		14F47CDB1D1B923200B81C99 /* VerificationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VerificationViewController.xib; sourceTree = "<group>"; };
+		14F47CDE1D1B99BD00B81C99 /* ForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetViewController.h; sourceTree = "<group>"; };
+		14F47CDF1D1B99BD00B81C99 /* ForgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetViewController.m; sourceTree = "<group>"; };
+		14F47CE01D1B99BD00B81C99 /* ForgetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetViewController.xib; sourceTree = "<group>"; };
+		14F47CE31D1B9C3200B81C99 /* NewPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPasswordViewController.h; sourceTree = "<group>"; };
+		14F47CE41D1B9C3200B81C99 /* NewPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPasswordViewController.m; sourceTree = "<group>"; };
+		14F47CE51D1B9C3200B81C99 /* NewPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewPasswordViewController.xib; sourceTree = "<group>"; };
+		14F47CE81D1BBC4C00B81C99 /* PostureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostureCell.h; sourceTree = "<group>"; };
+		14F47CE91D1BBC4C00B81C99 /* PostureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostureCell.m; sourceTree = "<group>"; };
+		14F47CEA1D1BBC4C00B81C99 /* PostureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostureCell.xib; sourceTree = "<group>"; };
+		14F47CED1D1BC80600B81C99 /* DriveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DriveCell.h; sourceTree = "<group>"; };
+		14F47CEE1D1BC80600B81C99 /* DriveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriveCell.m; sourceTree = "<group>"; };
+		14F47CEF1D1BC80600B81C99 /* DriveCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DriveCell.xib; sourceTree = "<group>"; };
+		14F47CF71D1BD34A00B81C99 /* FriendsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsCell.h; sourceTree = "<group>"; };
+		14F47CF81D1BD34A00B81C99 /* FriendsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsCell.m; sourceTree = "<group>"; };
+		14F47CF91D1BD34A00B81C99 /* FriendsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsCell.xib; sourceTree = "<group>"; };
+		14F47D101D1BE8CF00B81C99 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		14F47D111D1BE8CF00B81C99 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		14F47D121D1BE8CF00B81C99 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		14F47D131D1BE8CF00B81C99 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		14F47D141D1BE8CF00B81C99 /* LeftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftViewController.xib; sourceTree = "<group>"; };
+		14F47D151D1BE8CF00B81C99 /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
+		14F47D161D1BE8CF00B81C99 /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
+		14F47D171D1BE8CF00B81C99 /* RightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightViewController.xib; sourceTree = "<group>"; };
+		14F47D181D1BE8CF00B81C99 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		14F47D191D1BE8CF00B81C99 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		14F47D221D1BEA8C00B81C99 /* RightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightCell.h; sourceTree = "<group>"; };
+		14F47D231D1BEA8C00B81C99 /* RightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightCell.m; sourceTree = "<group>"; };
+		14F47D241D1BEA8C00B81C99 /* RightCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -426,17 +466,8 @@
 			children = (
 				14DD0C671D18DF0A0079D68D /* AppDelegate.h */,
 				14DD0C681D18DF0A0079D68D /* AppDelegate.m */,
-				14DD0C9A1D18E0540079D68D /* BaseViewController.h */,
-				14DD0C9B1D18E0540079D68D /* BaseViewController.m */,
-				14DD0C971D18DFA90079D68D /* TabBarViewController.h */,
-				14DD0C981D18DFA90079D68D /* TabBarViewController.m */,
-				144D881D1D1A72DB0021755E /* LeftViewController.h */,
-				144D881E1D1A72DB0021755E /* LeftViewController.m */,
-				144D881F1D1A72DB0021755E /* LeftViewController.xib */,
-				144D88221D1A72E90021755E /* RightViewController.h */,
-				144D88231D1A72E90021755E /* RightViewController.m */,
-				144D88241D1A72E90021755E /* RightViewController.xib */,
 				14DD0C9D1D18E0820079D68D /* CushionPch.pch */,
+				14F47D0E1D1BE8CF00B81C99 /* Base */,
 				14DD0CC91D1923580079D68D /* 登录 */,
 				14DD0CAD1D18E4DD0079D68D /* 坐姿 */,
 				14DD0CA51D18E4DD0079D68D /* 驾驶 */,
@@ -521,6 +552,9 @@
 		14DD0CA81D18E4DD0079D68D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				14F47CED1D1BC80600B81C99 /* DriveCell.h */,
+				14F47CEE1D1BC80600B81C99 /* DriveCell.m */,
+				14F47CEF1D1BC80600B81C99 /* DriveCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -555,6 +589,9 @@
 		14DD0CB01D18E4DD0079D68D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				14F47CE81D1BBC4C00B81C99 /* PostureCell.h */,
+				14F47CE91D1BBC4C00B81C99 /* PostureCell.m */,
+				14F47CEA1D1BBC4C00B81C99 /* PostureCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -589,6 +626,9 @@
 		14DD0CC61D1923370079D68D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				14F47CF71D1BD34A00B81C99 /* FriendsCell.h */,
+				14F47CF81D1BD34A00B81C99 /* FriendsCell.m */,
+				14F47CF91D1BD34A00B81C99 /* FriendsCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -609,6 +649,18 @@
 				14DD0CCE1D1924280079D68D /* LoginViewController.h */,
 				14DD0CCF1D1924280079D68D /* LoginViewController.m */,
 				14DD0CD01D1924280079D68D /* LoginViewController.xib */,
+				14F47CD41D1B803500B81C99 /* RegisterViewController.h */,
+				14F47CD51D1B803500B81C99 /* RegisterViewController.m */,
+				14F47CD61D1B803500B81C99 /* RegisterViewController.xib */,
+				14F47CD91D1B923200B81C99 /* VerificationViewController.h */,
+				14F47CDA1D1B923200B81C99 /* VerificationViewController.m */,
+				14F47CDB1D1B923200B81C99 /* VerificationViewController.xib */,
+				14F47CDE1D1B99BD00B81C99 /* ForgetViewController.h */,
+				14F47CDF1D1B99BD00B81C99 /* ForgetViewController.m */,
+				14F47CE01D1B99BD00B81C99 /* ForgetViewController.xib */,
+				14F47CE31D1B9C3200B81C99 /* NewPasswordViewController.h */,
+				14F47CE41D1B9C3200B81C99 /* NewPasswordViewController.m */,
+				14F47CE51D1B9C3200B81C99 /* NewPasswordViewController.xib */,
 			);
 			path = ViewConreollers;
 			sourceTree = "<group>";
@@ -625,6 +677,50 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		14F47D0E1D1BE8CF00B81C99 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				14F47D0F1D1BE8CF00B81C99 /* Conreollers */,
+				14F47D1A1D1BE8CF00B81C99 /* Model */,
+				14F47D1B1D1BE8CF00B81C99 /* View */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		14F47D0F1D1BE8CF00B81C99 /* Conreollers */ = {
+			isa = PBXGroup;
+			children = (
+				14F47D101D1BE8CF00B81C99 /* BaseViewController.h */,
+				14F47D111D1BE8CF00B81C99 /* BaseViewController.m */,
+				14F47D181D1BE8CF00B81C99 /* TabBarViewController.h */,
+				14F47D191D1BE8CF00B81C99 /* TabBarViewController.m */,
+				14F47D121D1BE8CF00B81C99 /* LeftViewController.h */,
+				14F47D131D1BE8CF00B81C99 /* LeftViewController.m */,
+				14F47D141D1BE8CF00B81C99 /* LeftViewController.xib */,
+				14F47D151D1BE8CF00B81C99 /* RightViewController.h */,
+				14F47D161D1BE8CF00B81C99 /* RightViewController.m */,
+				14F47D171D1BE8CF00B81C99 /* RightViewController.xib */,
+			);
+			path = Conreollers;
+			sourceTree = "<group>";
+		};
+		14F47D1A1D1BE8CF00B81C99 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		14F47D1B1D1BE8CF00B81C99 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				14F47D221D1BEA8C00B81C99 /* RightCell.h */,
+				14F47D231D1BEA8C00B81C99 /* RightCell.m */,
+				14F47D241D1BEA8C00B81C99 /* RightCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -736,6 +832,7 @@
 				14C8FA5D1D1A9C3B002A4ABB /* icon_wechat@2x.png in Resources */,
 				14C8FA511D1A9C3B002A4ABB /* icon_warn@2x.png in Resources */,
 				14C8FA381D1A9C3B002A4ABB /* bg@2x.png in Resources */,
+				14F47CE21D1B99BD00B81C99 /* ForgetViewController.xib in Resources */,
 				14C8FA571D1A9C3B002A4ABB /* icon_report@2x.png in Resources */,
 				14C8FA521D1A9C3B002A4ABB /* btn_next@2x.png in Resources */,
 				14C8FA581D1A9C3B002A4ABB /* icon_setting@2x.png in Resources */,
@@ -748,10 +845,10 @@
 				14C8FA3D1D1A9C3B002A4ABB /* bg_photo4@2x.png in Resources */,
 				14C8FA631D1A9C3B002A4ABB /* nav_btn_menu@2x.png in Resources */,
 				14C8FA3F1D1A9C3B002A4ABB /* shape_circle@2x.png in Resources */,
+				14F47CDD1D1B923200B81C99 /* VerificationViewController.xib in Resources */,
 				14DD0C741D18DF0A0079D68D /* LaunchScreen.storyboard in Resources */,
 				14C8FA461D1A9C3B002A4ABB /* bg_nav@2x.png in Resources */,
 				14C8FA611D1A9C3B002A4ABB /* cancer_commom@2x.png in Resources */,
-				144D88211D1A72DB0021755E /* LeftViewController.xib in Resources */,
 				14C8FA6F1D1A9C3B002A4ABB /* shape_circleb@2x.png in Resources */,
 				14C8FA5B1D1A9C3B002A4ABB /* icon_search_s@2x.png in Resources */,
 				14C8FA681D1A9C3B002A4ABB /* btn2@2x.png in Resources */,
@@ -766,10 +863,13 @@
 				14C8FA731D1A9C3B002A4ABB /* drive_s@2x.png in Resources */,
 				14C8FA471D1A9C3B002A4ABB /* bg_sleep_warn@2x.png in Resources */,
 				14C8FA691D1A9C3B002A4ABB /* btn3@2x.png in Resources */,
+				14F47D201D1BE8CF00B81C99 /* RightViewController.xib in Resources */,
 				14C8FA4F1D1A9C3B002A4ABB /* icon_sleep_warn@2x.png in Resources */,
+				14F47D1E1D1BE8CF00B81C99 /* LeftViewController.xib in Resources */,
 				14C8FA591D1A9C3B002A4ABB /* icon_photo@2x.png in Resources */,
 				14C8FA431D1A9C3B002A4ABB /* defoilt4@2x.png in Resources */,
 				14C8FA4A1D1A9C3B002A4ABB /* icon_drive_warn@2x.png in Resources */,
+				14F47CD81D1B803500B81C99 /* RegisterViewController.xib in Resources */,
 				14C8FA541D1A9C3B002A4ABB /* icon_device_ele@2x.png in Resources */,
 				14DD0CD21D1924280079D68D /* LoginViewController.xib in Resources */,
 				14C8FA6B1D1A9C3B002A4ABB /* home_icon@2x.png in Resources */,
@@ -778,12 +878,12 @@
 				14C8FA4D1D1A9C3B002A4ABB /* icon_se@2x.png in Resources */,
 				14C8FA751D1A9C3B002A4ABB /* sit_s@2x.png in Resources */,
 				14C8FA551D1A9C3B002A4ABB /* icon_myself@2x.png in Resources */,
+				14F47CFB1D1BD34A00B81C99 /* FriendsCell.xib in Resources */,
 				14C8FA4C1D1A9C3B002A4ABB /* icon_propel@2x.png in Resources */,
 				14C8FA411D1A9C3B002A4ABB /* defoilt2@2x.png in Resources */,
 				14C8FA481D1A9C3B002A4ABB /* btn_pull_down@2x.png in Resources */,
 				14C8FA421D1A9C3B002A4ABB /* defoilt3@2x.png in Resources */,
 				14DD0CBA1D18E55A0079D68D /* DriveViewController.xib in Resources */,
-				144D88261D1A72E90021755E /* RightViewController.xib in Resources */,
 				14C8FA3C1D1A9C3B002A4ABB /* bg_photo3@2x.png in Resources */,
 				14C8FA6A1D1A9C3B002A4ABB /* home_bg@2x.png in Resources */,
 				14C8FA5C1D1A9C3B002A4ABB /* icon_see@2x.png in Resources */,
@@ -793,13 +893,17 @@
 				14C8FA651D1A9C3B002A4ABB /* icon_search1@2x.png in Resources */,
 				14C8FA3E1D1A9C3B002A4ABB /* icon_share@2x.png in Resources */,
 				14C8FA4E1D1A9C3B002A4ABB /* icon_se_pre@2x.png in Resources */,
+				14F47D261D1BEA8C00B81C99 /* RightCell.xib in Resources */,
 				14C8FA5E1D1A9C3B002A4ABB /* login_bg@2x.png in Resources */,
 				14DD0CB51D18E53B0079D68D /* PostureViewController.xib in Resources */,
 				14C8FA6C1D1A9C3B002A4ABB /* home_icon_s@2x.png in Resources */,
+				14F47CF11D1BC80600B81C99 /* DriveCell.xib in Resources */,
 				14C8FA501D1A9C3B002A4ABB /* icon_time@2x.png in Resources */,
 				14C8FA6D1D1A9C3B002A4ABB /* icon_sit_second@2x.png in Resources */,
+				14F47CE71D1B9C3200B81C99 /* NewPasswordViewController.xib in Resources */,
 				14C8FA3A1D1A9C3B002A4ABB /* bg_photo1@2x.png in Resources */,
 				14C8FA451D1A9C3B002A4ABB /* bg_drive_warn@2x.png in Resources */,
+				14F47CEC1D1BBC4C00B81C99 /* PostureCell.xib in Resources */,
 				14DD0C711D18DF0A0079D68D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -825,18 +929,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14F47D1C1D1BE8CF00B81C99 /* BaseViewController.m in Sources */,
+				14F47D1D1D1BE8CF00B81C99 /* LeftViewController.m in Sources */,
+				14F47CF01D1BC80600B81C99 /* DriveCell.m in Sources */,
+				14F47D251D1BEA8C00B81C99 /* RightCell.m in Sources */,
 				14DD0CA11D18E1240079D68D /* UIView+Extension.m in Sources */,
 				14108EF01D1A8C82008A91C6 /* DACircularProgressView.m in Sources */,
-				144D88201D1A72DB0021755E /* LeftViewController.m in Sources */,
 				14DD0CB41D18E53B0079D68D /* PostureViewController.m in Sources */,
+				14F47CFA1D1BD34A00B81C99 /* FriendsCell.m in Sources */,
+				14F47CDC1D1B923200B81C99 /* VerificationViewController.m in Sources */,
 				14108EF61D1A9442008A91C6 /* CircleView.m in Sources */,
+				14F47CEB1D1BBC4C00B81C99 /* PostureCell.m in Sources */,
+				14F47CE61D1B9C3200B81C99 /* NewPasswordViewController.m in Sources */,
 				14DD0C691D18DF0A0079D68D /* AppDelegate.m in Sources */,
-				144D88251D1A72E90021755E /* RightViewController.m in Sources */,
-				14DD0C9C1D18E0540079D68D /* BaseViewController.m in Sources */,
+				14F47CE11D1B99BD00B81C99 /* ForgetViewController.m in Sources */,
+				14F47CD71D1B803500B81C99 /* RegisterViewController.m in Sources */,
+				14F47D1F1D1BE8CF00B81C99 /* RightViewController.m in Sources */,
 				143C518E1D1AA50F0091E837 /* ScrollImage.m in Sources */,
 				14DD0CC71D1923370079D68D /* FriendsViewController.m in Sources */,
 				14DD0CD11D1924280079D68D /* LoginViewController.m in Sources */,
-				14DD0C991D18DFA90079D68D /* TabBarViewController.m in Sources */,
+				14F47D211D1BE8CF00B81C99 /* TabBarViewController.m in Sources */,
 				14DD0C661D18DF0A0079D68D /* main.m in Sources */,
 				14DD0CB91D18E55A0079D68D /* DriveViewController.m in Sources */,
 				14108EF11D1A8C82008A91C6 /* DALabeledCircularProgressView.m in Sources */,

@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DriveViewController">
             <connections>
+                <outlet property="driveTable" destination="j2c-gB-dc3" id="16o-wg-cBq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +15,23 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="j2c-gB-dc3">
+                    <rect key="frame" x="10" y="10" width="300" height="508"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="XeN-Hl-dgL"/>
+                        <outlet property="delegate" destination="-1" id="CZC-hv-U8h"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="j2c-gB-dc3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="FC5-0r-Ba7"/>
+                <constraint firstAttribute="bottom" secondItem="j2c-gB-dc3" secondAttribute="bottom" constant="50" id="FG1-1w-f4R"/>
+                <constraint firstItem="j2c-gB-dc3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="oEY-SE-dOv"/>
+                <constraint firstAttribute="trailing" secondItem="j2c-gB-dc3" secondAttribute="trailing" constant="10" id="tbW-i1-ywn"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>

@@ -7,16 +7,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RightViewController">
             <connections>
+                <outlet property="rightTableVIew" destination="F63-0p-zsu" id="3G9-Rw-j8o"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <rect key="frame" x="0.0" y="0.0" width="250" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mcy-GB-hEe">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+                    <rect key="frame" x="0.0" y="0.0" width="250" height="66"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="66" id="Avx-67-TwS"/>
                     </constraints>
@@ -33,14 +34,14 @@
                     </items>
                 </navigationBar>
                 <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="NJc-iq-A4f">
-                    <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                    <rect key="frame" x="0.0" y="66" width="250" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="IoG-TQ-rnI"/>
                     </constraints>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="F63-0p-zsu">
-                    <rect key="frame" x="0.0" y="110" width="320" height="458"/>
+                    <rect key="frame" x="0.0" y="110" width="250" height="458"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
@@ -57,7 +58,7 @@
                 <constraint firstItem="NJc-iq-A4f" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="r1c-d6-tND"/>
                 <constraint firstItem="NJc-iq-A4f" firstAttribute="top" secondItem="Mcy-GB-hEe" secondAttribute="bottom" id="ycS-ji-jpo"/>
             </constraints>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
 </document>

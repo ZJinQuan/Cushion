@@ -31,6 +31,20 @@
     self.navigationItem.rightBarButtonItem = rightItem;
 }
 
+/**
+ *  退出键盘
+ */
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    UITouch *touch = [touches anyObject];
+    
+    if (touch.tapCount >= 1) {
+        
+        [self.view endEditing:YES];
+        
+    }
+}
+
 -(void) clickLeft{
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"showViewAnima" object:nil];
