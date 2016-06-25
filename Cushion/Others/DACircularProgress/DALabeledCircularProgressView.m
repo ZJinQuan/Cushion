@@ -41,7 +41,16 @@
     self.progressLabel.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     self.progressLabel.textAlignment = NSTextAlignmentCenter;
     self.progressLabel.backgroundColor = [UIColor clearColor];
+    
     [self addSubview:self.progressLabel];
+    
+    
+    self.label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
+    self.label.centerX = self.progressLabel.centerX;
+    self.label.centerY = self.progressLabel.centerY + 40;
+    self.label.textAlignment = NSTextAlignmentCenter;
+    self.label.font = [UIFont systemFontOfSize:14];
+    [self.progressLabel addSubview:self.label];
 }
 
 @end

@@ -73,6 +73,22 @@
 		14C8FA731D1A9C3B002A4ABB /* drive_s@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14C8FA351D1A9C3B002A4ABB /* drive_s@2x.png */; };
 		14C8FA741D1A9C3B002A4ABB /* sit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14C8FA361D1A9C3B002A4ABB /* sit@2x.png */; };
 		14C8FA751D1A9C3B002A4ABB /* sit_s@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14C8FA371D1A9C3B002A4ABB /* sit_s@2x.png */; };
+		14D227F11D1CCE3D0020B9B2 /* CorrectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D227EF1D1CCE3D0020B9B2 /* CorrectViewController.m */; };
+		14D227F21D1CCE3D0020B9B2 /* CorrectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14D227F01D1CCE3D0020B9B2 /* CorrectViewController.xib */; };
+		14D227F61D1CE2080020B9B2 /* SedentaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D227F41D1CE2080020B9B2 /* SedentaryViewController.m */; };
+		14D227F71D1CE2080020B9B2 /* SedentaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14D227F51D1CE2080020B9B2 /* SedentaryViewController.xib */; };
+		14D227FB1D1D13D40020B9B2 /* RemindCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D227F91D1D13D40020B9B2 /* RemindCell.m */; };
+		14D227FC1D1D13D40020B9B2 /* RemindCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14D227FA1D1D13D40020B9B2 /* RemindCell.xib */; };
+		14D228001D1D19E60020B9B2 /* WeightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D227FE1D1D19E60020B9B2 /* WeightViewController.m */; };
+		14D228011D1D19E60020B9B2 /* WeightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14D227FF1D1D19E60020B9B2 /* WeightViewController.xib */; };
+		14D228051D1D30460020B9B2 /* AwakenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D228031D1D30460020B9B2 /* AwakenViewController.m */; };
+		14D228061D1D30460020B9B2 /* AwakenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14D228041D1D30460020B9B2 /* AwakenViewController.xib */; };
+		14D2280A1D1D38A20020B9B2 /* RemindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D228081D1D38A20020B9B2 /* RemindViewController.m */; };
+		14D2280B1D1D38A20020B9B2 /* RemindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14D228091D1D38A20020B9B2 /* RemindViewController.xib */; };
+		14D2280F1D1D41E30020B9B2 /* CumulativeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D2280D1D1D41E30020B9B2 /* CumulativeCell.m */; };
+		14D228101D1D41E30020B9B2 /* CumulativeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14D2280E1D1D41E30020B9B2 /* CumulativeCell.xib */; };
+		14D228141D1D4A520020B9B2 /* WarnedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D228121D1D4A520020B9B2 /* WarnedCell.m */; };
+		14D228151D1D4A520020B9B2 /* WarnedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14D228131D1D4A520020B9B2 /* WarnedCell.xib */; };
 		14DD0C661D18DF0A0079D68D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DD0C651D18DF0A0079D68D /* main.m */; };
 		14DD0C691D18DF0A0079D68D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DD0C681D18DF0A0079D68D /* AppDelegate.m */; };
 		14DD0C711D18DF0A0079D68D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14DD0C701D18DF0A0079D68D /* Assets.xcassets */; };
@@ -200,6 +216,30 @@
 		14C8FA351D1A9C3B002A4ABB /* drive_s@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "drive_s@2x.png"; sourceTree = "<group>"; };
 		14C8FA361D1A9C3B002A4ABB /* sit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sit@2x.png"; sourceTree = "<group>"; };
 		14C8FA371D1A9C3B002A4ABB /* sit_s@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sit_s@2x.png"; sourceTree = "<group>"; };
+		14D227EE1D1CCE3D0020B9B2 /* CorrectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorrectViewController.h; sourceTree = "<group>"; };
+		14D227EF1D1CCE3D0020B9B2 /* CorrectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CorrectViewController.m; sourceTree = "<group>"; };
+		14D227F01D1CCE3D0020B9B2 /* CorrectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CorrectViewController.xib; sourceTree = "<group>"; };
+		14D227F31D1CE2080020B9B2 /* SedentaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SedentaryViewController.h; sourceTree = "<group>"; };
+		14D227F41D1CE2080020B9B2 /* SedentaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SedentaryViewController.m; sourceTree = "<group>"; };
+		14D227F51D1CE2080020B9B2 /* SedentaryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SedentaryViewController.xib; sourceTree = "<group>"; };
+		14D227F81D1D13D40020B9B2 /* RemindCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemindCell.h; sourceTree = "<group>"; };
+		14D227F91D1D13D40020B9B2 /* RemindCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemindCell.m; sourceTree = "<group>"; };
+		14D227FA1D1D13D40020B9B2 /* RemindCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RemindCell.xib; sourceTree = "<group>"; };
+		14D227FD1D1D19E60020B9B2 /* WeightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightViewController.h; sourceTree = "<group>"; };
+		14D227FE1D1D19E60020B9B2 /* WeightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightViewController.m; sourceTree = "<group>"; };
+		14D227FF1D1D19E60020B9B2 /* WeightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeightViewController.xib; sourceTree = "<group>"; };
+		14D228021D1D30460020B9B2 /* AwakenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwakenViewController.h; sourceTree = "<group>"; };
+		14D228031D1D30460020B9B2 /* AwakenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwakenViewController.m; sourceTree = "<group>"; };
+		14D228041D1D30460020B9B2 /* AwakenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AwakenViewController.xib; sourceTree = "<group>"; };
+		14D228071D1D38A20020B9B2 /* RemindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemindViewController.h; sourceTree = "<group>"; };
+		14D228081D1D38A20020B9B2 /* RemindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemindViewController.m; sourceTree = "<group>"; };
+		14D228091D1D38A20020B9B2 /* RemindViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RemindViewController.xib; sourceTree = "<group>"; };
+		14D2280C1D1D41E30020B9B2 /* CumulativeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CumulativeCell.h; sourceTree = "<group>"; };
+		14D2280D1D1D41E30020B9B2 /* CumulativeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CumulativeCell.m; sourceTree = "<group>"; };
+		14D2280E1D1D41E30020B9B2 /* CumulativeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CumulativeCell.xib; sourceTree = "<group>"; };
+		14D228111D1D4A520020B9B2 /* WarnedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarnedCell.h; sourceTree = "<group>"; };
+		14D228121D1D4A520020B9B2 /* WarnedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarnedCell.m; sourceTree = "<group>"; };
+		14D228131D1D4A520020B9B2 /* WarnedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WarnedCell.xib; sourceTree = "<group>"; };
 		14DD0C611D18DF0A0079D68D /* Cushion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cushion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14DD0C651D18DF0A0079D68D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		14DD0C671D18DF0A0079D68D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -545,6 +585,12 @@
 				14DD0CB61D18E55A0079D68D /* DriveViewController.h */,
 				14DD0CB71D18E55A0079D68D /* DriveViewController.m */,
 				14DD0CB81D18E55A0079D68D /* DriveViewController.xib */,
+				14D228021D1D30460020B9B2 /* AwakenViewController.h */,
+				14D228031D1D30460020B9B2 /* AwakenViewController.m */,
+				14D228041D1D30460020B9B2 /* AwakenViewController.xib */,
+				14D228071D1D38A20020B9B2 /* RemindViewController.h */,
+				14D228081D1D38A20020B9B2 /* RemindViewController.m */,
+				14D228091D1D38A20020B9B2 /* RemindViewController.xib */,
 			);
 			path = ViewConreollers;
 			sourceTree = "<group>";
@@ -555,6 +601,12 @@
 				14F47CED1D1BC80600B81C99 /* DriveCell.h */,
 				14F47CEE1D1BC80600B81C99 /* DriveCell.m */,
 				14F47CEF1D1BC80600B81C99 /* DriveCell.xib */,
+				14D2280C1D1D41E30020B9B2 /* CumulativeCell.h */,
+				14D2280D1D1D41E30020B9B2 /* CumulativeCell.m */,
+				14D2280E1D1D41E30020B9B2 /* CumulativeCell.xib */,
+				14D228111D1D4A520020B9B2 /* WarnedCell.h */,
+				14D228121D1D4A520020B9B2 /* WarnedCell.m */,
+				14D228131D1D4A520020B9B2 /* WarnedCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -582,6 +634,15 @@
 				14DD0CB11D18E53B0079D68D /* PostureViewController.h */,
 				14DD0CB21D18E53B0079D68D /* PostureViewController.m */,
 				14DD0CB31D18E53B0079D68D /* PostureViewController.xib */,
+				14D227EE1D1CCE3D0020B9B2 /* CorrectViewController.h */,
+				14D227EF1D1CCE3D0020B9B2 /* CorrectViewController.m */,
+				14D227F01D1CCE3D0020B9B2 /* CorrectViewController.xib */,
+				14D227F31D1CE2080020B9B2 /* SedentaryViewController.h */,
+				14D227F41D1CE2080020B9B2 /* SedentaryViewController.m */,
+				14D227F51D1CE2080020B9B2 /* SedentaryViewController.xib */,
+				14D227FD1D1D19E60020B9B2 /* WeightViewController.h */,
+				14D227FE1D1D19E60020B9B2 /* WeightViewController.m */,
+				14D227FF1D1D19E60020B9B2 /* WeightViewController.xib */,
 			);
 			path = ViewConreollers;
 			sourceTree = "<group>";
@@ -592,6 +653,9 @@
 				14F47CE81D1BBC4C00B81C99 /* PostureCell.h */,
 				14F47CE91D1BBC4C00B81C99 /* PostureCell.m */,
 				14F47CEA1D1BBC4C00B81C99 /* PostureCell.xib */,
+				14D227F81D1D13D40020B9B2 /* RemindCell.h */,
+				14D227F91D1D13D40020B9B2 /* RemindCell.m */,
+				14D227FA1D1D13D40020B9B2 /* RemindCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -827,10 +891,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14D228061D1D30460020B9B2 /* AwakenViewController.xib in Resources */,
 				14C8FA491D1A9C3B002A4ABB /* icon_drive_monit@2x.png in Resources */,
 				14C8FA741D1A9C3B002A4ABB /* sit@2x.png in Resources */,
 				14C8FA5D1D1A9C3B002A4ABB /* icon_wechat@2x.png in Resources */,
 				14C8FA511D1A9C3B002A4ABB /* icon_warn@2x.png in Resources */,
+				14D228101D1D41E30020B9B2 /* CumulativeCell.xib in Resources */,
 				14C8FA381D1A9C3B002A4ABB /* bg@2x.png in Resources */,
 				14F47CE21D1B99BD00B81C99 /* ForgetViewController.xib in Resources */,
 				14C8FA571D1A9C3B002A4ABB /* icon_report@2x.png in Resources */,
@@ -840,6 +906,9 @@
 				14C8FA531D1A9C3B002A4ABB /* icon_device_connect@2x.png in Resources */,
 				14C8FA721D1A9C3B002A4ABB /* drive@2x.png in Resources */,
 				14C8FA621D1A9C3B002A4ABB /* nav_btn_friend@2x.png in Resources */,
+				14D227FC1D1D13D40020B9B2 /* RemindCell.xib in Resources */,
+				14D228151D1D4A520020B9B2 /* WarnedCell.xib in Resources */,
+				14D228011D1D19E60020B9B2 /* WeightViewController.xib in Resources */,
 				14C8FA561D1A9C3B002A4ABB /* icon_news@2x.png in Resources */,
 				14C8FA701D1A9C3B002A4ABB /* circle@2x.png in Resources */,
 				14C8FA3D1D1A9C3B002A4ABB /* bg_photo4@2x.png in Resources */,
@@ -859,6 +928,7 @@
 				14C8FA401D1A9C3B002A4ABB /* defoilt1@2x.png in Resources */,
 				14DD0CC81D1923370079D68D /* FriendsViewController.xib in Resources */,
 				14C8FA711D1A9C3B002A4ABB /* circle_s@2x.png in Resources */,
+				14D227F21D1CCE3D0020B9B2 /* CorrectViewController.xib in Resources */,
 				14C8FA5F1D1A9C3B002A4ABB /* res_cir@2x.png in Resources */,
 				14C8FA731D1A9C3B002A4ABB /* drive_s@2x.png in Resources */,
 				14C8FA471D1A9C3B002A4ABB /* bg_sleep_warn@2x.png in Resources */,
@@ -868,6 +938,7 @@
 				14F47D1E1D1BE8CF00B81C99 /* LeftViewController.xib in Resources */,
 				14C8FA591D1A9C3B002A4ABB /* icon_photo@2x.png in Resources */,
 				14C8FA431D1A9C3B002A4ABB /* defoilt4@2x.png in Resources */,
+				14D227F71D1CE2080020B9B2 /* SedentaryViewController.xib in Resources */,
 				14C8FA4A1D1A9C3B002A4ABB /* icon_drive_warn@2x.png in Resources */,
 				14F47CD81D1B803500B81C99 /* RegisterViewController.xib in Resources */,
 				14C8FA541D1A9C3B002A4ABB /* icon_device_ele@2x.png in Resources */,
@@ -901,6 +972,7 @@
 				14C8FA501D1A9C3B002A4ABB /* icon_time@2x.png in Resources */,
 				14C8FA6D1D1A9C3B002A4ABB /* icon_sit_second@2x.png in Resources */,
 				14F47CE71D1B9C3200B81C99 /* NewPasswordViewController.xib in Resources */,
+				14D2280B1D1D38A20020B9B2 /* RemindViewController.xib in Resources */,
 				14C8FA3A1D1A9C3B002A4ABB /* bg_photo1@2x.png in Resources */,
 				14C8FA451D1A9C3B002A4ABB /* bg_drive_warn@2x.png in Resources */,
 				14F47CEC1D1BBC4C00B81C99 /* PostureCell.xib in Resources */,
@@ -936,22 +1008,30 @@
 				14DD0CA11D18E1240079D68D /* UIView+Extension.m in Sources */,
 				14108EF01D1A8C82008A91C6 /* DACircularProgressView.m in Sources */,
 				14DD0CB41D18E53B0079D68D /* PostureViewController.m in Sources */,
+				14D228001D1D19E60020B9B2 /* WeightViewController.m in Sources */,
 				14F47CFA1D1BD34A00B81C99 /* FriendsCell.m in Sources */,
 				14F47CDC1D1B923200B81C99 /* VerificationViewController.m in Sources */,
+				14D227F61D1CE2080020B9B2 /* SedentaryViewController.m in Sources */,
 				14108EF61D1A9442008A91C6 /* CircleView.m in Sources */,
 				14F47CEB1D1BBC4C00B81C99 /* PostureCell.m in Sources */,
+				14D227F11D1CCE3D0020B9B2 /* CorrectViewController.m in Sources */,
+				14D2280F1D1D41E30020B9B2 /* CumulativeCell.m in Sources */,
 				14F47CE61D1B9C3200B81C99 /* NewPasswordViewController.m in Sources */,
+				14D228141D1D4A520020B9B2 /* WarnedCell.m in Sources */,
 				14DD0C691D18DF0A0079D68D /* AppDelegate.m in Sources */,
 				14F47CE11D1B99BD00B81C99 /* ForgetViewController.m in Sources */,
 				14F47CD71D1B803500B81C99 /* RegisterViewController.m in Sources */,
 				14F47D1F1D1BE8CF00B81C99 /* RightViewController.m in Sources */,
 				143C518E1D1AA50F0091E837 /* ScrollImage.m in Sources */,
 				14DD0CC71D1923370079D68D /* FriendsViewController.m in Sources */,
+				14D227FB1D1D13D40020B9B2 /* RemindCell.m in Sources */,
 				14DD0CD11D1924280079D68D /* LoginViewController.m in Sources */,
 				14F47D211D1BE8CF00B81C99 /* TabBarViewController.m in Sources */,
+				14D2280A1D1D38A20020B9B2 /* RemindViewController.m in Sources */,
 				14DD0C661D18DF0A0079D68D /* main.m in Sources */,
 				14DD0CB91D18E55A0079D68D /* DriveViewController.m in Sources */,
 				14108EF11D1A8C82008A91C6 /* DALabeledCircularProgressView.m in Sources */,
+				14D228051D1D30460020B9B2 /* AwakenViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

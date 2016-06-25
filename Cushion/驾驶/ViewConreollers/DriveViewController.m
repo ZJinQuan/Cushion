@@ -9,6 +9,8 @@
 #import "DriveViewController.h"
 #import "CircleView.h"
 #import "DriveCell.h"
+#import "AwakenViewController.h"
+#import "RemindViewController.h"
 
 @interface DriveViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *driveTable;
@@ -17,12 +19,24 @@
 
 @implementation DriveViewController
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+
+    //添加手势通知
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"addGestures" object:nil];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     [self.driveTable registerNib:[UINib nibWithNibName:@"DriveCell" bundle:nil] forCellReuseIdentifier:@"driveCell"];
     
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_btn_menu"] style:UIBarButtonItemStylePlain target:self action:@selector(clickLeft)];
     
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_btn_friend"] style:UIBarButtonItemStylePlain target:self action:@selector(clickRight)];
+    
+    self.navigationItem.leftBarButtonItem = leftItem;
+    self.navigationItem.rightBarButtonItem = rightItem;
 }
 
 #pragma mark UITableViewDataSource and UITableViewDelegate
@@ -64,5 +78,48 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    switch (indexPath.section) {
+        case 0:{
+            
+            AwakenViewController *awkenVC = [[AwakenViewController alloc] init];
+            
+            awkenVC.title = @"瞌睡唤醒";
+            [awkenVC setHidesBottomBarWhenPushed:YES];
+            
+            [self.navigationController pushViewController:awkenVC animated:YES];
+        }
+            break;
+        case 1:{
+            
+            RemindViewController *remindVC = [[RemindViewController alloc] init];
+            
+            remindVC.title = @"安全驾驶提醒";
+            [remindVC setHidesBottomBarWhenPushed:YES];
+            
+            [self.navigationController pushViewController:remindVC animated:YES];
+        }
+            break;
+        case 3:{
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
+}
+
+-(void) clickLeft{
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"showViewAnima" object:nil];
+    
+}
+
+-(void) clickRight{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"showViewAnima" object:@"showViewAnima"];
+}
 
 @end

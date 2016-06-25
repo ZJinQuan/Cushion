@@ -41,6 +41,7 @@ typedef enum : NSInteger {
 @property (nonatomic, strong) UIView * leftBottomView;
 @property (nonatomic, strong) UIView * rightBottomView;
 
+@property (nonatomic, retain) UIPanGestureRecognizer *pan;
 @end
 
 @implementation TabBarViewController
@@ -120,11 +121,13 @@ typedef enum : NSInteger {
     [self.view addSubview:self.rightBottomView];
 
     //添加滑动手势
-    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
-    [self.view addGestureRecognizer:pan];
+    
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showViewAnima:) name:@"showViewAnima" object:nil];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addGestures) name:@"addGestures" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(removeGestures) name:@"removeGestures" object:nil];
     
 }
 
@@ -162,6 +165,23 @@ typedef enum : NSInteger {
     cell.nameLab.text = nameArr[indexPath.row];
     
     return cell;
+}
+
+#pragma mark 移除和添加手势
+-(void) addGestures{
+    
+    if (self.pan == nil) {
+
+        self.pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
+        [self.view addGestureRecognizer:self.pan];
+        
+    }
+}
+
+-(void) removeGestures{
+    
+    [self.view removeGestureRecognizer:self.pan];
+    self.pan = nil;
 }
 
 #pragma mark 手势
@@ -296,7 +316,7 @@ typedef enum : NSInteger {
  */
 - (void)showLeftWithAnimaTime:(CGFloat)time {
     
-    
+    [self.view bringSubviewToFront:self.leftBottomView];
     
     [UIView animateWithDuration:time animations:^{
         
@@ -312,6 +332,8 @@ typedef enum : NSInteger {
  出现右边视图
  */
 - (void)showRightWithAnimaTime:(CGFloat)time {
+    
+    [self.view bringSubviewToFront:self.rightBottomView];
     
     [UIView animateWithDuration:time animations:^{
         

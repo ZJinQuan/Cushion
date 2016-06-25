@@ -17,11 +17,25 @@
 
 @implementation FriendsViewController
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    //添加手势通知
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"addGestures" object:nil];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
     [self.friendTableView registerNib:[UINib nibWithNibName:@"FriendsCell" bundle:nil] forCellReuseIdentifier:@"friendsCell"];
+    
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_btn_menu"] style:UIBarButtonItemStylePlain target:self action:@selector(clickLeft)];
+    
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_btn_friend"] style:UIBarButtonItemStylePlain target:self action:@selector(clickRight)];
+    
+    self.navigationItem.leftBarButtonItem = leftItem;
+    self.navigationItem.rightBarButtonItem = rightItem;
 }
 
 #pragma mark UITableViewDelegate and UITableViewDataSource
@@ -49,5 +63,14 @@
     return cell;
 }
 
+-(void) clickLeft{
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"showViewAnima" object:nil];
+    
+}
+
+-(void) clickRight{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"showViewAnima" object:@"showViewAnima"];
+}
 
 @end

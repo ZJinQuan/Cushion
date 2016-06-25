@@ -23,12 +23,12 @@
     
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:19], NSForegroundColorAttributeName:[UIColor whiteColor]}];
 
-    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_btn_menu"] style:UIBarButtonItemStylePlain target:self action:@selector(clickLeft)];
+    //返回图片
+    UIImage *backButtonImage = [[UIImage imageNamed:@"back_commom"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 30, 0, 0)];
     
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_btn_friend"] style:UIBarButtonItemStylePlain target:self action:@selector(clickRight)];
-    
-    self.navigationItem.leftBarButtonItem = leftItem;
-    self.navigationItem.rightBarButtonItem = rightItem;
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    //将返回按钮的文字position设置不在屏幕上显示
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(NSIntegerMin, NSIntegerMin) forBarMetrics:UIBarMetricsDefault];
 }
 
 /**
@@ -43,16 +43,6 @@
         [self.view endEditing:YES];
         
     }
-}
-
--(void) clickLeft{
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"showViewAnima" object:nil];
-    
-}
-
--(void) clickRight{
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"showViewAnima" object:@"showViewAnima"];
 }
 
 @end

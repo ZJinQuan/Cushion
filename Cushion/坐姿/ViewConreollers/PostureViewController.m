@@ -7,22 +7,16 @@
 //
 
 #import "PostureViewController.h"
-#import "DACircularProgressView.h"
-#import "DALabeledCircularProgressView.h"
 #import "ScrollImage.h"
 #import "PostureCell.h"
+#import "CorrectViewController.h"
+#import "SedentaryViewController.h"
+#import "WeightViewController.h"
 
 #define TIMER_DURATION 5
 #define AQI_FULL 100
 
-@interface PostureViewController ()<ScrollImageDelegate, UITableViewDelegate, UITableViewDataSource>{
-    DACircularProgressView *progressView;
-    DALabeledCircularProgressView *labeledProgressView;
-    int start;
-    int aqi;
-}
-@property (weak, nonatomic) IBOutlet UIView *jindu;
-@property (nonatomic,retain )NSTimer *timer;
+@interface PostureViewController ()<ScrollImageDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UIView *topImageView;
 
@@ -54,12 +48,21 @@
     //图片轮播器
     [self.topImageView addSubview:self.scrollImage.view];
     
+    //添加手势通知
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"addGestures" object:nil];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     [self.postureTable registerNib:[UINib nibWithNibName:@"PostureCell" bundle:nil] forCellReuseIdentifier:@"postureCell"];
+    
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_btn_menu"] style:UIBarButtonItemStylePlain target:self action:@selector(clickLeft)];
+    
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_btn_friend"] style:UIBarButtonItemStylePlain target:self action:@selector(clickRight)];
+    
+    self.navigationItem.leftBarButtonItem = leftItem;
+    self.navigationItem.rightBarButtonItem = rightItem;
     
 }
 
@@ -104,50 +107,55 @@
     
     return cell;
 }
-
-
-/*
-#pragma mark - 进度条
--(void)setProgressView{
-
-    aqi=20;
-    //初始化进度条视图
-    progressView = [[DACircularProgressView alloc] initWithFrame:_jindu.bounds];
-    progressView.roundedCorners = YES;
-    //设置颜色
-    progressView.trackTintColor = [UIColor whiteColor];
-    progressView.progressTintColor=[UIColor greenColor];
-    //设置进度
-    [progressView setProgress:(CGFloat)aqi/AQI_FULL animated:YES initialDelay:0.5];
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    
-    labeledProgressView= [[DALabeledCircularProgressView alloc]
-                          initWithFrame:_jindu.bounds];
-    labeledProgressView.progressLabel.textColor=[UIColor blueColor];
-    [self.jindu addSubview:labeledProgressView];
-    [self.jindu addSubview:progressView];
-    
-    [self startAnimation];
-    
-    
-}
-
-- (void)startAnimation{
-    
-    self.timer= [NSTimer scheduledTimerWithTimeInterval:(CGFloat)TIMER_DURATION/aqi
-                                                 target:self
-                                               selector:@selector(progressChange)
-                                               userInfo:nil
-                                                repeats:YES];
-}
-
-- (void)progressChange{
-    
-    labeledProgressView.progressLabel.text = [NSString stringWithFormat:@"%d", aqi];
-    if (start >= aqi) {
-        [self.timer invalidate];
-        self.timer = nil;
+    switch (indexPath.section) {
+        case 0:{
+            
+            CorrectViewController *correctVC = [[CorrectViewController alloc] init];
+            
+            correctVC.title = @"坐姿纠正";
+            [correctVC setHidesBottomBarWhenPushed:YES];
+            
+            [self.navigationController pushViewController:correctVC animated:YES];
+        }
+            break;
+        case 1:{
+            
+            SedentaryViewController *sendenteryVC = [[SedentaryViewController alloc] init];
+            
+            sendenteryVC.title = @"久坐计时";
+            [sendenteryVC setHidesBottomBarWhenPushed:YES];
+            
+            [self.navigationController pushViewController:sendenteryVC animated:YES];
+        }
+            break;
+        case 2:{
+            
+            WeightViewController *weightVC = [[WeightViewController alloc] init];
+            
+            weightVC.title = @"体重监测";
+            [weightVC setHidesBottomBarWhenPushed:YES];
+            
+            [self.navigationController pushViewController:weightVC animated:YES];
+            
+        }
+            break;
+            
+        default:
+            break;
     }
+    
 }
- */
+
+-(void) clickLeft{
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"showViewAnima" object:nil];
+    
+}
+
+-(void) clickRight{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"showViewAnima" object:@"showViewAnima"];
+}
+
 @end

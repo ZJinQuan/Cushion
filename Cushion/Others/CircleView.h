@@ -15,4 +15,7 @@
 @property (nonatomic,assign) CGFloat arcWidth;      //弧宽
 @property (nonatomic,assign) CGFloat percentage;    //百分比
 @property (nonatomic,assign) CGFloat startAngle;
+
+@property (nonatomic, strong) UILabel *weightLab;
+
 @end

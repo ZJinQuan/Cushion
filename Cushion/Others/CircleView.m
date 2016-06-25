@@ -24,6 +24,21 @@
     if (self) {
         [self createView];
         [self updateView];
+        
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, 100, 30)];
+        label.font = [UIFont systemFontOfSize:15];
+        label.centerX = _centerView.centerX - 20;
+        label.text = @"本周体重波动";
+        label.textAlignment = NSTextAlignmentCenter;
+        
+        _weightLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 33, 80, 50)];
+        _weightLab.text = @"+2KG";
+        _weightLab.textAlignment = NSTextAlignmentCenter;
+        _weightLab.font = [UIFont systemFontOfSize:30];
+        _weightLab.centerX = _centerView.centerX -20;
+        
+        [_centerView addSubview:label];
+        [_centerView addSubview:_weightLab];
     }
     return self;
 }
@@ -42,9 +57,12 @@
     _centerView  = [[UIView alloc] init];
     [self addSubview:_centerView];
     _centerView.clipsToBounds = YES;
-    _startAngle = 0;
+    _startAngle = 3.15;
     _percentage = 0.5;
-    _arcWidth = 10;
+    _arcWidth = 20;
+    
+    
+    
 }
 
 -(void)setPercentage:(CGFloat)percentage
@@ -61,6 +79,7 @@
 
 -(void)updateView
 {
+    
     self.layer.cornerRadius = self.bounds.size.width/2;
     CGRect centerFrame = self.bounds;
     centerFrame.origin.x = _arcWidth;
@@ -74,6 +93,7 @@
     _defaultView.frame = self.bounds;
     
     UIBezierPath* path = [UIBezierPath bezierPath];
+    
     [path moveToPoint:_defaultView.center];
     [path addArcWithCenter: _defaultView.center radius:_defaultView.frame.size.width/2 startAngle:_startAngle endAngle:-2*M_PI*(1-_percentage) + _startAngle clockwise:NO];
     [path addLineToPoint:_defaultView.center];

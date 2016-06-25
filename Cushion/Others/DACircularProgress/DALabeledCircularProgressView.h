@@ -20,4 +20,6 @@
  */
 @property (strong, nonatomic) UILabel *progressLabel;
 
+@property (nonatomic, strong) UILabel *label;
+
 @end
