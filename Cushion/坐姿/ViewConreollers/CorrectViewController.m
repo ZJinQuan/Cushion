@@ -9,11 +9,12 @@
 #import "CorrectViewController.h"
 #import "DACircularProgressView.h"
 #import "DALabeledCircularProgressView.h"
+#import "XSChart.h"
 
 #define TIMER_DURATION 5
 #define AQI_FULL 100
 
-@interface CorrectViewController (){
+@interface CorrectViewController ()<XSChartDataSource,XSChartDelegate>{
     DACircularProgressView *progressView;
     DALabeledCircularProgressView *labeledProgressView;
     int start;
@@ -22,18 +23,74 @@
 @property (nonatomic,retain )NSTimer *timer;
 @property (weak, nonatomic) IBOutlet UIView *topView;
 
+@property (weak, nonatomic) IBOutlet UIView *CorrView;
+
+@property(nonatomic,strong)NSArray *data;
 
 @end
 
 @implementation CorrectViewController
+
+-(void)viewDidAppear:(BOOL)animated{
+    
+    [super viewDidAppear:animated];
+    
+    _data=@[@1,@2,@3,@4,@9,@6,@12];
+    XSChart *chart=[[XSChart alloc]initWithFrame:CGRectMake(0, 0, _CorrView.width, 250)];
+    
+    chart.backgroundColor = [UIColor clearColor];
+    
+    chart.dataSource=self;
+    chart.delegate=self;
+    [self.CorrView addSubview:chart];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"removeGestures" object:nil];
     
+    
+    
+    
     [self setProgressView];
 }
+
+#pragma mark XSChartDataSource and XSChartDelegate
+
+-(NSInteger)numberForChart:(XSChart *)chart
+{
+    return _data.count;
+}
+-(NSInteger)chart:(XSChart *)chart valueAtIndex:(NSInteger)index
+{
+    return [_data[index] floatValue];
+}
+-(BOOL)showDataAtPointForChart:(XSChart *)chart
+{
+    return YES;
+}
+-(NSString *)chart:(XSChart *)chart titleForXLabelAtIndex:(NSInteger)index
+{
+    return [NSString stringWithFormat:@"%ld",(long)index];
+}
+-(NSString *)titleForChart:(XSChart *)chart
+{
+    return @"正常坐姿占比曲线图";
+}
+-(NSString *)titleForXAtChart:(XSChart *)chart
+{
+    return @"Index";
+}
+-(NSString *)titleForYAtChart:(XSChart *)chart
+{
+    return @"count";
+}
+-(void)chart:(XSChart *)view didClickPointAtIndex:(NSInteger)index
+{
+    NSLog(@"click at index:%ld",(long)index);
+}
+
 
 #pragma mark - 进度条
 -(void)setProgressView{

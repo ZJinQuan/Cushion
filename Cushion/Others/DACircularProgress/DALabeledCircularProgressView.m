@@ -14,6 +14,9 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        
+        
+        
         [self initializeLabel];
     }
     return self;

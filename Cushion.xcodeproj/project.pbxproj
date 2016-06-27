@@ -11,6 +11,22 @@
 		14108EF11D1A8C82008A91C6 /* DALabeledCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14108EEF1D1A8C82008A91C6 /* DALabeledCircularProgressView.m */; };
 		14108EF61D1A9442008A91C6 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14108EF51D1A9442008A91C6 /* CircleView.m */; };
 		143C518E1D1AA50F0091E837 /* ScrollImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 143C518D1D1AA50F0091E837 /* ScrollImage.m */; };
+		1441806E1D20B8CE0067CF52 /* SettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1441806C1D20B8CE0067CF52 /* SettingCell.m */; };
+		1441806F1D20B8CE0067CF52 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1441806D1D20B8CE0067CF52 /* SettingCell.xib */; };
+		144180731D20BF150067CF52 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144180711D20BF150067CF52 /* MyViewController.m */; };
+		144180741D20BF150067CF52 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 144180721D20BF150067CF52 /* MyViewController.xib */; };
+		144180781D20C80E0067CF52 /* ThatDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 144180761D20C80E0067CF52 /* ThatDayCell.m */; };
+		144180791D20C80E0067CF52 /* ThatDayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 144180771D20C80E0067CF52 /* ThatDayCell.xib */; };
+		1441807D1D20CE230067CF52 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1441807B1D20CE230067CF52 /* MessageCell.m */; };
+		1441807E1D20CE230067CF52 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1441807C1D20CE230067CF52 /* MessageCell.xib */; };
+		144180821D20DA310067CF52 /* WhoShockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144180801D20DA310067CF52 /* WhoShockViewController.m */; };
+		144180831D20DA310067CF52 /* WhoShockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 144180811D20DA310067CF52 /* WhoShockViewController.xib */; };
+		144180871D20DBB40067CF52 /* ShockCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 144180851D20DBB40067CF52 /* ShockCell.m */; };
+		144180881D20DBB40067CF52 /* ShockCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 144180861D20DBB40067CF52 /* ShockCell.xib */; };
+		1441808C1D20E0BF0067CF52 /* LookAtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1441808A1D20E0BF0067CF52 /* LookAtViewController.m */; };
+		1441808D1D20E0BF0067CF52 /* LookAtViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1441808B1D20E0BF0067CF52 /* LookAtViewController.xib */; };
+		1441808F1D2104D40067CF52 /* nav_btn_more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1441808E1D2104D40067CF52 /* nav_btn_more@2x.png */; };
+		14AB8A4B1D2135210000ACE0 /* XSChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB8A4A1D2135210000ACE0 /* XSChart.m */; };
 		14C8FA381D1A9C3B002A4ABB /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14C8F9F21D1A9C3A002A4ABB /* bg@2x.png */; };
 		14C8FA391D1A9C3B002A4ABB /* bg_my@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14C8F9F31D1A9C3A002A4ABB /* bg_my@2x.png */; };
 		14C8FA3A1D1A9C3B002A4ABB /* bg_photo1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14C8F9F41D1A9C3A002A4ABB /* bg_photo1@2x.png */; };
@@ -154,6 +170,30 @@
 		14108EF51D1A9442008A91C6 /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
 		143C518C1D1AA50F0091E837 /* ScrollImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollImage.h; sourceTree = "<group>"; };
 		143C518D1D1AA50F0091E837 /* ScrollImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollImage.m; sourceTree = "<group>"; };
+		1441806B1D20B8CE0067CF52 /* SettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingCell.h; sourceTree = "<group>"; };
+		1441806C1D20B8CE0067CF52 /* SettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingCell.m; sourceTree = "<group>"; };
+		1441806D1D20B8CE0067CF52 /* SettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
+		144180701D20BF150067CF52 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		144180711D20BF150067CF52 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		144180721D20BF150067CF52 /* MyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
+		144180751D20C80E0067CF52 /* ThatDayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThatDayCell.h; sourceTree = "<group>"; };
+		144180761D20C80E0067CF52 /* ThatDayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThatDayCell.m; sourceTree = "<group>"; };
+		144180771D20C80E0067CF52 /* ThatDayCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThatDayCell.xib; sourceTree = "<group>"; };
+		1441807A1D20CE230067CF52 /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
+		1441807B1D20CE230067CF52 /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
+		1441807C1D20CE230067CF52 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		1441807F1D20DA310067CF52 /* WhoShockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhoShockViewController.h; sourceTree = "<group>"; };
+		144180801D20DA310067CF52 /* WhoShockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhoShockViewController.m; sourceTree = "<group>"; };
+		144180811D20DA310067CF52 /* WhoShockViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhoShockViewController.xib; sourceTree = "<group>"; };
+		144180841D20DBB40067CF52 /* ShockCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShockCell.h; sourceTree = "<group>"; };
+		144180851D20DBB40067CF52 /* ShockCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShockCell.m; sourceTree = "<group>"; };
+		144180861D20DBB40067CF52 /* ShockCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShockCell.xib; sourceTree = "<group>"; };
+		144180891D20E0BF0067CF52 /* LookAtViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LookAtViewController.h; sourceTree = "<group>"; };
+		1441808A1D20E0BF0067CF52 /* LookAtViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LookAtViewController.m; sourceTree = "<group>"; };
+		1441808B1D20E0BF0067CF52 /* LookAtViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LookAtViewController.xib; sourceTree = "<group>"; };
+		1441808E1D2104D40067CF52 /* nav_btn_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_btn_more@2x.png"; sourceTree = "<group>"; };
+		14AB8A491D2135210000ACE0 /* XSChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSChart.h; sourceTree = "<group>"; };
+		14AB8A4A1D2135210000ACE0 /* XSChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSChart.m; sourceTree = "<group>"; };
 		14C8F9F21D1A9C3A002A4ABB /* bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg@2x.png"; sourceTree = "<group>"; };
 		14C8F9F31D1A9C3A002A4ABB /* bg_my@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_my@2x.png"; sourceTree = "<group>"; };
 		14C8F9F41D1A9C3A002A4ABB /* bg_photo1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_photo1@2x.png"; sourceTree = "<group>"; };
@@ -340,9 +380,19 @@
 			path = DACircularProgress;
 			sourceTree = "<group>";
 		};
+		14AB8A481D2135210000ACE0 /* XSChart */ = {
+			isa = PBXGroup;
+			children = (
+				14AB8A491D2135210000ACE0 /* XSChart.h */,
+				14AB8A4A1D2135210000ACE0 /* XSChart.m */,
+			);
+			path = XSChart;
+			sourceTree = "<group>";
+		};
 		14C8F9F01D1A9C3A002A4ABB /* images */ = {
 			isa = PBXGroup;
 			children = (
+				1441808E1D2104D40067CF52 /* nav_btn_more@2x.png */,
 				14C8F9F11D1A9C3A002A4ABB /* circle */,
 				14C8F9FA1D1A9C3A002A4ABB /* default */,
 				14C8F9FF1D1A9C3A002A4ABB /* drive */,
@@ -551,6 +601,7 @@
 		14DD0C9E1D18E0FE0079D68D /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				14AB8A481D2135210000ACE0 /* XSChart */,
 				143C518C1D1AA50F0091E837 /* ScrollImage.h */,
 				143C518D1D1AA50F0091E837 /* ScrollImage.m */,
 				14108EF41D1A9442008A91C6 /* CircleView.h */,
@@ -607,6 +658,9 @@
 				14D228111D1D4A520020B9B2 /* WarnedCell.h */,
 				14D228121D1D4A520020B9B2 /* WarnedCell.m */,
 				14D228131D1D4A520020B9B2 /* WarnedCell.xib */,
+				1441806B1D20B8CE0067CF52 /* SettingCell.h */,
+				1441806C1D20B8CE0067CF52 /* SettingCell.m */,
+				1441806D1D20B8CE0067CF52 /* SettingCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -683,6 +737,15 @@
 				14DD0CC31D1923370079D68D /* FriendsViewController.h */,
 				14DD0CC41D1923370079D68D /* FriendsViewController.m */,
 				14DD0CC51D1923370079D68D /* FriendsViewController.xib */,
+				144180891D20E0BF0067CF52 /* LookAtViewController.h */,
+				1441808A1D20E0BF0067CF52 /* LookAtViewController.m */,
+				1441808B1D20E0BF0067CF52 /* LookAtViewController.xib */,
+				144180701D20BF150067CF52 /* MyViewController.h */,
+				144180711D20BF150067CF52 /* MyViewController.m */,
+				144180721D20BF150067CF52 /* MyViewController.xib */,
+				1441807F1D20DA310067CF52 /* WhoShockViewController.h */,
+				144180801D20DA310067CF52 /* WhoShockViewController.m */,
+				144180811D20DA310067CF52 /* WhoShockViewController.xib */,
 			);
 			path = ViewConreollers;
 			sourceTree = "<group>";
@@ -693,6 +756,15 @@
 				14F47CF71D1BD34A00B81C99 /* FriendsCell.h */,
 				14F47CF81D1BD34A00B81C99 /* FriendsCell.m */,
 				14F47CF91D1BD34A00B81C99 /* FriendsCell.xib */,
+				144180751D20C80E0067CF52 /* ThatDayCell.h */,
+				144180761D20C80E0067CF52 /* ThatDayCell.m */,
+				144180771D20C80E0067CF52 /* ThatDayCell.xib */,
+				1441807A1D20CE230067CF52 /* MessageCell.h */,
+				1441807B1D20CE230067CF52 /* MessageCell.m */,
+				1441807C1D20CE230067CF52 /* MessageCell.xib */,
+				144180841D20DBB40067CF52 /* ShockCell.h */,
+				144180851D20DBB40067CF52 /* ShockCell.m */,
+				144180861D20DBB40067CF52 /* ShockCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -897,6 +969,7 @@
 				14C8FA5D1D1A9C3B002A4ABB /* icon_wechat@2x.png in Resources */,
 				14C8FA511D1A9C3B002A4ABB /* icon_warn@2x.png in Resources */,
 				14D228101D1D41E30020B9B2 /* CumulativeCell.xib in Resources */,
+				1441808F1D2104D40067CF52 /* nav_btn_more@2x.png in Resources */,
 				14C8FA381D1A9C3B002A4ABB /* bg@2x.png in Resources */,
 				14F47CE21D1B99BD00B81C99 /* ForgetViewController.xib in Resources */,
 				14C8FA571D1A9C3B002A4ABB /* icon_report@2x.png in Resources */,
@@ -939,6 +1012,7 @@
 				14C8FA591D1A9C3B002A4ABB /* icon_photo@2x.png in Resources */,
 				14C8FA431D1A9C3B002A4ABB /* defoilt4@2x.png in Resources */,
 				14D227F71D1CE2080020B9B2 /* SedentaryViewController.xib in Resources */,
+				1441808D1D20E0BF0067CF52 /* LookAtViewController.xib in Resources */,
 				14C8FA4A1D1A9C3B002A4ABB /* icon_drive_warn@2x.png in Resources */,
 				14F47CD81D1B803500B81C99 /* RegisterViewController.xib in Resources */,
 				14C8FA541D1A9C3B002A4ABB /* icon_device_ele@2x.png in Resources */,
@@ -957,6 +1031,7 @@
 				14DD0CBA1D18E55A0079D68D /* DriveViewController.xib in Resources */,
 				14C8FA3C1D1A9C3B002A4ABB /* bg_photo3@2x.png in Resources */,
 				14C8FA6A1D1A9C3B002A4ABB /* home_bg@2x.png in Resources */,
+				144180741D20BF150067CF52 /* MyViewController.xib in Resources */,
 				14C8FA5C1D1A9C3B002A4ABB /* icon_see@2x.png in Resources */,
 				14C8FA4B1D1A9C3B002A4ABB /* icon_nav@2x.png in Resources */,
 				14C8FA391D1A9C3B002A4ABB /* bg_my@2x.png in Resources */,
@@ -968,14 +1043,19 @@
 				14C8FA5E1D1A9C3B002A4ABB /* login_bg@2x.png in Resources */,
 				14DD0CB51D18E53B0079D68D /* PostureViewController.xib in Resources */,
 				14C8FA6C1D1A9C3B002A4ABB /* home_icon_s@2x.png in Resources */,
+				144180881D20DBB40067CF52 /* ShockCell.xib in Resources */,
 				14F47CF11D1BC80600B81C99 /* DriveCell.xib in Resources */,
 				14C8FA501D1A9C3B002A4ABB /* icon_time@2x.png in Resources */,
+				1441806F1D20B8CE0067CF52 /* SettingCell.xib in Resources */,
 				14C8FA6D1D1A9C3B002A4ABB /* icon_sit_second@2x.png in Resources */,
 				14F47CE71D1B9C3200B81C99 /* NewPasswordViewController.xib in Resources */,
 				14D2280B1D1D38A20020B9B2 /* RemindViewController.xib in Resources */,
 				14C8FA3A1D1A9C3B002A4ABB /* bg_photo1@2x.png in Resources */,
+				1441807E1D20CE230067CF52 /* MessageCell.xib in Resources */,
 				14C8FA451D1A9C3B002A4ABB /* bg_drive_warn@2x.png in Resources */,
 				14F47CEC1D1BBC4C00B81C99 /* PostureCell.xib in Resources */,
+				144180791D20C80E0067CF52 /* ThatDayCell.xib in Resources */,
+				144180831D20DA310067CF52 /* WhoShockViewController.xib in Resources */,
 				14DD0C711D18DF0A0079D68D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1001,15 +1081,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				144180731D20BF150067CF52 /* MyViewController.m in Sources */,
 				14F47D1C1D1BE8CF00B81C99 /* BaseViewController.m in Sources */,
 				14F47D1D1D1BE8CF00B81C99 /* LeftViewController.m in Sources */,
 				14F47CF01D1BC80600B81C99 /* DriveCell.m in Sources */,
 				14F47D251D1BEA8C00B81C99 /* RightCell.m in Sources */,
+				1441807D1D20CE230067CF52 /* MessageCell.m in Sources */,
 				14DD0CA11D18E1240079D68D /* UIView+Extension.m in Sources */,
 				14108EF01D1A8C82008A91C6 /* DACircularProgressView.m in Sources */,
+				1441806E1D20B8CE0067CF52 /* SettingCell.m in Sources */,
 				14DD0CB41D18E53B0079D68D /* PostureViewController.m in Sources */,
 				14D228001D1D19E60020B9B2 /* WeightViewController.m in Sources */,
 				14F47CFA1D1BD34A00B81C99 /* FriendsCell.m in Sources */,
+				1441808C1D20E0BF0067CF52 /* LookAtViewController.m in Sources */,
+				14AB8A4B1D2135210000ACE0 /* XSChart.m in Sources */,
 				14F47CDC1D1B923200B81C99 /* VerificationViewController.m in Sources */,
 				14D227F61D1CE2080020B9B2 /* SedentaryViewController.m in Sources */,
 				14108EF61D1A9442008A91C6 /* CircleView.m in Sources */,
@@ -1018,12 +1103,15 @@
 				14D2280F1D1D41E30020B9B2 /* CumulativeCell.m in Sources */,
 				14F47CE61D1B9C3200B81C99 /* NewPasswordViewController.m in Sources */,
 				14D228141D1D4A520020B9B2 /* WarnedCell.m in Sources */,
+				144180821D20DA310067CF52 /* WhoShockViewController.m in Sources */,
 				14DD0C691D18DF0A0079D68D /* AppDelegate.m in Sources */,
+				144180871D20DBB40067CF52 /* ShockCell.m in Sources */,
 				14F47CE11D1B99BD00B81C99 /* ForgetViewController.m in Sources */,
 				14F47CD71D1B803500B81C99 /* RegisterViewController.m in Sources */,
 				14F47D1F1D1BE8CF00B81C99 /* RightViewController.m in Sources */,
 				143C518E1D1AA50F0091E837 /* ScrollImage.m in Sources */,
 				14DD0CC71D1923370079D68D /* FriendsViewController.m in Sources */,
+				144180781D20C80E0067CF52 /* ThatDayCell.m in Sources */,
 				14D227FB1D1D13D40020B9B2 /* RemindCell.m in Sources */,
 				14DD0CD11D1924280079D68D /* LoginViewController.m in Sources */,
 				14F47D211D1BE8CF00B81C99 /* TabBarViewController.m in Sources */,

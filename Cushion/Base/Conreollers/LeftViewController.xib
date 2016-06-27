@@ -17,14 +17,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TIO-kS-waD">
-                    <rect key="frame" x="0.0" y="0.0" width="250" height="136"/>
+                    <rect key="frame" x="0.0" y="0.0" width="250" height="110"/>
                     <color key="backgroundColor" red="0.20784313725490197" green="0.20000000000000001" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="136" id="ngU-rL-MjE"/>
+                        <constraint firstAttribute="height" constant="110" id="ngU-rL-MjE"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1eq-gI-08Z">
-                    <rect key="frame" x="0.0" y="136" width="250" height="432"/>
+                    <rect key="frame" x="0.0" y="110" width="250" height="458"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="曾燕强" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2Z-Rm-8lV">
                             <rect key="frame" x="50" y="45" width="151" height="27"/>
@@ -165,11 +165,16 @@
                     </constraints>
                 </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_my.png" translatesAutoresizingMaskIntoConstraints="NO" id="cT4-rC-fs1">
-                    <rect key="frame" x="85" y="95" width="81" height="81"/>
+                    <rect key="frame" x="85" y="68" width="81" height="81"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="81" id="TT4-eA-88B"/>
                         <constraint firstAttribute="height" constant="81" id="gXu-BM-UbH"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="41"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -179,7 +184,7 @@
                 <constraint firstAttribute="trailing" secondItem="1eq-gI-08Z" secondAttribute="trailing" id="9wV-F0-E45"/>
                 <constraint firstAttribute="bottom" secondItem="1eq-gI-08Z" secondAttribute="bottom" id="Vpw-UE-Y9K"/>
                 <constraint firstItem="TIO-kS-waD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ZyM-ej-CRA"/>
-                <constraint firstItem="cT4-rC-fs1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="95" id="g6k-po-dU9"/>
+                <constraint firstItem="cT4-rC-fs1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="68" id="g6k-po-dU9"/>
                 <constraint firstItem="1eq-gI-08Z" firstAttribute="top" secondItem="TIO-kS-waD" secondAttribute="bottom" id="gVb-ha-Xle"/>
                 <constraint firstItem="1eq-gI-08Z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="muC-Np-XFR"/>
                 <constraint firstItem="TIO-kS-waD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qdU-TK-kx8"/>

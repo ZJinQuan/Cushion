@@ -9,6 +9,7 @@
 #import "RemindViewController.h"
 #import "CumulativeCell.h"
 #import "WarnedCell.h"
+#import "SettingCell.h"
 
 @interface RemindViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *remindTableView;
@@ -25,6 +26,7 @@
     
     [_remindTableView registerNib:[UINib nibWithNibName:@"CumulativeCell" bundle:nil] forCellReuseIdentifier:@"cumulativeCell"];
     [_remindTableView registerNib:[UINib nibWithNibName:@"WarnedCell" bundle:nil] forCellReuseIdentifier:@"warnedCell"];
+    [_remindTableView registerNib:[UINib nibWithNibName:@"SettingCell" bundle:nil] forCellReuseIdentifier:@"settingCell"];
 }
 
 #pragma mark UITableViewDelegate and UITableViewDataSource
@@ -79,8 +81,9 @@
     switch (indexPath.section) {
         case 0:{
             
-             CumulativeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cumulativeCell"];
+            CumulativeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cumulativeCell"];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            
             return cell;
         }
             break;
@@ -89,7 +92,10 @@
         }
             break;
         case 2:{
+            SettingCell *cell = [tableView dequeueReusableCellWithIdentifier:@"settingCell"];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             
+            return cell;
         }
             break;
         case 3:{

@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FriendsViewController">
             <connections>
                 <outlet property="friendTableView" destination="mlI-QG-0TX" id="HtQ-Ez-y9t"/>
+                <outlet property="topView" destination="Nd1-bK-OWG" id="oaf-WO-8L8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -62,8 +63,19 @@
                             <color key="textColor" red="0.058823529411764705" green="0.85490196078431369" blue="0.25882352941176473" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日被震次数" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYF-Hh-Z8a">
+                            <rect key="frame" x="234" y="90" width="81" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="7Nw-cg-gtG"/>
+                                <constraint firstAttribute="width" constant="81" id="oFg-g1-oxz"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.058823529409999999" green="0.85490196080000003" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <constraints>
+                        <constraint firstItem="eYF-Hh-Z8a" firstAttribute="top" secondItem="mzO-I5-Cxs" secondAttribute="bottom" constant="-3" id="3hT-V2-eyc"/>
                         <constraint firstAttribute="trailing" secondItem="mzO-I5-Cxs" secondAttribute="trailing" constant="16" id="8XZ-BB-EYu"/>
                         <constraint firstItem="biL-xl-yIc" firstAttribute="leading" secondItem="LPP-oN-Xz1" secondAttribute="trailing" constant="16" id="BlU-c6-C3q"/>
                         <constraint firstItem="mzO-I5-Cxs" firstAttribute="centerY" secondItem="Nd1-bK-OWG" secondAttribute="centerY" id="CFn-W6-Cjw"/>
@@ -73,6 +85,7 @@
                         <constraint firstItem="LPP-oN-Xz1" firstAttribute="leading" secondItem="Nd1-bK-OWG" secondAttribute="leading" constant="25" id="Kgp-W8-etf"/>
                         <constraint firstItem="biL-xl-yIc" firstAttribute="top" secondItem="LPP-oN-Xz1" secondAttribute="top" id="Wq1-WI-wAe"/>
                         <constraint firstItem="xqA-pP-oQ3" firstAttribute="leading" secondItem="LPP-oN-Xz1" secondAttribute="trailing" constant="16" id="eiG-Tr-3QU"/>
+                        <constraint firstItem="eYF-Hh-Z8a" firstAttribute="centerX" secondItem="mzO-I5-Cxs" secondAttribute="centerX" id="wie-kj-ycO"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzj-TD-0CJ">

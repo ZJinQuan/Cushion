@@ -8,10 +8,14 @@
 
 #import "FriendsViewController.h"
 #import "FriendsCell.h"
+#import "MyViewController.h"
+#import "LookAtViewController.h"
 
 @interface FriendsViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *friendTableView;
+
+@property (weak, nonatomic) IBOutlet UIView *topView;
 
 @end
 
@@ -36,6 +40,21 @@
     
     self.navigationItem.leftBarButtonItem = leftItem;
     self.navigationItem.rightBarButtonItem = rightItem;
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickTop)];
+    
+    [self.topView addGestureRecognizer:tap];
+}
+
+-(void) clickTop{
+    
+    MyViewController *myVC = [[MyViewController alloc] init];
+    
+    myVC.title = @"我的优垫";
+    
+    myVC.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:myVC animated:YES];
 }
 
 #pragma mark UITableViewDelegate and UITableViewDataSource
@@ -61,6 +80,22 @@
     cell.nameLab.text = nameArr[indexPath.row];
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NSArray *iconArr = @[@"bg_photo2", @"bg_my", @"bg_photo2", @"bg_photo3", @"bg_photo4", @"bg_photo2", @"bg_my"];
+    NSArray *nameArr = @[@"LIM",@"林涛", @"汉诺", @"张三", @"李四" ,@"王五", @"赵六"];
+    
+    LookAtViewController *lookVC = [[LookAtViewController alloc] init];
+    
+    lookVC.iconStr = iconArr[indexPath.row];
+    lookVC.nameStr = nameArr[indexPath.row];
+    
+    lookVC.title = @"查看优友";
+    lookVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:lookVC animated:YES];
+    
 }
 
 -(void) clickLeft{
