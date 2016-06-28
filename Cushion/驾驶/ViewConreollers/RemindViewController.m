@@ -10,10 +10,12 @@
 #import "CumulativeCell.h"
 #import "WarnedCell.h"
 #import "SettingCell.h"
+#import "ChartCell.h"
 
-@interface RemindViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface RemindViewController ()<UITableViewDelegate, UITableViewDataSource,XSChartDataSource,XSChartDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *remindTableView;
 
+@property(nonatomic,strong)NSArray *data;
 @end
 
 @implementation RemindViewController
@@ -24,10 +26,49 @@
     //移除手势
     [[NSNotificationCenter defaultCenter] postNotificationName:@"removeGestures" object:nil];
     
+    _data=@[@1,@12,@3,@4,@9,@6,@2];
+    
     [_remindTableView registerNib:[UINib nibWithNibName:@"CumulativeCell" bundle:nil] forCellReuseIdentifier:@"cumulativeCell"];
     [_remindTableView registerNib:[UINib nibWithNibName:@"WarnedCell" bundle:nil] forCellReuseIdentifier:@"warnedCell"];
     [_remindTableView registerNib:[UINib nibWithNibName:@"SettingCell" bundle:nil] forCellReuseIdentifier:@"settingCell"];
+    [_remindTableView registerNib:[UINib nibWithNibName:@"ChartCell" bundle:nil] forCellReuseIdentifier:@"chartCell"];
 }
+
+#pragma mark XSChartDataSource and XSChartDelegate
+
+-(NSInteger)numberForChart:(XSChart *)chart
+{
+    return _data.count;
+}
+-(NSInteger)chart:(XSChart *)chart valueAtIndex:(NSInteger)index
+{
+    return [_data[index] floatValue];
+}
+-(BOOL)showDataAtPointForChart:(XSChart *)chart
+{
+    return YES;
+}
+-(NSString *)chart:(XSChart *)chart titleForXLabelAtIndex:(NSInteger)index
+{
+    return [NSString stringWithFormat:@"%ld",(long)index];
+}
+-(NSString *)titleForChart:(XSChart *)chart
+{
+    return @"正常坐姿占比曲线图";
+}
+-(NSString *)titleForXAtChart:(XSChart *)chart
+{
+    return nil;
+}
+-(NSString *)titleForYAtChart:(XSChart *)chart
+{
+    return nil;
+}
+-(void)chart:(XSChart *)view didClickPointAtIndex:(NSInteger)index
+{
+    NSLog(@"click at index:%ld",(long)index);
+}
+
 
 #pragma mark UITableViewDelegate and UITableViewDataSource
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -60,6 +101,10 @@
         return 30;
     }
     
+    if (indexPath.section == 2) {
+        return 200;
+    }
+    
     return 180;
 }
 
@@ -89,13 +134,24 @@
             break;
         case 1:{
             
-        }
-            break;
-        case 2:{
             SettingCell *cell = [tableView dequeueReusableCellWithIdentifier:@"settingCell"];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             
             return cell;
+            
+        }
+            break;
+        case 2:{
+            
+            ChartCell *cell = [tableView dequeueReusableCellWithIdentifier:@"chartCell"];
+            
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            
+            cell.chart.dataSource = self;
+            cell.chart.delegate = self;
+            
+            return cell;
+            
         }
             break;
         case 3:{
@@ -110,16 +166,6 @@
             break;
     }
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    }
-
-    if (indexPath.section == 1) {
-        cell.backgroundColor = RGBA(101, 219, 204, 1);
-    }
-    
-    return cell;
+    return nil;
 }
 @end

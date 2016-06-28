@@ -117,7 +117,7 @@
                         <constraint firstItem="RwA-Gp-ovE" firstAttribute="leading" secondItem="mta-2q-FuP" secondAttribute="trailing" id="yNa-9x-81M"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mlI-QG-0TX">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mlI-QG-0TX">
                     <rect key="frame" x="0.0" y="151" width="320" height="367"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="0.3330078125" colorSpace="calibratedWhite"/>
                     <connections>

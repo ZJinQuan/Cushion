@@ -9,7 +9,7 @@
 #import "XSChart.h"
 
 CGFloat margin=14.f;
-CGFloat radius=5.f;
+CGFloat radius=3.f;
 @interface XSChart ()
 
 @property(nonatomic,strong)UILabel *titleLabel;
@@ -71,41 +71,47 @@ CGFloat radius=5.f;
     }
     path.lineCapStyle = kCGLineCapRound;
     path.lineJoinStyle=kCGLineJoinRound;
-    //path.lineWidth=1;
+//    path.lineWidth=1;
     [[UIColor redColor]setStroke];
     CABasicAnimation *pathAnimation=[CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-    pathAnimation.duration = 1.5;
+    pathAnimation.duration = 1.0;
     pathAnimation.timingFunction=[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     pathAnimation.fromValue=[NSNumber numberWithFloat:0.0f];
     pathAnimation.toValue=[NSNumber numberWithFloat:1.0f];
     pathAnimation.autoreverses=NO;
     _linePath.path=path.CGPath;
-    _linePath.strokeColor=[UIColor redColor].CGColor;
+    _linePath.strokeColor=[UIColor whiteColor].CGColor;
     [_linePath addAnimation:pathAnimation forKey:@"strokeEndAnimation"];
     
     _linePath.strokeEnd = 1.0;
     
     for (int i=0; i<self.count; i++) {
+        
         CGFloat value=[_dataSource chart:self valueAtIndex:i];
         CGPoint point=[self pointWithValue:value index:i];
         UIBezierPath *drawPoint=[UIBezierPath bezierPath];
-        [drawPoint addArcWithCenter:point radius:radius startAngle:M_PI*0 endAngle:M_PI*2 clockwise:YES];
+//        drawPoint.lineWidth = ;
+        
+        [drawPoint addArcWithCenter:point radius:radius startAngle:M_PI * 0 endAngle:M_PI * 2 clockwise:YES];
+//        [[UIColor whiteColor] setStroke];
+//        [drawPoint stroke];
         CAShapeLayer *layer=[[CAShapeLayer alloc]init];
-        layer.path=drawPoint.CGPath;
+        layer.path = drawPoint.CGPath;
         _linePath.strokeEnd=1;
        
         [self.layer addSublayer:layer];
         if (_dataSource&&[_dataSource respondsToSelector:@selector(showDataAtPointForChart:)]&&[_dataSource showDataAtPointForChart:self]) {
             NSString *valueString=[NSString stringWithFormat:@"%ld",(long)value];
-            CGRect frame=[valueString boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:14.f]} context:nil];
+            CGRect frame=[valueString boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:14.f],} context:nil];
             CGPoint pointForValueString=CGPointMake(point.x-frame.size.width/2, point.y+margin/3);
             if (pointForValueString.y+frame.size.height>self.frame.size.height-1.5*margin) {
                 pointForValueString.y=point.y-1.5*margin;
             }
-            [valueString drawAtPoint:pointForValueString withAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:14.f]}];
+            [valueString drawAtPoint:pointForValueString withAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:14.f],NSForegroundColorAttributeName: [UIColor whiteColor]}];
         }
         if (_dataSource&&[_dataSource respondsToSelector:@selector(chart:titleForXLabelAtIndex:)]) {
-            NSString *titleForXLabel=[_dataSource chart:self titleForXLabelAtIndex:i];
+            NSString *titleForXLabel=[_dataSource chart:self titleForXLabelAtIndex:i + 1];
+            
             if (titleForXLabel) {
                 [self drawXLabel:titleForXLabel index:i];
             }
@@ -115,7 +121,7 @@ CGFloat radius=5.f;
 }
 -(void)drawXLabel:(NSString *)text index:(NSInteger)index
 {//
-    NSDictionary *font=@{NSFontAttributeName: [UIFont systemFontOfSize:12.f]};
+    NSDictionary *font=@{NSFontAttributeName: [UIFont systemFontOfSize:12.f],NSForegroundColorAttributeName: [UIColor whiteColor]};
     CGPoint point=[self pointWithValue:0 index:index];
     CGSize size=[text boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:font context:nil].size;
     point.x-=size.width/2;
@@ -124,28 +130,30 @@ CGFloat radius=5.f;
 }
 -(void)drawOriginAndMaxPoint
 {
-    NSDictionary *font=@{NSFontAttributeName: [UIFont systemFontOfSize:12.f]};
+    NSDictionary *font=@{NSFontAttributeName: [UIFont systemFontOfSize:12.f],NSForegroundColorAttributeName: [UIColor whiteColor]};
     
     NSString *origin=@"0";
-    [origin drawAtPoint:CGPointMake(0.9*margin, self.frame.size.height-2*margin) withAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:11.f]}];
+    [origin drawAtPoint:CGPointMake(0.9*margin, self.frame.size.height-2*margin) withAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:11.f],NSForegroundColorAttributeName: [UIColor whiteColor]}];
     
     NSString *max=[NSString stringWithFormat:@"%ld",(long)self.maxValue];
     CGRect tmpFrame=[max boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:font context:nil];
-    [max drawAtPoint:CGPointMake(1.5*margin-tmpFrame.size.width-1, [self pointWithValue:_maxValue index:0].y-5) withAttributes:font];
+    [max drawAtPoint:CGPointMake(1.5*margin - tmpFrame.size.width - 1, [self pointWithValue:_maxValue index:0].y - 5) withAttributes:font];
 }
 -(void)setupTitle
 {
     if (_dataSource&&[_dataSource respondsToSelector:@selector(titleForChart:)]) {
         self.titleLabel.text=[_dataSource titleForChart:self];
+        
     }
     if (_dataSource&&[_dataSource respondsToSelector:@selector(titleForYAtChart:)]) {
-        NSString *yTitle=[_dataSource titleForYAtChart:self];
-        [yTitle drawAtPoint:CGPointMake(1.5*margin,0.5*margin) withAttributes:nil];
+        NSString *yTitle = [_dataSource titleForYAtChart:self];
+        
+        [yTitle drawAtPoint:CGPointMake(1.5*margin,0.5*margin) withAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     }
     if (_dataSource&&[_dataSource respondsToSelector:@selector(titleForXAtChart:)]) {
         NSString *xTitle=[_dataSource titleForXAtChart:self];
         CGRect frame=[xTitle boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:12.f]} context:nil];
-        [xTitle drawAtPoint:CGPointMake(self.frame.size.width-margin-frame.size.width,self.frame.size.height-2*margin-frame.size.height) withAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:12.f]}];
+        [xTitle drawAtPoint:CGPointMake(self.frame.size.width-margin-frame.size.width,self.frame.size.height-2*margin-frame.size.height) withAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:12.f],NSForegroundColorAttributeName: [UIColor whiteColor]}];
     }
     
     
@@ -156,6 +164,8 @@ CGFloat radius=5.f;
     [coordinate moveToPoint:CGPointMake(1.5*margin, 1.5*margin)];
     [coordinate addLineToPoint:CGPointMake(1.5*margin, self.frame.size.height-1.5*margin)];
     [coordinate addLineToPoint:CGPointMake(self.frame.size.width-margin, self.frame.size.height-1.5*margin)];
+    
+    [[UIColor whiteColor] setStroke];
     
     [coordinate stroke];
     
@@ -191,6 +201,7 @@ CGFloat radius=5.f;
     if (_titleLabel==nil) {
         _titleLabel=[[UILabel alloc]init];
         _titleLabel.font=[UIFont systemFontOfSize:14.f];
+        _titleLabel.textColor = [UIColor whiteColor];
         [self addSubview:_titleLabel];
         _titleLabel.translatesAutoresizingMaskIntoConstraints=NO;
         _titleLabel.textAlignment=NSTextAlignmentCenter;

@@ -8,12 +8,14 @@
 
 #import "MyViewController.h"
 #import "ThatDayCell.h"
-#import "MessageCell.h"
+#import "ChartCell.h"
 #import "WhoShockViewController.h"
 
 
-@interface MyViewController ()<UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate>
+@interface MyViewController ()<UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate,XSChartDataSource,XSChartDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *messageTableView;
+
+@property(nonatomic,strong)NSArray *data;
 
 @end
 
@@ -26,8 +28,10 @@
     //移除手势
     [[NSNotificationCenter defaultCenter] postNotificationName:@"removeGestures" object:nil];
     
+    _data=@[@1,@6,@3,@4,@9,@6,@12];
+    
     [self.messageTableView registerNib:[UINib nibWithNibName:@"ThatDayCell" bundle:nil] forCellReuseIdentifier:@"thatDayCell"];
-    [self.messageTableView registerNib:[UINib nibWithNibName:@"MessageCell" bundle:nil] forCellReuseIdentifier:@"messageCell"];
+    [self.messageTableView registerNib:[UINib nibWithNibName:@"ChartCell" bundle:nil] forCellReuseIdentifier:@"chartCell"];
 }
 
 -(void) clickShare{
@@ -46,6 +50,42 @@
     [self.navigationController pushViewController:whoVC animated:YES];
 }
 
+#pragma mark XSChartDataSource and XSChartDelegate
+
+-(NSInteger)numberForChart:(XSChart *)chart
+{
+    return _data.count;
+}
+-(NSInteger)chart:(XSChart *)chart valueAtIndex:(NSInteger)index
+{
+    return [_data[index] floatValue];
+}
+-(BOOL)showDataAtPointForChart:(XSChart *)chart
+{
+    return YES;
+}
+-(NSString *)chart:(XSChart *)chart titleForXLabelAtIndex:(NSInteger)index
+{
+    return [NSString stringWithFormat:@"%ld",(long)index];
+}
+-(NSString *)titleForChart:(XSChart *)chart
+{
+    return @"正常坐姿占比曲线图";
+}
+-(NSString *)titleForXAtChart:(XSChart *)chart
+{
+    return nil;
+}
+-(NSString *)titleForYAtChart:(XSChart *)chart
+{
+    return nil;
+}
+-(void)chart:(XSChart *)view didClickPointAtIndex:(NSInteger)index
+{
+    NSLog(@"click at index:%ld",(long)index);
+}
+
+
 #pragma mark UITableViewDelegate and UITableViewDataSource
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 10;
@@ -56,7 +96,7 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 210;
+    return 200;
 }
 
 -(UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
@@ -100,9 +140,12 @@
             break;
         case 1:{
             
-            MessageCell *cell = [tableView dequeueReusableCellWithIdentifier:@"messageCell"];
+            ChartCell *cell = [tableView dequeueReusableCellWithIdentifier:@"chartCell"];
             
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            
+            cell.chart.dataSource = self;
+            cell.chart.delegate = self;
             
             return cell;
             

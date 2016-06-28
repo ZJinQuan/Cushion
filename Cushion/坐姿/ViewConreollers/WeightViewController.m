@@ -8,12 +8,16 @@
 
 #import "WeightViewController.h"
 #import "CircleView.h"
+#import "ChartCell.h"
+#import "WeightCell.h"
 
-@interface WeightViewController ()
-@property (weak, nonatomic) IBOutlet UIView *topView;
+@interface WeightViewController ()<UITableViewDelegate, UITableViewDataSource,XSChartDataSource,XSChartDelegate>
 
 @property (nonatomic, strong) CircleView *circle;
 
+@property (weak, nonatomic) IBOutlet UITableView *weightTableView;
+
+@property(nonatomic,strong)NSArray *data;
 @end
 
 @implementation WeightViewController
@@ -23,37 +27,129 @@
     // Do any additional setup after loading the view from its nib.
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"removeGestures" object:nil];
+
+    _data=@[@1,@6,@3,@4,@9,@6,@12];
     
-    CircleView *circle = [[CircleView alloc] initWithFrame:_topView.bounds];
-    circle.centerView.backgroundColor = [UIColor whiteColor];
-    circle.dataView.backgroundColor = RGBA(0, 233, 253, 1);
-    circle.defaultView.backgroundColor = RGBA(232, 234, 234, 1);
-    circle.percentage = 0.2;
-    circle.arcWidth = 20;
-//    circle.startAngle = 0.2;
-    [self.topView addSubview:circle];
-    self.circle = circle;
+    [self.weightTableView registerNib:[UINib nibWithNibName:@"WeightCell" bundle:nil] forCellReuseIdentifier:@"weightCell"];
+    [self.weightTableView registerNib:[UINib nibWithNibName:@"ChartCell" bundle:nil] forCellReuseIdentifier:@"chartCell"];
 }
 
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+#pragma mark XSChartDataSource and XSChartDelegate
+
+-(NSInteger)numberForChart:(XSChart *)chart
+{
+    return _data.count;
+}
+-(NSInteger)chart:(XSChart *)chart valueAtIndex:(NSInteger)index
+{
+    return [_data[index] floatValue];
+}
+-(BOOL)showDataAtPointForChart:(XSChart *)chart
+{
+    return YES;
+}
+-(NSString *)chart:(XSChart *)chart titleForXLabelAtIndex:(NSInteger)index
+{
+    return [NSString stringWithFormat:@"%ld",(long)index];
+}
+-(NSString *)titleForChart:(XSChart *)chart
+{
+    return @"正常坐姿占比曲线图";
+}
+-(NSString *)titleForXAtChart:(XSChart *)chart
+{
+    return nil;
+}
+-(NSString *)titleForYAtChart:(XSChart *)chart
+{
+    return nil;
+}
+-(void)chart:(XSChart *)view didClickPointAtIndex:(NSInteger)index
+{
+    NSLog(@"click at index:%ld",(long)index);
+}
+
+
+#pragma mark UITableViewDelegate and UITableViewDataSource
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     
-    self.circle.percentage = 0.4;
+    if (section == 0) {
+        return 30;
+    }
     
+    return 0.1;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    
+    return 20;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    
+    if (section == 0) {
+        
+        UILabel *lab = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 30)];
+        
+        lab.textAlignment = NSTextAlignmentCenter;
+        
+        lab.text = @"2016年6月1日";
+        
+        lab.textColor = RGBA(1, 195, 169, 1);
+        
+        return lab;
+    }
+    return nil;
 }
-*/
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (indexPath.section == 0) {
+        return 230;
+    }
+    return 200;
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 2;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    switch (indexPath.section) {
+        case 0:{
+            
+            WeightCell *cell = [tableView dequeueReusableCellWithIdentifier:@"weightCell"];
+            
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            
+            return cell;
+
+        }
+            break;
+        case 1:{
+            
+            ChartCell *cell = [tableView dequeueReusableCellWithIdentifier:@"chartCell"];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            
+            cell.chart.dataSource = self;
+            cell.chart.delegate = self;
+            
+            return cell;
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
+    return nil;
+}
+
+
 
 @end

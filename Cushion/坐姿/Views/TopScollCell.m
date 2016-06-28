@@ -1,24 +1,24 @@
 //
-//  PostureCell.m
+//  TopScollCell.m
 //  Cushion
 //
-//  Created by QUAN on 16/6/23.
+//  Created by QUAN on 16/6/28.
 //  Copyright © 2016年 QUAN. All rights reserved.
 //
 
-#import "PostureCell.h"
+#import "TopScollCell.h"
 
-@interface PostureCell ()
-
-
+@interface TopScollCell ()
 
 @end
 
-@implementation PostureCell
+@implementation TopScollCell
+
+
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
+    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
