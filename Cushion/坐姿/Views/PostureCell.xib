@@ -15,6 +15,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="300" height="99.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eqZ-Bo-kYb">
+                        <rect key="frame" x="10" y="0.5" width="280" height="99.5"/>
+                        <color key="backgroundColor" red="0.39607843139999999" green="0.86274509799999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn1.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Ci-C4-RtL">
                         <rect key="frame" x="16" y="9" width="80" height="80"/>
                         <constraints>
@@ -35,13 +39,17 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="2Ci-C4-RtL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="4av-Rh-HSY"/>
+                    <constraint firstAttribute="bottom" secondItem="eqZ-Bo-kYb" secondAttribute="bottom" id="NLw-LB-xYr"/>
                     <constraint firstAttribute="trailingMargin" secondItem="zhV-6o-WQ2" secondAttribute="trailing" constant="35" id="XrO-eJ-cOh"/>
+                    <constraint firstItem="eqZ-Bo-kYb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="hi6-3q-V2A"/>
+                    <constraint firstAttribute="trailing" secondItem="eqZ-Bo-kYb" secondAttribute="trailing" constant="10" id="igC-cA-RlY"/>
                     <constraint firstItem="2Ci-C4-RtL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mHx-wd-EqY"/>
                     <constraint firstItem="zhV-6o-WQ2" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="vig-Zv-UeC"/>
+                    <constraint firstItem="eqZ-Bo-kYb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wca-7h-cbo"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.39607843139999999" green="0.86274509799999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
+                <outlet property="backView" destination="eqZ-Bo-kYb" id="ZH7-ba-y7C"/>
                 <outlet property="iconImage" destination="2Ci-C4-RtL" id="waT-Gv-fTS"/>
                 <outlet property="titleLab" destination="zhV-6o-WQ2" id="8BK-81-sKc"/>
             </connections>

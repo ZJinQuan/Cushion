@@ -14,4 +14,5 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLab;
 
+@property (weak, nonatomic) IBOutlet UIView *backView;
 @end

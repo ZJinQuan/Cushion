@@ -7,11 +7,11 @@
 //
 
 #import "PostureViewController.h"
-#import "ScrollImage.h"
 #import "PostureCell.h"
 #import "CorrectViewController.h"
 #import "SedentaryViewController.h"
 #import "WeightViewController.h"
+#import "TopScollCell.h"
 
 #define TIMER_DURATION 5
 #define AQI_FULL 100
@@ -20,33 +20,16 @@
 
 @property (weak, nonatomic) IBOutlet UIView *topImageView;
 
-@property (nonatomic, strong) ScrollImage *scrollImage;
+
 @property (weak, nonatomic) IBOutlet UITableView *postureTable;
 
 @end
 
 @implementation PostureViewController
 
--(ScrollImage *)scrollImage{
-    
-    if (_scrollImage == nil) {
-        
-        NSArray *imageArr = @[@"home_bg", @"bg_drive_warn", @"bg_nav"];
-        _scrollImage = [[ScrollImage alloc] initWithCurrentController:self imageNames:imageArr viewFrame:self.topImageView.bounds placeholderImage:[UIImage imageNamed:@""]];
-        _scrollImage.pageControl.currentPageIndicatorTintColor = RGBA(1, 195, 169, 1);
-        _scrollImage.delegate = self;
-        _scrollImage.timeInterval = 2.0;
-        
-    }
-    return _scrollImage;
-}
-
 -(void)viewDidAppear:(BOOL)animated{
     
     [super viewDidAppear:animated];
-    
-    //图片轮播器
-    [self.topImageView addSubview:self.scrollImage.view];
     
     //添加手势通知
     [[NSNotificationCenter defaultCenter] postNotificationName:@"addGestures" object:nil];
@@ -56,6 +39,7 @@
     [super viewDidLoad];
 
     [self.postureTable registerNib:[UINib nibWithNibName:@"PostureCell" bundle:nil] forCellReuseIdentifier:@"postureCell"];
+    [self.postureTable registerNib:[UINib nibWithNibName:@"TopScollCell" bundle:nil] forCellReuseIdentifier:@"topScollCell"];
     
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_btn_menu"] style:UIBarButtonItemStylePlain target:self action:@selector(clickLeft)];
     
@@ -68,6 +52,11 @@
 
 #pragma mark UITableViewDelegate and UITableViewDataSource
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    
+    if (section == 1) {
+        return 40;
+    }
+    
     return 0.1;
 }
 
@@ -75,13 +64,44 @@
     return 10;
 }
 
+-(UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    
+    if (section == 1) {
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 30)];
+        
+        UILabel *lab = [[UILabel alloc] initWithFrame:CGRectMake(8, 8, 80, 20)];
+        
+        lab.text = @"坐姿数据";
+        
+        lab.textColor = RGBA(1, 195, 169, 1);
+        lab.textAlignment = NSTextAlignmentCenter;
+        lab.font = [UIFont systemFontOfSize:14];
+        
+        UILabel *lab2 = [[UILabel alloc] initWithFrame:CGRectMake(0, 28, kScreenWidth, 2)];
+        
+        lab2.backgroundColor = RGBA(1, 195, 169, 1);
+        
+        [view addSubview:lab];
+        [view addSubview:lab2];
+        
+        return view;
+    }
+    
+    return nil;
+}
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (indexPath.section == 0) {
+        
+        return 155;
+    }
     
     return 100;
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 3;
+    return 4;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -91,9 +111,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *ID = @"postureCell";
+    if (indexPath.section == 0) {
+        
+        TopScollCell *cell = [tableView dequeueReusableCellWithIdentifier:@"topScollCell"];
+        
+        cell.delegate= self;
+        cell.PostureVC = self;
+        
+        return cell;
+    }
     
-    PostureCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    PostureCell *cell = [tableView dequeueReusableCellWithIdentifier:@"postureCell"];
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
@@ -101,16 +129,16 @@
     NSArray *titleArr = @[@"坐姿纠正",@"久坐计时",@"体重监测"];
     NSArray *colorArr = @[RGBA(101, 219, 204, 1),RGBA(255, 169, 34, 1),RGBA(10, 218, 164, 1)];
     
-    cell.iconImage.image = [UIImage imageNamed:iconArr[indexPath.section]];
-    cell.titleLab.text = titleArr[indexPath.section];
-    cell.backgroundColor = colorArr[indexPath.section];
+    cell.iconImage.image = [UIImage imageNamed:iconArr[indexPath.section - 1]];
+    cell.titleLab.text = titleArr[indexPath.section - 1];
+    cell.backView.backgroundColor = colorArr[indexPath.section - 1];
     
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     switch (indexPath.section) {
-        case 0:{
+        case 1:{
             
             CorrectViewController *correctVC = [[CorrectViewController alloc] init];
             
@@ -120,7 +148,7 @@
             [self.navigationController pushViewController:correctVC animated:YES];
         }
             break;
-        case 1:{
+        case 2:{
             
             SedentaryViewController *sendenteryVC = [[SedentaryViewController alloc] init];
             
@@ -130,7 +158,7 @@
             [self.navigationController pushViewController:sendenteryVC animated:YES];
         }
             break;
-        case 2:{
+        case 3:{
             
             WeightViewController *weightVC = [[WeightViewController alloc] init];
             

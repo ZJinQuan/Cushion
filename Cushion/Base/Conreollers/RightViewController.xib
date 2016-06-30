@@ -33,7 +33,7 @@
                         </navigationItem>
                     </items>
                 </navigationBar>
-                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="NJc-iq-A4f">
+                <searchBar contentMode="redraw" placeholder="搜索" translatesAutoresizingMaskIntoConstraints="NO" id="NJc-iq-A4f">
                     <rect key="frame" x="0.0" y="66" width="250" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="IoG-TQ-rnI"/>

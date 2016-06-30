@@ -89,6 +89,7 @@
         [self.view addSubview:self.pageControl];
         [self getLocalImages];
         [self scrollViewLoadImages];
+
     }
     return self;
 }
@@ -98,12 +99,17 @@
 - (UIPageControl *)pageControl
 {
     if (_pageControl == nil) {
+        
         _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, _frame.size.height-20, _frame.size.width, 20)];
-        
-        
         
         _pageControl.numberOfPages = _imageCount;
         _pageControl.currentPage = 0;
+        
+        CGSize pointSize = [_pageControl sizeForNumberOfPages:3];
+        
+        CGFloat page_x = -(_pageControl.bounds.size.width - pointSize.width) / 2 ;
+        
+        [_pageControl setBounds:CGRectMake(page_x + 40, _pageControl.bounds.origin.y, _pageControl.bounds.size.width, _pageControl.bounds.size.height)];
         
         _pageControl.userInteractionEnabled = NO;
     }

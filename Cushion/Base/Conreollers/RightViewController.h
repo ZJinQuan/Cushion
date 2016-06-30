@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface RightViewController : UIViewController
+@interface RightViewController : BaseViewController
 @property (weak, nonatomic) IBOutlet UITableView *rightTableVIew;
 
 @end

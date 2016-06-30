@@ -11,5 +11,6 @@
 @interface VerificationViewController : BaseViewController
 
 @property (nonatomic, copy) NSString *phomeN;
+@property (nonatomic, copy) NSString *passWrod;
 
 @end

@@ -15,7 +15,11 @@
 #define kScreenWidth        [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight       [UIScreen mainScreen].bounds.size.height
 
+#define BaseUrl @"http://115.28.77.44/UMat/"
+
 #import "UIView+Extension.h"
+
+#import "AFNetworking.h"
 
 #endif
 #endif /* CushionPch_pch */

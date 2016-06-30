@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "ScrollImage.h"
+#import "PostureViewController.h"
 
 @interface TopScollCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIView *scollView;
 
 @property (nonatomic, strong) ScrollImage *scrollImage;
+
+@property (nonatomic, strong) PostureViewController * PostureVC;
+
+@property (nonatomic, weak) id<ScrollImageDelegate> delegate;
 
 @end
