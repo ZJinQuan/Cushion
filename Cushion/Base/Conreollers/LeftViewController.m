@@ -11,6 +11,7 @@
 @interface LeftViewController ()
 @property (weak, nonatomic) IBOutlet UIView *view1;
 
+@property (weak, nonatomic) IBOutlet UIButton *btn;
 @end
 
 @implementation LeftViewController
@@ -23,7 +24,14 @@
     self.view1.layer.borderColor = [UIColor whiteColor].CGColor;
 //    self.view1.layer.masksToBounds = YES;
     
+    [self.btn addTarget:self action:@selector(clickSettingBtn:) forControlEvents:UIControlEventTouchUpInside];
+    
 }
 
+- (IBAction)clickSettingBtn:(UIButton *)sender {
+    
+    
+    
+}
 
 @end

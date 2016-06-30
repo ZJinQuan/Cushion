@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LeftViewController">
             <connections>
+                <outlet property="btn" destination="fzn-vq-fZH" id="cLf-IL-hrz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="si4-SA-ewn"/>
                 <outlet property="view1" destination="p4A-aB-WcW" id="ce5-iW-TBH"/>
             </connections>
@@ -110,6 +111,9 @@
                             <state key="normal" title="个人中心" image="icon_myself.png">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="clickSettingBtn:" destination="-1" eventType="touchUpInside" id="i2Y-gw-7kR"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mhd-vL-dgz">
                             <rect key="frame" x="40" y="213" width="170" height="29"/>

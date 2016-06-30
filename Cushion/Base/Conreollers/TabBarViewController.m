@@ -13,6 +13,7 @@
 #import "LeftViewController.h"
 #import "RightViewController.h"
 #import "RightCell.h"
+#import "LeftView.h"
 
 CGFloat const gestureMinimumTranslation = 20.0 ;
 
@@ -64,13 +65,19 @@ typedef enum : NSInteger {
     
     if (_leftBottomView == nil) {
         
-        _leftBottomView = [[UIView alloc] initWithFrame:CGRectMake(-kScreenWidth, 0, kScreenWidth, kScreenHeight)];
+        _leftBottomView = [[LeftView alloc] initWithFrame:CGRectMake(-kScreenWidth, 0, kScreenWidth, kScreenHeight)];
         _leftBottomView.backgroundColor = [UIColor yellowColor];
         
-        LeftViewController *left = [[LeftViewController alloc] init];
-        left.view.frame = CGRectMake(85, 0, _leftBottomView.width - 85, _leftBottomView.height);
+//        LeftViewController *left = [[LeftViewController alloc] init];
+//        left.view.frame = CGRectMake(85, 0, _leftBottomView.width - 85, _leftBottomView.height);
+//        
+//        [_leftBottomView addSubview:left.view];
         
-        [_leftBottomView addSubview:left.view];
+        LeftView *leftV = [[LeftView alloc] initWithFrame:CGRectMake(85, 0, _leftBottomView.width - 85, _leftBottomView.height)];
+        
+        
+        [_leftBottomView addSubview:leftV];
+        
     }
     return _leftBottomView;
 }
@@ -93,6 +100,16 @@ typedef enum : NSInteger {
         
     }
     return _rightBottomView;
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+}
+
+-(void) viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
+    
 }
 
 - (void)viewDidLoad {
@@ -166,6 +183,11 @@ typedef enum : NSInteger {
     
     return cell;
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
+
 
 #pragma mark 移除和添加手势
 -(void) addGestures{

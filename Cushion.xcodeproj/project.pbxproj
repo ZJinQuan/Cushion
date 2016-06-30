@@ -11,6 +11,8 @@
 		14108EF11D1A8C82008A91C6 /* DALabeledCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14108EEF1D1A8C82008A91C6 /* DALabeledCircularProgressView.m */; };
 		14108EF61D1A9442008A91C6 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14108EF51D1A9442008A91C6 /* CircleView.m */; };
 		143C518E1D1AA50F0091E837 /* ScrollImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 143C518D1D1AA50F0091E837 /* ScrollImage.m */; };
+		143F2ADE1D24BD5300A684BD /* LeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 143F2ADD1D24BD5300A684BD /* LeftView.m */; };
+		143F2AE01D24BD6700A684BD /* LeftView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 143F2ADF1D24BD6700A684BD /* LeftView.xib */; };
 		1441806E1D20B8CE0067CF52 /* SettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1441806C1D20B8CE0067CF52 /* SettingCell.m */; };
 		1441806F1D20B8CE0067CF52 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1441806D1D20B8CE0067CF52 /* SettingCell.xib */; };
 		144180731D20BF150067CF52 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144180711D20BF150067CF52 /* MyViewController.m */; };
@@ -189,6 +191,9 @@
 		14108EF51D1A9442008A91C6 /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
 		143C518C1D1AA50F0091E837 /* ScrollImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollImage.h; sourceTree = "<group>"; };
 		143C518D1D1AA50F0091E837 /* ScrollImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollImage.m; sourceTree = "<group>"; };
+		143F2ADC1D24BD5300A684BD /* LeftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftView.h; sourceTree = "<group>"; };
+		143F2ADD1D24BD5300A684BD /* LeftView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftView.m; sourceTree = "<group>"; };
+		143F2ADF1D24BD6700A684BD /* LeftView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftView.xib; sourceTree = "<group>"; };
 		1441806B1D20B8CE0067CF52 /* SettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingCell.h; sourceTree = "<group>"; };
 		1441806C1D20B8CE0067CF52 /* SettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingCell.m; sourceTree = "<group>"; };
 		1441806D1D20B8CE0067CF52 /* SettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
@@ -966,6 +971,9 @@
 				14F47D221D1BEA8C00B81C99 /* RightCell.h */,
 				14F47D231D1BEA8C00B81C99 /* RightCell.m */,
 				14F47D241D1BEA8C00B81C99 /* RightCell.xib */,
+				143F2ADC1D24BD5300A684BD /* LeftView.h */,
+				143F2ADD1D24BD5300A684BD /* LeftView.m */,
+				143F2ADF1D24BD6700A684BD /* LeftView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1169,6 +1177,7 @@
 				14A121511D2273770018BA49 /* PostureViewController.xib in Resources */,
 				14C8FA3A1D1A9C3B002A4ABB /* bg_photo1@2x.png in Resources */,
 				1441807E1D20CE230067CF52 /* MessageCell.xib in Resources */,
+				143F2AE01D24BD6700A684BD /* LeftView.xib in Resources */,
 				14C8FA451D1A9C3B002A4ABB /* bg_drive_warn@2x.png in Resources */,
 				144180791D20C80E0067CF52 /* ThatDayCell.xib in Resources */,
 				144180831D20DA310067CF52 /* WhoShockViewController.xib in Resources */,
@@ -1238,6 +1247,7 @@
 				143C518E1D1AA50F0091E837 /* ScrollImage.m in Sources */,
 				14DD0CC71D1923370079D68D /* FriendsViewController.m in Sources */,
 				144180781D20C80E0067CF52 /* ThatDayCell.m in Sources */,
+				143F2ADE1D24BD5300A684BD /* LeftView.m in Sources */,
 				14D227FB1D1D13D40020B9B2 /* RemindCell.m in Sources */,
 				14A1212D1D2228180018BA49 /* ChartCell.m in Sources */,
 				14DD0CD11D1924280079D68D /* LoginViewController.m in Sources */,
