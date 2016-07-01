@@ -9,6 +9,8 @@
 #import "LeftView.h"
 
 @interface LeftView ()
+@property (weak, nonatomic) IBOutlet UIImageView *iconImage;
+@property (weak, nonatomic) IBOutlet UIView *mesgView;
 
 @end
 
@@ -23,6 +25,7 @@
         
         self.frame = frame;
         
+        self.mesgView.layer.borderColor = [UIColor whiteColor].CGColor;
         
     }
     return self;

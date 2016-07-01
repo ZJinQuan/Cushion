@@ -12,6 +12,7 @@
 #import "FriendsViewController.h"
 #import "LeftViewController.h"
 #import "RightViewController.h"
+#import "ConnectViewController.h"
 #import "RightCell.h"
 #import "LeftView.h"
 
@@ -145,6 +146,19 @@ typedef enum : NSInteger {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addGestures) name:@"addGestures" object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(removeGestures) name:@"removeGestures" object:nil];
+    
+    
+    
+    
+    
+    
+}
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    ConnectViewController *connectVC = [[ConnectViewController alloc] init];
+    
+    [self presentViewController:connectVC animated:YES completion:nil];
     
 }
 

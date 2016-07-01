@@ -178,6 +178,10 @@
                 <constraint firstItem="4lT-wt-9vZ" firstAttribute="leading" secondItem="3IZ-2t-bee" secondAttribute="leading" id="vct-y4-glM"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="iconImage" destination="rPA-nq-cGM" id="c6l-Dt-qOX"/>
+                <outlet property="mesgView" destination="dye-aN-a2s" id="kar-dh-kh9"/>
+            </connections>
             <point key="canvasLocation" x="532" y="447"/>
         </view>
     </objects>

@@ -15,11 +15,51 @@
 #define kScreenWidth        [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight       [UIScreen mainScreen].bounds.size.height
 
+
+#define kBLEManager [BLEManager sharedBLEManager]
+#define kBLESearchDevices @"已搜索到了BLE设备列表"
+#define kBLEHasBroken @"蓝牙已断开通知名"
+#define KBLEstopScan @"搜索蓝牙停止"
+#define kBLEConnectionSucceed @"连接成功数据返回可操作通知名"
+#define kDrawerHidden @"连接蓝牙成功跳转主页隐藏左视图"
+#define kMonitoringNotif @"蓝牙连接成功进入监控状态"
+
+#define kCBCharacteristicUUID @"49535343-8841-43F4-A8D4-ECBE34729BB3"
+
+
+#pragma mark =================== 设备状态 (详情见用户发来的<<无线数据传输协议.pdf>>)
+
+// 设备刚刚开启 默认状态，表示设备与app通讯连接还没有建立
+#define KDeviceState_Disconnected @"Disconnected"
+
+// Unassociated 无联系的状态 设备会一直在 Unassociated 只要其不需要和 APP 进行应用层 的联接
+#define KDeviceState_Unassociated @"Unassociated"
+
+// 设备打算和APP进行联接通讯,设备会自动进入Associating 并且会发送一个联接(Association)请求包给 APP
+#define KDeviceState_Associating @"Associating" //Associating
+
+// 当APP 认可 设备的配置,APP 会发送一个同意建立联接通 讯的回应包使得 设备 可以进入 Operating 状态
+#define KDeviceState_Operating @"Operating" // Operating 操作状态
+
+//当 设备 打算断开联接通讯的时候,BP60 会进入这个状态并 且发送一个请求断开联接通讯的包给 APP。设备待在这个状态等待回应包一旦超时 ,会立即回到 Unassociated。
+#define KDeviceState_Disassociating @"Disassociating" //Disassociating
+
+
+#define KBT_GetNewDataFromDevice  @"GetNewDataFromDevice"  //设备发来最新一次测试结果
+
+
+#define KBT_DeviceAutoDisconnect @"设备自己断开"
+
+#define kAppDelegate [[UIApplication sharedApplication]delegate]
+
+
 #define BaseUrl @"http://115.28.77.44/UMat/"
 
 #import "UIView+Extension.h"
 
 #import "AFNetworking.h"
+
+#import "BLEManager.h"
 
 #endif
 #endif /* CushionPch_pch */

@@ -42,8 +42,6 @@
     
     [[HttpTool sharedManager] GET:url params:params result:^(id responseObj, NSError *error) {
         
-        NSLog(@"%@",responseObj);
-        
         NSLog(@"%@",[responseObj objectForKey:@"message"]);
         
         if ([[responseObj objectForKey:@"result"] isEqual: @"0"]) {

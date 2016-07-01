@@ -109,7 +109,7 @@
         
         CGFloat page_x = -(_pageControl.bounds.size.width - pointSize.width) / 2 ;
         
-        [_pageControl setBounds:CGRectMake(page_x + 40, _pageControl.bounds.origin.y, _pageControl.bounds.size.width, _pageControl.bounds.size.height)];
+        [_pageControl setBounds:CGRectMake(page_x + 10, _pageControl.bounds.origin.y, _pageControl.bounds.size.width, _pageControl.bounds.size.height)];
         
         _pageControl.userInteractionEnabled = NO;
     }
