@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FinishViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_search_s.png" translatesAutoresizingMaskIntoConstraints="NO" id="kNN-Ws-07t">
+                    <rect key="frame" x="56" y="100" width="209" height="209"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="209" id="8C9-Kr-aQk"/>
+                        <constraint firstAttribute="width" constant="209" id="msf-ta-8fm"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.039215686274509803" green="0.84705882352941175" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="kNN-Ws-07t" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9Wk-Y2-Rih"/>
+                <constraint firstItem="kNN-Ws-07t" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="KOs-ZV-bdi"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_search_s.png" width="279" height="279"/>
+    </resources>
+</document>

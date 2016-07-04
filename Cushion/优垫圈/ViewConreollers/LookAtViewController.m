@@ -10,6 +10,8 @@
 #import "ThatDayCell.h"
 #import "ChartCell.h"
 
+#define channelOnCharacteristicView @"CharacteristicView"
+
 @interface LookAtViewController ()<UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate,XSChartDataSource,XSChartDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *messageTableView;
 
@@ -17,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLab;
 
 @property(nonatomic,strong)NSArray *data;
+
 @end
 
 @implementation LookAtViewController
@@ -39,18 +42,40 @@
     [self.messageTableView registerNib:[UINib nibWithNibName:@"ThatDayCell" bundle:nil] forCellReuseIdentifier:@"thatDayCell"];
     [self.messageTableView registerNib:[UINib nibWithNibName:@"ChartCell" bundle:nil] forCellReuseIdentifier:@"chartCell"];
     
+    sect = [NSMutableArray arrayWithObjects:@"read value",@"write value",@"desc",@"properties", nil];
+    readValueArray = [[NSMutableArray alloc]init];
+    descriptors = [[NSMutableArray alloc]init];
+
 }
 
 -(void) clickShock{
+    
+    
+    
+    NSLog(@"%@ ------- %@",self.currPeripheral, self.characteristic);
+    
+    
+    AppDelegate *app = kAppDelegate;
+    
+    
+    if (app.peripheral != nil) {
+        
+        Byte bytes[2];
+        
+        
+        bytes[0] = 0xFC;
+        bytes[1] = 0xCF;
+        
+        NSData *data = [NSData dataWithBytes:&bytes length:sizeof(bytes)];
+        
+        [app.peripheral writeValue:data forCharacteristic:app.characteristics type:CBCharacteristicWriteWithoutResponse];
+    }
     
 }
 
 -(void) clickRightitem{
     
-    
-    
 }
-
 
 #pragma mark XSChartDataSource and XSChartDelegate
 

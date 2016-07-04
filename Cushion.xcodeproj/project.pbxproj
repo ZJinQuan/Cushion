@@ -13,7 +13,6 @@
 		143C518E1D1AA50F0091E837 /* ScrollImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 143C518D1D1AA50F0091E837 /* ScrollImage.m */; };
 		143F2ADE1D24BD5300A684BD /* LeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 143F2ADD1D24BD5300A684BD /* LeftView.m */; };
 		143F2AE01D24BD6700A684BD /* LeftView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 143F2ADF1D24BD6700A684BD /* LeftView.xib */; };
-		143F2AE31D25045300A684BD /* BLEManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 143F2AE21D25045300A684BD /* BLEManager.m */; };
 		143F2AE71D2517BF00A684BD /* ConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143F2AE51D2517BF00A684BD /* ConnectViewController.m */; };
 		143F2AE81D2517BF00A684BD /* ConnectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 143F2AE61D2517BF00A684BD /* ConnectViewController.xib */; };
 		1441806E1D20B8CE0067CF52 /* SettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1441806C1D20B8CE0067CF52 /* SettingCell.m */; };
@@ -146,6 +145,23 @@
 		14E434D61D236107005E8B0A /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E434D51D236107005E8B0A /* HttpTool.m */; };
 		14E434DC1D23664D005E8B0A /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E434D91D23664D005E8B0A /* MBProgressHUD+Add.m */; };
 		14E434DD1D23664D005E8B0A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E434DB1D23664D005E8B0A /* MBProgressHUD.m */; };
+		14E57B351D2625C900956608 /* BabyBluetooth.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E57B1E1D2625C900956608 /* BabyBluetooth.m */; };
+		14E57B361D2625C900956608 /* BabyCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E57B201D2625C900956608 /* BabyCallback.m */; };
+		14E57B371D2625C900956608 /* BabyCentralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E57B221D2625C900956608 /* BabyCentralManager.m */; };
+		14E57B381D2625C900956608 /* BabyDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E57B241D2625C900956608 /* BabyDefine.m */; };
+		14E57B391D2625C900956608 /* BabyOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E57B261D2625C900956608 /* BabyOptions.m */; };
+		14E57B3A1D2625C900956608 /* BabyPeripheralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E57B281D2625C900956608 /* BabyPeripheralManager.m */; };
+		14E57B3B1D2625C900956608 /* BabyRhythm.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E57B2A1D2625C900956608 /* BabyRhythm.m */; };
+		14E57B3C1D2625C900956608 /* BabySpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E57B2C1D2625C900956608 /* BabySpeaker.m */; };
+		14E57B3D1D2625C900956608 /* BabyToy.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E57B2E1D2625C900956608 /* BabyToy.m */; };
+		14E57B3E1D2625C900956608 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E57B311D2625C900956608 /* SVIndefiniteAnimatedView.m */; };
+		14E57B3F1D2625C900956608 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 14E57B321D2625C900956608 /* SVProgressHUD.bundle */; };
+		14E57B401D2625C900956608 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E57B341D2625C900956608 /* SVProgressHUD.m */; };
+		14E57B471D26271B00956608 /* BlueConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E57B421D26271B00956608 /* BlueConnectViewController.m */; };
+		14E57B481D26271B00956608 /* BlueConnectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E57B431D26271B00956608 /* BlueConnectViewController.xib */; };
+		14E57B491D26271B00956608 /* FinishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E57B451D26271B00956608 /* FinishViewController.m */; };
+		14E57B4A1D26271B00956608 /* FinishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E57B461D26271B00956608 /* FinishViewController.xib */; };
+		14E57B4D1D2627C800956608 /* PeripheralInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E57B4C1D2627C800956608 /* PeripheralInfo.m */; };
 		14F47CD71D1B803500B81C99 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F47CD51D1B803500B81C99 /* RegisterViewController.m */; };
 		14F47CD81D1B803500B81C99 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F47CD61D1B803500B81C99 /* RegisterViewController.xib */; };
 		14F47CDC1D1B923200B81C99 /* VerificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F47CDA1D1B923200B81C99 /* VerificationViewController.m */; };
@@ -197,8 +213,6 @@
 		143F2ADC1D24BD5300A684BD /* LeftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftView.h; sourceTree = "<group>"; };
 		143F2ADD1D24BD5300A684BD /* LeftView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftView.m; sourceTree = "<group>"; };
 		143F2ADF1D24BD6700A684BD /* LeftView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftView.xib; sourceTree = "<group>"; };
-		143F2AE11D25045300A684BD /* BLEManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEManager.h; sourceTree = "<group>"; };
-		143F2AE21D25045300A684BD /* BLEManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEManager.m; sourceTree = "<group>"; };
 		143F2AE41D2517BF00A684BD /* ConnectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectViewController.h; sourceTree = "<group>"; };
 		143F2AE51D2517BF00A684BD /* ConnectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectViewController.m; sourceTree = "<group>"; };
 		143F2AE61D2517BF00A684BD /* ConnectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectViewController.xib; sourceTree = "<group>"; };
@@ -377,6 +391,37 @@
 		14E434D91D23664D005E8B0A /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
 		14E434DA1D23664D005E8B0A /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		14E434DB1D23664D005E8B0A /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		14E57B1D1D2625C900956608 /* BabyBluetooth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyBluetooth.h; sourceTree = "<group>"; };
+		14E57B1E1D2625C900956608 /* BabyBluetooth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyBluetooth.m; sourceTree = "<group>"; };
+		14E57B1F1D2625C900956608 /* BabyCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyCallback.h; sourceTree = "<group>"; };
+		14E57B201D2625C900956608 /* BabyCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyCallback.m; sourceTree = "<group>"; };
+		14E57B211D2625C900956608 /* BabyCentralManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyCentralManager.h; sourceTree = "<group>"; };
+		14E57B221D2625C900956608 /* BabyCentralManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyCentralManager.m; sourceTree = "<group>"; };
+		14E57B231D2625C900956608 /* BabyDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyDefine.h; sourceTree = "<group>"; };
+		14E57B241D2625C900956608 /* BabyDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyDefine.m; sourceTree = "<group>"; };
+		14E57B251D2625C900956608 /* BabyOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyOptions.h; sourceTree = "<group>"; };
+		14E57B261D2625C900956608 /* BabyOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyOptions.m; sourceTree = "<group>"; };
+		14E57B271D2625C900956608 /* BabyPeripheralManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyPeripheralManager.h; sourceTree = "<group>"; };
+		14E57B281D2625C900956608 /* BabyPeripheralManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyPeripheralManager.m; sourceTree = "<group>"; };
+		14E57B291D2625C900956608 /* BabyRhythm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyRhythm.h; sourceTree = "<group>"; };
+		14E57B2A1D2625C900956608 /* BabyRhythm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyRhythm.m; sourceTree = "<group>"; };
+		14E57B2B1D2625C900956608 /* BabySpeaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabySpeaker.h; sourceTree = "<group>"; };
+		14E57B2C1D2625C900956608 /* BabySpeaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabySpeaker.m; sourceTree = "<group>"; };
+		14E57B2D1D2625C900956608 /* BabyToy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyToy.h; sourceTree = "<group>"; };
+		14E57B2E1D2625C900956608 /* BabyToy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyToy.m; sourceTree = "<group>"; };
+		14E57B301D2625C900956608 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		14E57B311D2625C900956608 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		14E57B321D2625C900956608 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		14E57B331D2625C900956608 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		14E57B341D2625C900956608 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		14E57B411D26271B00956608 /* BlueConnectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueConnectViewController.h; sourceTree = "<group>"; };
+		14E57B421D26271B00956608 /* BlueConnectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueConnectViewController.m; sourceTree = "<group>"; };
+		14E57B431D26271B00956608 /* BlueConnectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlueConnectViewController.xib; sourceTree = "<group>"; };
+		14E57B441D26271B00956608 /* FinishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinishViewController.h; sourceTree = "<group>"; };
+		14E57B451D26271B00956608 /* FinishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinishViewController.m; sourceTree = "<group>"; };
+		14E57B461D26271B00956608 /* FinishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FinishViewController.xib; sourceTree = "<group>"; };
+		14E57B4B1D2627C800956608 /* PeripheralInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeripheralInfo.h; sourceTree = "<group>"; };
+		14E57B4C1D2627C800956608 /* PeripheralInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeripheralInfo.m; sourceTree = "<group>"; };
 		14F47CD41D1B803500B81C99 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		14F47CD51D1B803500B81C99 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		14F47CD61D1B803500B81C99 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
@@ -667,8 +712,8 @@
 		14DD0C9E1D18E0FE0079D68D /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				143F2AE11D25045300A684BD /* BLEManager.h */,
-				143F2AE21D25045300A684BD /* BLEManager.m */,
+				14E57B1C1D2625C900956608 /* objc */,
+				14E57B2F1D2625C900956608 /* SVProgressHUD */,
 				14E434D31D2360BF005E8B0A /* 工具类 */,
 				14E434D71D23664D005E8B0A /* MBProgressHUD */,
 				14E434BF1D235FB0005E8B0A /* AFNetworking */,
@@ -941,6 +986,43 @@
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
+		14E57B1C1D2625C900956608 /* objc */ = {
+			isa = PBXGroup;
+			children = (
+				14E57B1D1D2625C900956608 /* BabyBluetooth.h */,
+				14E57B1E1D2625C900956608 /* BabyBluetooth.m */,
+				14E57B1F1D2625C900956608 /* BabyCallback.h */,
+				14E57B201D2625C900956608 /* BabyCallback.m */,
+				14E57B211D2625C900956608 /* BabyCentralManager.h */,
+				14E57B221D2625C900956608 /* BabyCentralManager.m */,
+				14E57B231D2625C900956608 /* BabyDefine.h */,
+				14E57B241D2625C900956608 /* BabyDefine.m */,
+				14E57B251D2625C900956608 /* BabyOptions.h */,
+				14E57B261D2625C900956608 /* BabyOptions.m */,
+				14E57B271D2625C900956608 /* BabyPeripheralManager.h */,
+				14E57B281D2625C900956608 /* BabyPeripheralManager.m */,
+				14E57B291D2625C900956608 /* BabyRhythm.h */,
+				14E57B2A1D2625C900956608 /* BabyRhythm.m */,
+				14E57B2B1D2625C900956608 /* BabySpeaker.h */,
+				14E57B2C1D2625C900956608 /* BabySpeaker.m */,
+				14E57B2D1D2625C900956608 /* BabyToy.h */,
+				14E57B2E1D2625C900956608 /* BabyToy.m */,
+			);
+			path = objc;
+			sourceTree = "<group>";
+		};
+		14E57B2F1D2625C900956608 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				14E57B301D2625C900956608 /* SVIndefiniteAnimatedView.h */,
+				14E57B311D2625C900956608 /* SVIndefiniteAnimatedView.m */,
+				14E57B321D2625C900956608 /* SVProgressHUD.bundle */,
+				14E57B331D2625C900956608 /* SVProgressHUD.h */,
+				14E57B341D2625C900956608 /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
 		14F47D0E1D1BE8CF00B81C99 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -967,6 +1049,12 @@
 				143F2AE41D2517BF00A684BD /* ConnectViewController.h */,
 				143F2AE51D2517BF00A684BD /* ConnectViewController.m */,
 				143F2AE61D2517BF00A684BD /* ConnectViewController.xib */,
+				14E57B411D26271B00956608 /* BlueConnectViewController.h */,
+				14E57B421D26271B00956608 /* BlueConnectViewController.m */,
+				14E57B431D26271B00956608 /* BlueConnectViewController.xib */,
+				14E57B441D26271B00956608 /* FinishViewController.h */,
+				14E57B451D26271B00956608 /* FinishViewController.m */,
+				14E57B461D26271B00956608 /* FinishViewController.xib */,
 			);
 			path = Conreollers;
 			sourceTree = "<group>";
@@ -974,6 +1062,8 @@
 		14F47D1A1D1BE8CF00B81C99 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				14E57B4B1D2627C800956608 /* PeripheralInfo.h */,
+				14E57B4C1D2627C800956608 /* PeripheralInfo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1097,6 +1187,7 @@
 			files = (
 				14D228061D1D30460020B9B2 /* AwakenViewController.xib in Resources */,
 				14C8FA491D1A9C3B002A4ABB /* icon_drive_monit@2x.png in Resources */,
+				14E57B481D26271B00956608 /* BlueConnectViewController.xib in Resources */,
 				14C8FA741D1A9C3B002A4ABB /* sit@2x.png in Resources */,
 				14C8FA5D1D1A9C3B002A4ABB /* icon_wechat@2x.png in Resources */,
 				14C8FA511D1A9C3B002A4ABB /* icon_warn@2x.png in Resources */,
@@ -1114,6 +1205,7 @@
 				14C8FA721D1A9C3B002A4ABB /* drive@2x.png in Resources */,
 				143F2AE81D2517BF00A684BD /* ConnectViewController.xib in Resources */,
 				14C8FA621D1A9C3B002A4ABB /* nav_btn_friend@2x.png in Resources */,
+				14E57B3F1D2625C900956608 /* SVProgressHUD.bundle in Resources */,
 				14D227FC1D1D13D40020B9B2 /* RemindCell.xib in Resources */,
 				14D228151D1D4A520020B9B2 /* WarnedCell.xib in Resources */,
 				14D228011D1D19E60020B9B2 /* WeightViewController.xib in Resources */,
@@ -1182,6 +1274,7 @@
 				14C8FA6C1D1A9C3B002A4ABB /* home_icon_s@2x.png in Resources */,
 				14A121331D222E3B0018BA49 /* SedentaryCell.xib in Resources */,
 				144180881D20DBB40067CF52 /* ShockCell.xib in Resources */,
+				14E57B4A1D26271B00956608 /* FinishViewController.xib in Resources */,
 				14F47CF11D1BC80600B81C99 /* DriveCell.xib in Resources */,
 				14C8FA501D1A9C3B002A4ABB /* icon_time@2x.png in Resources */,
 				1441806F1D20B8CE0067CF52 /* SettingCell.xib in Resources */,
@@ -1223,6 +1316,7 @@
 				144180731D20BF150067CF52 /* MyViewController.m in Sources */,
 				14F47D1C1D1BE8CF00B81C99 /* BaseViewController.m in Sources */,
 				14E434D61D236107005E8B0A /* HttpTool.m in Sources */,
+				14E57B3C1D2625C900956608 /* BabySpeaker.m in Sources */,
 				14F47D1D1D1BE8CF00B81C99 /* LeftViewController.m in Sources */,
 				14F47CF01D1BC80600B81C99 /* DriveCell.m in Sources */,
 				14F47D251D1BEA8C00B81C99 /* RightCell.m in Sources */,
@@ -1230,22 +1324,28 @@
 				14E434DC1D23664D005E8B0A /* MBProgressHUD+Add.m in Sources */,
 				14DD0CA11D18E1240079D68D /* UIView+Extension.m in Sources */,
 				14108EF01D1A8C82008A91C6 /* DACircularProgressView.m in Sources */,
+				14E57B391D2625C900956608 /* BabyOptions.m in Sources */,
 				1441806E1D20B8CE0067CF52 /* SettingCell.m in Sources */,
 				14D228001D1D19E60020B9B2 /* WeightViewController.m in Sources */,
 				14F47CFA1D1BD34A00B81C99 /* FriendsCell.m in Sources */,
 				1441808C1D20E0BF0067CF52 /* LookAtViewController.m in Sources */,
 				14E434CD1D235FB0005E8B0A /* AFHTTPSessionManager.m in Sources */,
+				14E57B491D26271B00956608 /* FinishViewController.m in Sources */,
 				14A1214B1D226B310018BA49 /* TopScollCell.m in Sources */,
 				14A121321D222E3B0018BA49 /* SedentaryCell.m in Sources */,
-				143F2AE31D25045300A684BD /* BLEManager.m in Sources */,
+				14E57B371D2625C900956608 /* BabyCentralManager.m in Sources */,
 				14AB8A4B1D2135210000ACE0 /* XSChart.m in Sources */,
 				14E434CE1D235FB0005E8B0A /* AFNetworkReachabilityManager.m in Sources */,
 				14F47CDC1D1B923200B81C99 /* VerificationViewController.m in Sources */,
 				14D227F61D1CE2080020B9B2 /* SedentaryViewController.m in Sources */,
 				14108EF61D1A9442008A91C6 /* CircleView.m in Sources */,
 				14D227F11D1CCE3D0020B9B2 /* CorrectViewController.m in Sources */,
+				14E57B3B1D2625C900956608 /* BabyRhythm.m in Sources */,
+				14E57B381D2625C900956608 /* BabyDefine.m in Sources */,
 				14D2280F1D1D41E30020B9B2 /* CumulativeCell.m in Sources */,
 				14E434DD1D23664D005E8B0A /* MBProgressHUD.m in Sources */,
+				14E57B3D1D2625C900956608 /* BabyToy.m in Sources */,
+				14E57B3A1D2625C900956608 /* BabyPeripheralManager.m in Sources */,
 				14F47CE61D1B9C3200B81C99 /* NewPasswordViewController.m in Sources */,
 				14D228141D1D4A520020B9B2 /* WarnedCell.m in Sources */,
 				14A121551D2273E60018BA49 /* PostureCell.m in Sources */,
@@ -1254,19 +1354,24 @@
 				14DD0C691D18DF0A0079D68D /* AppDelegate.m in Sources */,
 				14E434CF1D235FB0005E8B0A /* AFSecurityPolicy.m in Sources */,
 				144180871D20DBB40067CF52 /* ShockCell.m in Sources */,
+				14E57B3E1D2625C900956608 /* SVIndefiniteAnimatedView.m in Sources */,
 				14F47CE11D1B99BD00B81C99 /* ForgetViewController.m in Sources */,
 				14F47CD71D1B803500B81C99 /* RegisterViewController.m in Sources */,
 				14A121371D22507F0018BA49 /* CorrectCell.m in Sources */,
 				14F47D1F1D1BE8CF00B81C99 /* RightViewController.m in Sources */,
 				14E434D11D235FB0005E8B0A /* AFURLResponseSerialization.m in Sources */,
 				143C518E1D1AA50F0091E837 /* ScrollImage.m in Sources */,
+				14E57B471D26271B00956608 /* BlueConnectViewController.m in Sources */,
+				14E57B4D1D2627C800956608 /* PeripheralInfo.m in Sources */,
 				14DD0CC71D1923370079D68D /* FriendsViewController.m in Sources */,
 				144180781D20C80E0067CF52 /* ThatDayCell.m in Sources */,
 				143F2ADE1D24BD5300A684BD /* LeftView.m in Sources */,
 				143F2AE71D2517BF00A684BD /* ConnectViewController.m in Sources */,
 				14D227FB1D1D13D40020B9B2 /* RemindCell.m in Sources */,
 				14A1212D1D2228180018BA49 /* ChartCell.m in Sources */,
+				14E57B401D2625C900956608 /* SVProgressHUD.m in Sources */,
 				14DD0CD11D1924280079D68D /* LoginViewController.m in Sources */,
+				14E57B351D2625C900956608 /* BabyBluetooth.m in Sources */,
 				14E434D01D235FB0005E8B0A /* AFURLRequestSerialization.m in Sources */,
 				14F47D211D1BE8CF00B81C99 /* TabBarViewController.m in Sources */,
 				14D2280A1D1D38A20020B9B2 /* RemindViewController.m in Sources */,
@@ -1275,6 +1380,7 @@
 				14A1213C1D2259630018BA49 /* WeightCell.m in Sources */,
 				14108EF11D1A8C82008A91C6 /* DALabeledCircularProgressView.m in Sources */,
 				14D228051D1D30460020B9B2 /* AwakenViewController.m in Sources */,
+				14E57B361D2625C900956608 /* BabyCallback.m in Sources */,
 				14A121501D2273770018BA49 /* PostureViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,13 +7,21 @@
 //
 
 #import "BaseViewController.h"
+#import "BabyBluetooth.h"
 
-@interface LookAtViewController : BaseViewController
+@interface LookAtViewController : BaseViewController{
+@public
+    BabyBluetooth *baby;
+    NSMutableArray *sect;
+    __block  NSMutableArray *readValueArray;
+    __block  NSMutableArray *descriptors;
+}
 
 @property (nonatomic, copy) NSString *iconStr;
 
 @property (nonatomic, copy) NSString *nameStr;
 
-
+@property (nonatomic,strong)CBCharacteristic *characteristic;
+@property (nonatomic,strong)CBPeripheral *currPeripheral;
 
 @end

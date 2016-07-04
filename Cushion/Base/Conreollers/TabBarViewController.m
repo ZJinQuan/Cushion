@@ -147,19 +147,6 @@ typedef enum : NSInteger {
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(removeGestures) name:@"removeGestures" object:nil];
     
-    
-    
-    
-    
-    
-}
-
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    
-    ConnectViewController *connectVC = [[ConnectViewController alloc] init];
-    
-    [self presentViewController:connectVC animated:YES completion:nil];
-    
 }
 
 -(void)showViewAnima:(NSNotification *) noti {

@@ -12,6 +12,7 @@
 #import "SedentaryViewController.h"
 #import "WeightViewController.h"
 #import "TopScollCell.h"
+#import "ConnectViewController.h"
 
 #define TIMER_DURATION 5
 #define AQI_FULL 100
@@ -26,6 +27,13 @@
 @end
 
 @implementation PostureViewController
+
+-(void)viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
+    
+    [self.navigationController setNavigationBarHidden:NO];
+}
 
 -(void)viewDidAppear:(BOOL)animated{
     
@@ -47,7 +55,20 @@
     
     self.navigationItem.leftBarButtonItem = leftItem;
     self.navigationItem.rightBarButtonItem = rightItem;
+ 
+    [self connectBlue];
     
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(connectBlue) name:@"connectBlue" object:nil];
+    
+}
+
+-(void) connectBlue{
+    
+    ConnectViewController *connectVC = [[ConnectViewController alloc] init];
+    [connectVC setHidesBottomBarWhenPushed:YES];
+    
+    [self.navigationController pushViewController:connectVC animated:YES];
 }
 
 #pragma mark UITableViewDelegate and UITableViewDataSource

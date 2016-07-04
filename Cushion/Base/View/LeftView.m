@@ -7,6 +7,7 @@
 //
 
 #import "LeftView.h"
+#import "ConnectViewController.h"
 
 @interface LeftView ()
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
@@ -29,6 +30,10 @@
         
     }
     return self;
+}
+- (IBAction)clicoConnect:(id)sender {
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"connectBlue" object:nil];
 }
 
 - (IBAction)clickSettingBtn:(UIButton *)sender {

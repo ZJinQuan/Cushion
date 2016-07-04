@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "BabyBluetooth.h"
 
 @interface ConnectViewController : BaseViewController
 

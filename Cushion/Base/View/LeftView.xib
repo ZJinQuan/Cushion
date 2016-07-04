@@ -45,6 +45,9 @@
                                     <state key="normal" title="优垫已连接" image="icon_device_connect.png">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <connections>
+                                        <action selector="clicoConnect:" destination="3IZ-2t-bee" eventType="touchUpInside" id="azs-lA-rJk"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sc-wS-5TN">
                                     <rect key="frame" x="61" y="40" width="73" height="24"/>
