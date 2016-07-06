@@ -24,6 +24,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *postureTable;
 
+
 @end
 
 @implementation PostureViewController
@@ -32,7 +33,37 @@
     
     [super viewWillAppear:animated];
     
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"updataIcon" object:nil];
+    
     [self.navigationController setNavigationBarHidden:NO];
+    
+    
+    if (baby != nil && _index == 0) {
+
+        AppDelegate *app = kAppDelegate;
+        
+        [baby notify:app.peripheral
+      characteristic:app.characteristics
+               block:^(CBPeripheral *peripheral, CBCharacteristic *characteristics, NSError *error) {
+                   
+                   NSLog(@"notify block");
+                   
+                   NSLog(@"new value %@",characteristics.value);
+                   Byte *byte = (Byte *)[characteristics.value bytes];
+                   
+                   if (byte[0]== 0xff && byte[7]>0x00) {
+
+                       app.byte.v1 += byte[2];
+                       app.byte.v2 += byte[3];
+                       app.byte.v3 += byte[4];
+                       app.byte.v4 += byte[5];
+                       app.byte.m+=2;
+                       
+                   }
+ 
+               }];
+        _index++;
+    }
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -46,6 +77,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    
+    _index = 0;
+    
     [self.postureTable registerNib:[UINib nibWithNibName:@"PostureCell" bundle:nil] forCellReuseIdentifier:@"postureCell"];
     [self.postureTable registerNib:[UINib nibWithNibName:@"TopScollCell" bundle:nil] forCellReuseIdentifier:@"topScollCell"];
     
@@ -59,7 +93,7 @@
     [self connectBlue];
     
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(connectBlue) name:@"connectBlue" object:nil];
+    
     
 }
 

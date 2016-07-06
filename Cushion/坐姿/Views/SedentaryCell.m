@@ -11,7 +11,7 @@
 #import "DALabeledCircularProgressView.h"
 
 #define TIMER_DURATION 5
-#define AQI_FULL 24
+#define AQI_FULL 86400
 
 @interface SedentaryCell (){
     DACircularProgressView *progressView;
@@ -22,9 +22,23 @@
 
 @property (nonatomic,retain )NSTimer *timer;
 @property (weak, nonatomic) IBOutlet UIView *proghressView;
+@property (weak, nonatomic) IBOutlet UIButton *sedentLab;
+@property (nonatomic, assign) NSInteger *sedent;
+@property (nonatomic, strong) AppDelegate *app;
+
 @end
 
 @implementation SedentaryCell
+
+-(AppDelegate *)app{
+    
+    if (_app == nil) {
+        
+        _app = kAppDelegate;
+        
+    }
+    return _app;
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -32,12 +46,33 @@
     
     
     [self setProgressView];
+    
+    [self updataCorrect];
+    
+    [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(updataCorrect) userInfo:nil repeats:YES];
+}
+
+-(void) updataCorrect{
+    
+    NSLog(@"----%ld", (long)self.app.byte.m);
+    
+    labeledProgressView.progressLabel.text = [NSString stringWithFormat:@"%f小时",(float)self.app.byte.m / 86400];
+    
+    if (self.app.byte.m == 3600) {
+        
+        [_sedentLab setTitle:@"1次" forState:UIControlStateNormal];
+    }
+    
+    aqi = (float)self.app.byte.m;
+    
+    [progressView setProgress:(CGFloat)aqi/AQI_FULL animated:YES initialDelay:0.5];
+    
 }
 
 #pragma mark - 进度条
 -(void)setProgressView{
     
-    aqi=7;
+    aqi=0;
     //初始化进度条视图
     progressView = [[DACircularProgressView alloc] initWithFrame:_proghressView.bounds];
     //    progressView.roundedCorners = YES;
@@ -72,8 +107,8 @@
 
 - (void)progressChange{
     
-    labeledProgressView.progressLabel.text = [NSString stringWithFormat:@"%d小时", aqi];
-    labeledProgressView.progressLabel.font = [UIFont systemFontOfSize:37];
+//    labeledProgressView.progressLabel.text = [NSString stringWithFormat:@"%d小时", aqi];
+    labeledProgressView.progressLabel.font = [UIFont systemFontOfSize:15];
     if (start >= aqi) {
         [self.timer invalidate];
         self.timer = nil;

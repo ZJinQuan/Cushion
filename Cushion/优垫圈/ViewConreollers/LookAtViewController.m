@@ -63,8 +63,8 @@
         Byte bytes[2];
         
         
-        bytes[0] = 0xFC;
-        bytes[1] = 0xCF;
+        bytes[0] = 0xFF;
+        bytes[1] = 0x01;
         
         NSData *data = [NSData dataWithBytes:&bytes length:sizeof(bytes)];
         

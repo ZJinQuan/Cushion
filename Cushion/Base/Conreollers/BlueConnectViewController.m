@@ -46,9 +46,12 @@
         
         FinishViewController *finishVC = [[FinishViewController alloc] init];
         
+        finishVC.currPeripheral = weakSelf.currPeripheral;
+//        finishVC.characteristic = [[weakSelf.services objectAtIndex:0] characteristics];
+        finishVC->baby = baby;
         
-//        [weakSelf presentViewController:finishVC animated:NO completion:nil];
         [weakSelf.navigationController pushViewController:finishVC animated:YES];
+        
     }];
     
     //设置设备连接失败的委托

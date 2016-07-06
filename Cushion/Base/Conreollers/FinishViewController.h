@@ -7,7 +7,14 @@
 //
 
 #import "BaseViewController.h"
+#import "BabyBluetooth.h"
 
-@interface FinishViewController : BaseViewController
+@interface FinishViewController : BaseViewController{
+@public
+    BabyBluetooth *baby;
+}
+
+@property (nonatomic,strong)CBCharacteristic *characteristic;
+@property (nonatomic,strong)CBPeripheral *currPeripheral;
 
 @end

@@ -10,4 +10,8 @@
 
 @interface LeftView : UIView
 
+@property (weak, nonatomic) IBOutlet UIImageView *iconImage;
+
+-(void) updataIconImage;
+
 @end

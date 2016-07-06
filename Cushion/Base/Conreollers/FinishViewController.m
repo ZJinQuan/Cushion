@@ -7,6 +7,9 @@
 //
 
 #import "FinishViewController.h"
+#import "PostureViewController.h"
+
+#define channelOnCharacteristicView @"CharacteristicView"
 
 @interface FinishViewController ()
 
@@ -19,13 +22,32 @@
     // Do any additional setup after loading the view from its nib.
     
     //启动一个定时任务
-    [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(timerTask) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(timerTask) userInfo:nil repeats:NO];
+    
+    
+    
+    //读取服务
+//    baby.channel(channelOnCharacteristicView).characteristicDetails(self.currPeripheral,self.characteristic);
     
 }
 
 -(void)timerTask{
+    
+//    PostureViewController *postireVC = [[PostureViewController alloc] init];
 
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    for (int i = 0; i < self.navigationController.viewControllers.count; i++) {
+        
+        NSLog(@"-------%@",self.navigationController.viewControllers[i]);
+        
+    }
+    
+    PostureViewController *postireVC = self.navigationController.viewControllers[0];
+    
+    postireVC->baby = self->baby;
+    
+    
+    [self.navigationController popToViewController:postireVC animated:YES];
+    
 }
 
 @end

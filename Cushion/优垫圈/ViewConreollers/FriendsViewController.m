@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *friendTableView;
 
 @property (weak, nonatomic) IBOutlet UIView *topView;
+@property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 
 @end
 
@@ -26,6 +27,13 @@
     
     //添加手势通知
     [[NSNotificationCenter defaultCenter] postNotificationName:@"addGestures" object:nil];
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+    NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:[NSString stringWithFormat:@"iconImage.png"]];
+    
+    if ([UIImage imageWithContentsOfFile:filePath] != nil) {
+        _iconImage.image = [UIImage imageWithContentsOfFile:filePath];
+    }
 }
 
 - (void)viewDidLoad {
@@ -44,6 +52,7 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickTop)];
     
     [self.topView addGestureRecognizer:tap];
+    
 }
 
 -(void) clickTop{

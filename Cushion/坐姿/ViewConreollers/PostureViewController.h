@@ -7,7 +7,12 @@
 //
 
 #import "BaseViewController.h"
+#import "BabyBluetooth.h"
 
-@interface PostureViewController : BaseViewController
+@interface PostureViewController : BaseViewController{
+@public
+    BabyBluetooth *baby;
+}
 
+@property (nonatomic, assign) NSInteger *index;
 @end

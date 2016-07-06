@@ -21,6 +21,8 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
+    _byte = [[ByteModel alloc] init];
+    
     
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:[[LoginViewController alloc] init]];
     

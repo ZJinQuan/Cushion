@@ -165,6 +165,7 @@
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="41"/>
                         </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </imageView>
             </subviews>
@@ -182,7 +183,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="iconImage" destination="rPA-nq-cGM" id="c6l-Dt-qOX"/>
+                <outlet property="iconImage" destination="rPA-nq-cGM" id="LOq-Rm-PWH"/>
                 <outlet property="mesgView" destination="dye-aN-a2s" id="kar-dh-kh9"/>
             </connections>
             <point key="canvasLocation" x="532" y="447"/>

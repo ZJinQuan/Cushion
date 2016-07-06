@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ByteModel.h"
 
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
@@ -16,6 +17,8 @@
 @property (nonatomic, strong) CBCharacteristic *characteristics;
 
 @property (nonatomic, strong) CBPeripheral *peripheral;
+
+@property (nonatomic, strong) ByteModel *byte;
 
 @end
 

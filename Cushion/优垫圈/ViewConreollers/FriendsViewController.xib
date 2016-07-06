@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FriendsViewController">
             <connections>
                 <outlet property="friendTableView" destination="mlI-QG-0TX" id="HtQ-Ez-y9t"/>
+                <outlet property="iconImage" destination="LPP-oN-Xz1" id="3qB-g7-Q3X"/>
                 <outlet property="topView" destination="Nd1-bK-OWG" id="oaf-WO-8L8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -26,13 +27,6 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nd1-bK-OWG">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_my.png" translatesAutoresizingMaskIntoConstraints="NO" id="LPP-oN-Xz1">
-                            <rect key="frame" x="25" y="33" width="61" height="61"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="61" id="NPl-qh-M43"/>
-                                <constraint firstAttribute="height" constant="61" id="VE6-iT-13h"/>
-                            </constraints>
-                        </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="曾燕强" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biL-xl-yIc">
                             <rect key="frame" x="102" y="33" width="78" height="21"/>
                             <constraints>
@@ -73,6 +67,19 @@
                             <color key="textColor" red="0.058823529409999999" green="0.85490196080000003" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_my.png" translatesAutoresizingMaskIntoConstraints="NO" id="LPP-oN-Xz1">
+                            <rect key="frame" x="25" y="33" width="61" height="61"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="61" id="NPl-qh-M43"/>
+                                <constraint firstAttribute="height" constant="61" id="VE6-iT-13h"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="30"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
                     </subviews>
                     <constraints>
                         <constraint firstItem="eYF-Hh-Z8a" firstAttribute="top" secondItem="mzO-I5-Cxs" secondAttribute="bottom" constant="-3" id="3hT-V2-eyc"/>

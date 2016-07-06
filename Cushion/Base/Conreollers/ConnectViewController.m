@@ -8,6 +8,7 @@
 
 #import "ConnectViewController.h"
 #import "BlueConnectViewController.h"
+#import "PostureViewController.h"
 
 @interface ConnectViewController ()<UITableViewDelegate, UITableViewDataSource>{
     
@@ -41,6 +42,8 @@
     //设置蓝牙委托
     [self babyDelegate];
     
+    PostureViewController *posture = self.navigationController.viewControllers[0];
+    posture.index = 0;
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -50,6 +53,14 @@
     //设置委托后直接可以使用，无需等待CBCentralManagerStatePoweredOn状态。
     baby.scanForPeripherals().begin();
     //baby.scanForPeripherals().begin().stop(10);
+}
+
+-(void)viewDidDisappear:(BOOL)animated{
+    
+    [super viewDidDisappear:animated];
+    
+    [baby cancelScan];
+    
 }
 
 -(void)babyDelegate{

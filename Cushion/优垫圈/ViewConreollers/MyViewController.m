@@ -14,6 +14,7 @@
 
 @interface MyViewController ()<UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate,XSChartDataSource,XSChartDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *messageTableView;
+@property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 
 @property(nonatomic,strong)NSArray *data;
 
@@ -32,6 +33,13 @@
     
     [self.messageTableView registerNib:[UINib nibWithNibName:@"ThatDayCell" bundle:nil] forCellReuseIdentifier:@"thatDayCell"];
     [self.messageTableView registerNib:[UINib nibWithNibName:@"ChartCell" bundle:nil] forCellReuseIdentifier:@"chartCell"];
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+    NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:[NSString stringWithFormat:@"iconImage.png"]];
+    
+    if ([UIImage imageWithContentsOfFile:filePath] != nil) {
+        _iconImage.image = [UIImage imageWithContentsOfFile:filePath];
+    }
 }
 
 -(void) clickShare{

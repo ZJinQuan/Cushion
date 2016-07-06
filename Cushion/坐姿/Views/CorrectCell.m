@@ -19,21 +19,72 @@
     int start;
     int aqi;
 }
+@property (weak, nonatomic) IBOutlet UIProgressView *progress1;
+@property (weak, nonatomic) IBOutlet UIProgressView *progress2;
+@property (weak, nonatomic) IBOutlet UIProgressView *progress3;
+@property (weak, nonatomic) IBOutlet UIProgressView *progress4;
+@property (weak, nonatomic) IBOutlet UILabel *percentage1;
+@property (weak, nonatomic) IBOutlet UILabel *percentage2;
+@property (weak, nonatomic) IBOutlet UILabel *percentage3;
+@property (weak, nonatomic) IBOutlet UILabel *percentage4;
 
 @property (nonatomic,retain )NSTimer *timer;
 @property (weak, nonatomic) IBOutlet UIView *progView;
 
+
+@property (nonatomic, strong) AppDelegate *app;
 @end
 
 @implementation CorrectCell
+
+-(AppDelegate *)app{
+    
+    if (_app == nil) {
+        
+        _app = kAppDelegate;
+        
+    }
+    return _app;
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
     
     [self setProgressView];
+    
+    
+//    self.progress.progress =
+    
+    self.progress1.progressTintColor = [UIColor yellowColor];
+    self.progress2.progressTintColor = [UIColor redColor];
+    self.progress3.progressTintColor = [UIColor blueColor];
+    self.progress4.progressTintColor = [UIColor orangeColor];
+    
+    [self updataCorrect];
+    
+    [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(updataCorrect) userInfo:nil repeats:YES];
 }
 
+
+-(void) updataCorrect{
+    
+    NSLog(@"=======%ld, %ld, %ld, %ld, ----%ld", (long)self.app.byte.v1, (long)self.app.byte.v2, (long)self.app.byte.v3, (long)self.app.byte.v4, (long)self.app.byte.m);
+    
+    self.progress1.progress = (self.app.byte.m - (float)self.app.byte.v1  * 2)/self.app.byte.m;
+    self.progress2.progress = (self.app.byte.m - (float)self.app.byte.v2  * 2)/self.app.byte.m;
+    self.progress3.progress = (self.app.byte.m - (float)self.app.byte.v3  * 2)/self.app.byte.m;
+    self.progress4.progress = (self.app.byte.m - (float)self.app.byte.v4  * 2)/self.app.byte.m;
+    
+    float fl = ((float)self.app.byte.v2  * 2)/self.app.byte.m;
+    
+    NSLog(@"%.2f",fl);
+    self.percentage1.text = [NSString stringWithFormat:@"%.0f%%",((float)self.app.byte.v1  * 2)/self.app.byte.m * (float)100];
+    self.percentage2.text = [NSString stringWithFormat:@"%.0f%%",((float)self.app.byte.v2  * 2)/self.app.byte.m * (float)100];
+    self.percentage3.text = [NSString stringWithFormat:@"%.0f%%",((float)self.app.byte.v3  * 2)/self.app.byte.m * (float)100];
+    self.percentage4.text = [NSString stringWithFormat:@"%.0f%%",((float)self.app.byte.v4  * 2)/self.app.byte.m * (float)100];
+    
+}
 #pragma mark - 进度条
 -(void)setProgressView{
     
@@ -52,7 +103,7 @@
     
     labeledProgressView= [[DALabeledCircularProgressView alloc] initWithFrame:_progView.bounds];
     labeledProgressView.backgroundColor = [UIColor clearColor];
-    labeledProgressView.label.text = @"当日累计久坐";
+    labeledProgressView.label.text = @"正常坐姿占比";
     labeledProgressView.progressLabel.textColor=[UIColor blackColor];
     [_progView addSubview:labeledProgressView];
     [_progView addSubview:progressView];
@@ -72,7 +123,7 @@
 
 - (void)progressChange{
     
-    labeledProgressView.progressLabel.text = [NSString stringWithFormat:@"%d小时", aqi];
+    labeledProgressView.progressLabel.text = [NSString stringWithFormat:@"%d%%", aqi];
     labeledProgressView.progressLabel.font = [UIFont systemFontOfSize:37];
     if (start >= aqi) {
         [self.timer invalidate];

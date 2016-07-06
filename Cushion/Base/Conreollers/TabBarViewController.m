@@ -15,6 +15,10 @@
 #import "ConnectViewController.h"
 #import "RightCell.h"
 #import "LeftView.h"
+#import "PersonalViewController.h"
+#import "SystemViewController.h"
+#import "AnalysisViewController.h"
+#import "SetUpViewController.h"
 
 CGFloat const gestureMinimumTranslation = 20.0 ;
 
@@ -40,7 +44,7 @@ typedef enum : NSInteger {
 @property (nonatomic,assign) CGFloat rightDistance;
 
 @property (nonatomic, strong) UIView * bottomView;
-@property (nonatomic, strong) UIView * leftBottomView;
+@property (nonatomic, strong) LeftView * leftBottomView;
 @property (nonatomic, strong) UIView * rightBottomView;
 
 @property (nonatomic, retain) UIPanGestureRecognizer *pan;
@@ -62,7 +66,7 @@ typedef enum : NSInteger {
     return _bottomView;
 }
 
--(UIView *)leftBottomView{
+-(LeftView *)leftBottomView{
     
     if (_leftBottomView == nil) {
         
@@ -75,7 +79,6 @@ typedef enum : NSInteger {
 //        [_leftBottomView addSubview:left.view];
         
         LeftView *leftV = [[LeftView alloc] initWithFrame:CGRectMake(85, 0, _leftBottomView.width - 85, _leftBottomView.height)];
-        
         
         [_leftBottomView addSubview:leftV];
         
@@ -101,16 +104,6 @@ typedef enum : NSInteger {
         
     }
     return _rightBottomView;
-}
-
--(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-}
-
--(void) viewWillAppear:(BOOL)animated{
-    
-    [super viewWillAppear:animated];
-    
 }
 
 - (void)viewDidLoad {
@@ -139,14 +132,92 @@ typedef enum : NSInteger {
     [self.view addSubview:self.rightBottomView];
 
     //添加滑动手势
-    
-    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showViewAnima:) name:@"showViewAnima" object:nil];
     
+    //添加滑动手势通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addGestures) name:@"addGestures" object:nil];
     
+    //移除手势通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(removeGestures) name:@"removeGestures" object:nil];
     
+    //跳转界面通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clickInterface:) name:@"clickInterface" object:nil];
+    
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updataIcon:) name:@"updataIcon" object:nil];
+}
+
+-(void)updataIcon:(NSNotification *)notf{
+    
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+//    NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:[NSString stringWithFormat:@"iconImage.png"]];
+//    
+//    if ([UIImage imageWithContentsOfFile:filePath] != nil) {
+//        _leftBottomView.iconImage.image = [UIImage imageWithContentsOfFile:filePath];
+//    }
+    
+    [_leftBottomView updataIconImage];
+}
+
+//跳转界面
+-(void) clickInterface: (NSNotification *)notf{
+    
+    [UIView animateWithDuration:0.2 animations:^{
+        _leftBottomView.x =  -kScreenWidth;
+        _rightBottomView.x = kScreenWidth;
+        _leftDistance = _leftBottomView.x;
+        _rightDistance = _rightBottomView.x;
+        _bottomView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0];
+    } completion:^(BOOL finished) {
+        _bottomView.hidden = YES;
+
+        
+        if ([notf.object isEqualToString:@"connectBlue"]) {
+            
+            ConnectViewController *connectVC = [[ConnectViewController alloc] init];
+            [connectVC setHidesBottomBarWhenPushed:YES];
+            
+            [self.selectedViewController pushViewController:connectVC animated:YES];
+        }
+        
+        if ([notf.object isEqualToString:@"Personal"]) {
+            
+            PersonalViewController *persinalVC = [[PersonalViewController alloc] init];
+            persinalVC.title = @"个人中心";
+            [persinalVC setHidesBottomBarWhenPushed:YES];
+            
+            [self.selectedViewController pushViewController:persinalVC animated:YES];
+        }
+        
+        if ([notf.object isEqualToString:@"System"]) {
+            
+            SystemViewController *systemVC = [[SystemViewController alloc] init];
+            systemVC.title = @"系统消息";
+            [systemVC setHidesBottomBarWhenPushed:YES];
+            
+            [self.selectedViewController pushViewController:systemVC animated:YES];
+        }
+        
+        if ([notf.object isEqualToString:@"Analysis"]) {
+            
+            AnalysisViewController *analysisVC = [[AnalysisViewController alloc] init];
+            analysisVC.title = @"报告分析";
+            [analysisVC setHidesBottomBarWhenPushed:YES];
+            
+            [self.selectedViewController pushViewController:analysisVC animated:YES];
+        }
+        
+        if ([notf.object isEqualToString:@"SetUp"]) {
+            
+            [self setSelectedIndex:0];
+            
+            SetUpViewController *setupVC = [[SetUpViewController alloc] init];
+            setupVC.title = @"系统设置";
+            [setupVC setHidesBottomBarWhenPushed:YES];
+            
+            [self.selectedViewController pushViewController:setupVC animated:YES];
+        }
+    }];
+
 }
 
 -(void)showViewAnima:(NSNotification *) noti {
@@ -340,6 +411,9 @@ typedef enum : NSInteger {
 - (void)showLeftWithAnimaTime:(CGFloat)time {
     
     [self.view bringSubviewToFront:self.leftBottomView];
+    
+    
+    [self updataIcon:nil];
     
     [UIView animateWithDuration:time animations:^{
         

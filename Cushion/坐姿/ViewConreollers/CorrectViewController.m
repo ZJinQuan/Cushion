@@ -15,9 +15,21 @@
 
 @property(nonatomic,strong)NSArray *data;
 
+@property (nonatomic, strong) AppDelegate *app;
+
 @end
 
 @implementation CorrectViewController
+
+-(AppDelegate *)app{
+    
+    if (_app == nil) {
+        
+        _app = kAppDelegate;
+        
+    }
+    return _app;
+}
 
 -(void)viewDidAppear:(BOOL)animated{
     
@@ -30,12 +42,23 @@
     
     
     _data=@[@91,@79,@70,@100,@99,@90,@89];
-
+    
+    
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"removeGestures" object:nil];
     
     [self.correctTableView registerNib:[UINib nibWithNibName:@"CorrectCell" bundle:nil] forCellReuseIdentifier:@"correctCell"];
     [self.correctTableView registerNib:[UINib nibWithNibName:@"ChartCell" bundle:nil] forCellReuseIdentifier:@"chartCell"];
+    
+    
+    [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(updataCorrect) userInfo:nil repeats:YES];
+}
+
+-(void) updataCorrect{
+    
+//    NSLog(@"=======%ld, %ld, %ld, %ld, ----%ld", (long)self.app.byte.v1, (long)self.app.byte.v2, (long)self.app.byte.v3, (long)self.app.byte.v4, (long)self.app.byte.m);
+    
+    
 }
 
 #pragma mark XSChartDataSource and XSChartDelegate

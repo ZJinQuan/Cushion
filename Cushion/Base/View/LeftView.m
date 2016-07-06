@@ -10,7 +10,7 @@
 #import "ConnectViewController.h"
 
 @interface LeftView ()
-@property (weak, nonatomic) IBOutlet UIImageView *iconImage;
+
 @property (weak, nonatomic) IBOutlet UIView *mesgView;
 
 @end
@@ -28,32 +28,60 @@
         
         self.mesgView.layer.borderColor = [UIColor whiteColor].CGColor;
         
+        
+        [self updataIconImage];
+        
     }
     return self;
 }
+
+-(void) drawRect:(CGRect)rect{
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+    NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:[NSString stringWithFormat:@"iconImage.png"]];
+    UIImage *img = [UIImage imageWithContentsOfFile:filePath];
+    if (img != nil) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            _iconImage.image = [UIImage imageWithContentsOfFile:filePath];
+        });
+    }
+    
+}
+
+-(void) updataIconImage{
+    
+    [self setNeedsDisplay];
+}
+
 - (IBAction)clicoConnect:(id)sender {
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"connectBlue" object:nil];
+    
 }
 
 - (IBAction)clickSettingBtn:(UIButton *)sender {
     
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"removeGestures" object:nil];
     
     switch (sender.tag) {
         case 100:{
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"clickInterface" object:@"Personal"];
             
         }
             break;
         case 200:{
             
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"clickInterface" object:@"System"];
         }
             break;
         case 300:{
             
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"clickInterface" object:@"Analysis"];
         }
             break;
         case 400:{
             
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"clickInterface" object:@"SetUp"];
         }
             break;
             

@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyViewController">
             <connections>
+                <outlet property="iconImage" destination="qIY-AX-wTd" id="smf-Vy-hOe"/>
                 <outlet property="messageTableView" destination="wMg-r2-3Vp" id="3v7-zC-gv8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -31,6 +32,12 @@
                                 <constraint firstAttribute="height" constant="61" id="5k8-yM-B8b"/>
                                 <constraint firstAttribute="width" constant="61" id="YrW-3s-Ke3"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="30"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="曾燕强" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECz-xc-Cuv">
                             <rect key="frame" x="102" y="33" width="78" height="21"/>
