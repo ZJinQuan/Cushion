@@ -29,7 +29,6 @@
         self.mesgView.layer.borderColor = [UIColor whiteColor].CGColor;
         
         
-        [self updataIconImage];
         
     }
     return self;

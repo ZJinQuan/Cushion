@@ -155,7 +155,7 @@
                         <constraint firstAttribute="height" constant="110" id="c5E-Q1-YjY"/>
                     </constraints>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_my.png" translatesAutoresizingMaskIntoConstraints="NO" id="rPA-nq-cGM">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_my.png" translatesAutoresizingMaskIntoConstraints="NO" id="rPA-nq-cGM">
                     <rect key="frame" x="85" y="68" width="81" height="81"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="81" id="Oeb-cJ-ewL"/>

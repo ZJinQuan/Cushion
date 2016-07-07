@@ -70,17 +70,11 @@ typedef enum : NSInteger {
     
     if (_leftBottomView == nil) {
         
-        _leftBottomView = [[LeftView alloc] initWithFrame:CGRectMake(-kScreenWidth, 0, kScreenWidth, kScreenHeight)];
-        _leftBottomView.backgroundColor = [UIColor yellowColor];
+        _leftBottomView = [[LeftView alloc] initWithFrame:CGRectMake(-kScreenWidth + 85, 0, kScreenWidth -85, kScreenHeight)];
         
-//        LeftViewController *left = [[LeftViewController alloc] init];
-//        left.view.frame = CGRectMake(85, 0, _leftBottomView.width - 85, _leftBottomView.height);
-//        
-//        [_leftBottomView addSubview:left.view];
+//        LeftView *leftV = [[LeftView alloc] initWithFrame:CGRectMake(85, 0, _leftBottomView.width - 85, _leftBottomView.height)];
         
-        LeftView *leftV = [[LeftView alloc] initWithFrame:CGRectMake(85, 0, _leftBottomView.width - 85, _leftBottomView.height)];
-        
-        [_leftBottomView addSubview:leftV];
+//        [_leftBottomView addSubview:leftV];
         
     }
     return _leftBottomView;
@@ -143,19 +137,8 @@ typedef enum : NSInteger {
     //跳转界面通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clickInterface:) name:@"clickInterface" object:nil];
     
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updataIcon:) name:@"updataIcon" object:nil];
-}
-
--(void)updataIcon:(NSNotification *)notf{
-    
-//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
-//    NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:[NSString stringWithFormat:@"iconImage.png"]];
-//    
-//    if ([UIImage imageWithContentsOfFile:filePath] != nil) {
-//        _leftBottomView.iconImage.image = [UIImage imageWithContentsOfFile:filePath];
-//    }
-    
-    [_leftBottomView updataIconImage];
+    //更换头像通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updataIcon:) name:@"updataIcon" object:nil];
 }
 
 //跳转界面
@@ -218,6 +201,11 @@ typedef enum : NSInteger {
         }
     }];
 
+}
+
+-(void)updataIcon:(NSNotification *)notf{
+    
+    [_leftBottomView updataIconImage];
 }
 
 -(void)showViewAnima:(NSNotification *) noti {
@@ -410,27 +398,27 @@ typedef enum : NSInteger {
  */
 - (void)showLeftWithAnimaTime:(CGFloat)time {
     
-    [self.view bringSubviewToFront:self.leftBottomView];
-    
+    [self.view bringSubviewToFront:_bottomView];
+    [self.view bringSubviewToFront:_leftBottomView];
     
     [self updataIcon:nil];
     
     [UIView animateWithDuration:time animations:^{
         
         _rightBottomView.x = kScreenWidth;
-        _leftBottomView.x =  -85;
+        _leftBottomView.x =  0;
         _bottomView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.2];
         _leftDistance = _leftBottomView.x;
         _bottomView.hidden = NO;
     }];
-    
 }
 /**
  出现右边视图
  */
 - (void)showRightWithAnimaTime:(CGFloat)time {
     
-    [self.view bringSubviewToFront:self.rightBottomView];
+    [self.view bringSubviewToFront:_bottomView];
+    [self.view bringSubviewToFront:_rightBottomView];
     
     [UIView animateWithDuration:time animations:^{
         
@@ -444,6 +432,8 @@ typedef enum : NSInteger {
 
 //点击蒙版隐藏视图
 - (void)tapAction {
+    
+    
     
     [UIView animateWithDuration:0.2 animations:^{
         _leftBottomView.x =  -kScreenWidth;

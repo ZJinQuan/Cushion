@@ -19,11 +19,7 @@
 
 @interface PostureViewController ()<ScrollImageDelegate, UITableViewDelegate, UITableViewDataSource>
 
-@property (weak, nonatomic) IBOutlet UIView *topImageView;
-
-
 @property (weak, nonatomic) IBOutlet UITableView *postureTable;
-
 
 @end
 
@@ -33,14 +29,11 @@
     
     [super viewWillAppear:animated];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"updataIcon" object:nil];
-    
     [self.navigationController setNavigationBarHidden:NO];
     
+    AppDelegate *app = kAppDelegate;
     
     if (baby != nil && _index == 0) {
-
-        AppDelegate *app = kAppDelegate;
         
         [baby notify:app.peripheral
       characteristic:app.characteristics
@@ -51,16 +44,15 @@
                    NSLog(@"new value %@",characteristics.value);
                    Byte *byte = (Byte *)[characteristics.value bytes];
                    
-                   if (byte[0]== 0xff && byte[7]>0x00) {
+                   if (byte[0] == 0xff && byte[7] > 0x00) {
 
                        app.byte.v1 += byte[2];
                        app.byte.v2 += byte[3];
                        app.byte.v3 += byte[4];
                        app.byte.v4 += byte[5];
-                       app.byte.m+=2;
-                       
+                       app.byte.m += 2;
+                       app.byte.w = byte[6] + byte[7];
                    }
- 
                }];
         _index++;
     }
@@ -76,7 +68,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     
     _index = 0;
     
@@ -91,10 +82,7 @@
     self.navigationItem.rightBarButtonItem = rightItem;
  
     [self connectBlue];
-    
-    
-    
-    
+
 }
 
 -(void) connectBlue{
@@ -190,6 +178,7 @@
     
     return cell;
 }
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     switch (indexPath.section) {
@@ -232,9 +221,7 @@
 }
 
 -(void) clickLeft{
-    
     [[NSNotificationCenter defaultCenter] postNotificationName:@"showViewAnima" object:nil];
-    
 }
 
 -(void) clickRight{

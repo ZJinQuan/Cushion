@@ -43,8 +43,7 @@
 }
 
 -(void) clickShare{
-    
-    
+
     UIActionSheet *action=[[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"分享到朋友圈",@"分享给微信好友", nil];
     [action showInView:self.view];
     

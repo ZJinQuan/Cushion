@@ -76,12 +76,12 @@
     //设置发现设备的Services的委托
     [baby setBlockOnDiscoverServicesAtChannel:channelOnPeropheralView block:^(CBPeripheral *peripheral, NSError *error) {
         for (CBService *s in peripheral.services) {
-            ///插入section到tableview
-//            [weakSelf insertSectionToTableView:s];
+            
         }
         
         [rhythm beats];
     }];
+    
     //设置发现设service的Characteristics的委托
     [baby setBlockOnDiscoverCharacteristicsAtChannel:channelOnPeropheralView block:^(CBPeripheral *peripheral, CBService *service, NSError *error) {
         NSLog(@"===service name:%@",service.UUID);
@@ -149,7 +149,7 @@
                                      CBConnectPeripheralOptionNotifyOnNotificationKey:@YES};
     
     [baby setBabyOptionsAtChannel:channelOnPeropheralView scanForPeripheralsWithOptions:scanForPeripheralsWithOptions connectPeripheralWithOptions:connectOptions scanForPeripheralsWithServices:nil discoverWithServices:nil discoverWithCharacteristics:nil];
-    
+
 }
 
 #pragma mark -插入table数据

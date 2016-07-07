@@ -24,16 +24,9 @@
     //启动一个定时任务
     [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(timerTask) userInfo:nil repeats:NO];
     
-    
-    
-    //读取服务
-//    baby.channel(channelOnCharacteristicView).characteristicDetails(self.currPeripheral,self.characteristic);
-    
 }
 
 -(void)timerTask{
-    
-//    PostureViewController *postireVC = [[PostureViewController alloc] init];
 
     for (int i = 0; i < self.navigationController.viewControllers.count; i++) {
         
