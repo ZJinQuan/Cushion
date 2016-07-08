@@ -10,8 +10,6 @@
 #import "ThatDayCell.h"
 #import "ChartCell.h"
 
-#define channelOnCharacteristicView @"CharacteristicView"
-
 @interface LookAtViewController ()<UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate,XSChartDataSource,XSChartDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *messageTableView;
 
@@ -49,20 +47,15 @@
 }
 
 -(void) clickShock{
-    
-    
-    
+
     NSLog(@"%@ ------- %@",self.currPeripheral, self.characteristic);
     
-    
     AppDelegate *app = kAppDelegate;
-    
-    
+
     if (app.peripheral != nil) {
         
         Byte bytes[2];
-        
-        
+ 
         bytes[0] = 0xFF;
         bytes[1] = 0x01;
         

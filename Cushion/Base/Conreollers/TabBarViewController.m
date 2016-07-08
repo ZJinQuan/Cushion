@@ -19,6 +19,7 @@
 #import "SystemViewController.h"
 #import "AnalysisViewController.h"
 #import "SetUpViewController.h"
+#import "LookAtViewController.h"
 
 CGFloat const gestureMinimumTranslation = 20.0 ;
 
@@ -151,6 +152,7 @@ typedef enum : NSInteger {
         _rightDistance = _rightBottomView.x;
         _bottomView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0];
     } completion:^(BOOL finished) {
+        
         _bottomView.hidden = YES;
 
         
@@ -246,6 +248,33 @@ typedef enum : NSInteger {
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    
+    [UIView animateWithDuration:0.2 animations:^{
+        
+        _leftBottomView.x =  -kScreenWidth;
+        _rightBottomView.x = kScreenWidth;
+        _leftDistance = _leftBottomView.x;
+        _rightDistance = _rightBottomView.x;
+        _bottomView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0];
+   
+    } completion:^(BOOL finished) {
+        
+        _bottomView.hidden = YES;
+        
+        NSArray *iconArr = @[@"bg_photo2", @"bg_my", @"bg_photo2", @"bg_photo3", @"bg_photo4", @"bg_photo2", @"bg_my"];
+        NSArray *nameArr = @[@"LIM",@"林涛", @"汉诺", @"张三", @"李四" ,@"王五", @"赵六"];
+        
+        LookAtViewController *lookVC = [[LookAtViewController alloc] init];
+        
+        lookVC.iconStr = iconArr[indexPath.row];
+        lookVC.nameStr = nameArr[indexPath.row];
+        
+        lookVC.title = @"查看优友";
+        lookVC.hidesBottomBarWhenPushed = YES;
+        [self.selectedViewController pushViewController:lookVC animated:YES];
+        
+    }];
+
 }
 
 

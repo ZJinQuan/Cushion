@@ -84,7 +84,7 @@
     NSArray *iconArr = @[@"bg_photo2", @"bg_my", @"bg_photo2", @"bg_photo3", @"bg_photo4", @"bg_photo2", @"bg_my"];
     NSArray *nameArr = @[@"LIM",@"林涛", @"汉诺", @"张三", @"李四" ,@"王五", @"赵六"];
     
-    cell.rankingLab.text = [NSString stringWithFormat:@"%ld",indexPath.row + 1];
+    cell.rankingLab.text = [NSString stringWithFormat:@"%d",indexPath.row + 1];
     cell.iconImage.image = [UIImage imageNamed:iconArr[indexPath.row]];
     cell.nameLab.text = nameArr[indexPath.row];
     

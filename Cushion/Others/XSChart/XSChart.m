@@ -9,7 +9,7 @@
 #import "XSChart.h"
 
 CGFloat margin=14.f;
-CGFloat radius=3.f;
+CGFloat radius=2.f;
 @interface XSChart ()
 
 @property(nonatomic,strong)UILabel *titleLabel;
@@ -72,7 +72,7 @@ CGFloat radius=3.f;
     path.lineCapStyle = kCGLineCapRound;
     path.lineJoinStyle=kCGLineJoinRound;
 //    path.lineWidth=1;
-    [[UIColor redColor]setStroke];
+//    [[UIColor redColor]setStroke];
     CABasicAnimation *pathAnimation=[CABasicAnimation animationWithKeyPath:@"strokeEnd"];
     pathAnimation.duration = 1.0;
     pathAnimation.timingFunction=[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
@@ -93,13 +93,15 @@ CGFloat radius=3.f;
 //        drawPoint.lineWidth = ;
         
         [drawPoint addArcWithCenter:point radius:radius startAngle:M_PI * 0 endAngle:M_PI * 2 clockwise:YES];
-//        [[UIColor whiteColor] setStroke];
-//        [drawPoint stroke];
+        
         CAShapeLayer *layer=[[CAShapeLayer alloc]init];
         layer.path = drawPoint.CGPath;
+        layer.fillColor = [UIColor whiteColor].CGColor;
+        layer.strokeColor = [UIColor whiteColor].CGColor;
         _linePath.strokeEnd=1;
        
         [self.layer addSublayer:layer];
+        
         if (_dataSource&&[_dataSource respondsToSelector:@selector(showDataAtPointForChart:)]&&[_dataSource showDataAtPointForChart:self]) {
             NSString *valueString=[NSString stringWithFormat:@"%ld",(long)value];
             CGRect frame=[valueString boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:14.f],} context:nil];
