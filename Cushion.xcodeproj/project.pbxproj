@@ -10,6 +10,14 @@
 		14108EF01D1A8C82008A91C6 /* DACircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14108EED1D1A8C82008A91C6 /* DACircularProgressView.m */; };
 		14108EF11D1A8C82008A91C6 /* DALabeledCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14108EEF1D1A8C82008A91C6 /* DALabeledCircularProgressView.m */; };
 		14108EF61D1A9442008A91C6 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14108EF51D1A9442008A91C6 /* CircleView.m */; };
+		141A22DB1D2F87B400E04E27 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 141A22D71D2F87B400E04E27 /* libWeChatSDK.a */; };
+		141A22DD1D2F881400E04E27 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 141A22DC1D2F881400E04E27 /* SystemConfiguration.framework */; };
+		141A22DF1D2F885000E04E27 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 141A22DE1D2F885000E04E27 /* libz.tbd */; };
+		141A22E11D2F886000E04E27 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 141A22E01D2F886000E04E27 /* libsqlite3.0.tbd */; };
+		141A22E31D2F8D8000E04E27 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 141A22E21D2F8D8000E04E27 /* libc++.tbd */; };
+		141A22E51D2F8DF700E04E27 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 141A22E41D2F8DF700E04E27 /* CoreTelephony.framework */; };
+		141A22E91D2FA9A500E04E27 /* MyShareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 141A22E71D2FA9A500E04E27 /* MyShareCell.m */; };
+		141A22EA1D2FA9A500E04E27 /* MyShareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 141A22E81D2FA9A500E04E27 /* MyShareCell.xib */; };
 		143C518E1D1AA50F0091E837 /* ScrollImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 143C518D1D1AA50F0091E837 /* ScrollImage.m */; };
 		143F2ADE1D24BD5300A684BD /* LeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 143F2ADD1D24BD5300A684BD /* LeftView.m */; };
 		143F2AE01D24BD6700A684BD /* LeftView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 143F2ADF1D24BD6700A684BD /* LeftView.xib */; };
@@ -221,6 +229,18 @@
 		14108EEF1D1A8C82008A91C6 /* DALabeledCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DALabeledCircularProgressView.m; sourceTree = "<group>"; };
 		14108EF41D1A9442008A91C6 /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
 		14108EF51D1A9442008A91C6 /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
+		141A22D71D2F87B400E04E27 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		141A22D81D2F87B400E04E27 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		141A22D91D2F87B400E04E27 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		141A22DA1D2F87B400E04E27 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		141A22DC1D2F881400E04E27 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		141A22DE1D2F885000E04E27 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		141A22E01D2F886000E04E27 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		141A22E21D2F8D8000E04E27 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		141A22E41D2F8DF700E04E27 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		141A22E61D2FA9A500E04E27 /* MyShareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyShareCell.h; sourceTree = "<group>"; };
+		141A22E71D2FA9A500E04E27 /* MyShareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyShareCell.m; sourceTree = "<group>"; };
+		141A22E81D2FA9A500E04E27 /* MyShareCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyShareCell.xib; sourceTree = "<group>"; };
 		143C518C1D1AA50F0091E837 /* ScrollImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollImage.h; sourceTree = "<group>"; };
 		143C518D1D1AA50F0091E837 /* ScrollImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollImage.m; sourceTree = "<group>"; };
 		143F2ADC1D24BD5300A684BD /* LeftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftView.h; sourceTree = "<group>"; };
@@ -493,6 +513,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				141A22E51D2F8DF700E04E27 /* CoreTelephony.framework in Frameworks */,
+				141A22E31D2F8D8000E04E27 /* libc++.tbd in Frameworks */,
+				141A22E11D2F886000E04E27 /* libsqlite3.0.tbd in Frameworks */,
+				141A22DF1D2F885000E04E27 /* libz.tbd in Frameworks */,
+				141A22DD1D2F881400E04E27 /* SystemConfiguration.framework in Frameworks */,
+				141A22DB1D2F87B400E04E27 /* libWeChatSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +548,17 @@
 				14108EEF1D1A8C82008A91C6 /* DALabeledCircularProgressView.m */,
 			);
 			path = DACircularProgress;
+			sourceTree = "<group>";
+		};
+		141A22D61D2F877700E04E27 /* WeiXinSDK */ = {
+			isa = PBXGroup;
+			children = (
+				141A22D71D2F87B400E04E27 /* libWeChatSDK.a */,
+				141A22D81D2F87B400E04E27 /* WechatAuthSDK.h */,
+				141A22D91D2F87B400E04E27 /* WXApi.h */,
+				141A22DA1D2F87B400E04E27 /* WXApiObject.h */,
+			);
+			path = WeiXinSDK;
 			sourceTree = "<group>";
 		};
 		14AB8A481D2135210000ACE0 /* XSChart */ = {
@@ -678,6 +715,11 @@
 		14DD0C581D18DF0A0079D68D = {
 			isa = PBXGroup;
 			children = (
+				141A22E41D2F8DF700E04E27 /* CoreTelephony.framework */,
+				141A22E21D2F8D8000E04E27 /* libc++.tbd */,
+				141A22E01D2F886000E04E27 /* libsqlite3.0.tbd */,
+				141A22DE1D2F885000E04E27 /* libz.tbd */,
+				141A22DC1D2F881400E04E27 /* SystemConfiguration.framework */,
 				14DD0C631D18DF0A0079D68D /* Cushion */,
 				14DD0C7D1D18DF0A0079D68D /* CushionTests */,
 				14DD0C881D18DF0A0079D68D /* CushionUITests */,
@@ -701,6 +743,7 @@
 				14DD0C671D18DF0A0079D68D /* AppDelegate.h */,
 				14DD0C681D18DF0A0079D68D /* AppDelegate.m */,
 				14DD0C9D1D18E0820079D68D /* CushionPch.pch */,
+				141A22D61D2F877700E04E27 /* WeiXinSDK */,
 				14F47D0E1D1BE8CF00B81C99 /* Base */,
 				14DD0CC91D1923580079D68D /* 登录 */,
 				14DD0CAD1D18E4DD0079D68D /* 坐姿 */,
@@ -931,6 +974,9 @@
 				144180841D20DBB40067CF52 /* ShockCell.h */,
 				144180851D20DBB40067CF52 /* ShockCell.m */,
 				144180861D20DBB40067CF52 /* ShockCell.xib */,
+				141A22E61D2FA9A500E04E27 /* MyShareCell.h */,
+				141A22E71D2FA9A500E04E27 /* MyShareCell.m */,
+				141A22E81D2FA9A500E04E27 /* MyShareCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1314,6 +1360,7 @@
 				14C8FA4C1D1A9C3B002A4ABB /* icon_propel@2x.png in Resources */,
 				14C8FA411D1A9C3B002A4ABB /* defoilt2@2x.png in Resources */,
 				14C8FA481D1A9C3B002A4ABB /* btn_pull_down@2x.png in Resources */,
+				141A22EA1D2FA9A500E04E27 /* MyShareCell.xib in Resources */,
 				14C8FA421D1A9C3B002A4ABB /* defoilt3@2x.png in Resources */,
 				14DD0CBA1D18E55A0079D68D /* DriveViewController.xib in Resources */,
 				14E085E81D2B487E005F452C /* SetUpViewController.xib in Resources */,
@@ -1405,6 +1452,7 @@
 				14E57B381D2625C900956608 /* BabyDefine.m in Sources */,
 				14537AC81D2D00CE0072DDD7 /* ByteModel.m in Sources */,
 				14D2280F1D1D41E30020B9B2 /* CumulativeCell.m in Sources */,
+				141A22E91D2FA9A500E04E27 /* MyShareCell.m in Sources */,
 				14E434DD1D23664D005E8B0A /* MBProgressHUD.m in Sources */,
 				14E57B3D1D2625C900956608 /* BabyToy.m in Sources */,
 				14E57B3A1D2625C900956608 /* BabyPeripheralManager.m in Sources */,
@@ -1586,6 +1634,10 @@
 				INFOPLIST_FILE = Cushion/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Cushion/WeiXinSDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.QUAN.Cushion00;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1602,6 +1654,10 @@
 				INFOPLIST_FILE = Cushion/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Cushion/WeiXinSDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.QUAN.Cushion00;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

@@ -22,38 +22,34 @@
 @implementation HttpTool
 
 //单例
-+ (HttpTool *)sharedManager
-{
++ (HttpTool *)sharedManager{
+    
     static HttpTool *instance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         instance = [[HttpTool alloc] init];
-        
     });
     return instance;
 }
 
 //初始化
-- (instancetype)init
-{
+- (instancetype)init{
+    
     if (self = [super init]) {
-        
         manager = [AFHTTPSessionManager manager];
         manager.requestSerializer.timeoutInterval = 15;
-        
     }
     return self;
 }
 
 //隐藏加载
-- (void)hideHUD
-{
+- (void)hideHUD{
     [self.hud hide:YES];
 }
 
 //GET请求
--(void)GET:(NSString *)url params:(id)params result:(ResultBlock)resultBlock
-{
+-(void)GET:(NSString *)url params:(id)params result:(ResultBlock)resultBlock{
+    
 //    manager.requestSerializer.timeoutInterval = 30;
     
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
@@ -87,15 +83,12 @@
             resultBlock(nil, error);
 
         }
-        
     }];
-    
 }
 
-
 //POST请求
-- (void)POST:(NSString *)url params:(id)params result:(ResultBlock)resultBlock
-{
+- (void)POST:(NSString *)url params:(id)params result:(ResultBlock)resultBlock{
+    
     manager.requestSerializer = [AFHTTPRequestSerializer serializer];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
@@ -136,8 +129,7 @@
     
 }
 
-- (void)POSTImage:(NSString *)url params:(id)params image:(UIImage *)image result:(ResultBlock)resultBlock
-{
+- (void)POSTImage:(NSString *)url params:(id)params image:(UIImage *)image result:(ResultBlock)resultBlock{
     
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     
@@ -156,18 +148,22 @@
                 
                 mimeType = @"image/jpeg";
                 break;
+                
             case 0x89:
                 
                 mimeType = @"image/png";
                 break;
+                
             case 0x47:
                 
                 mimeType = @"image/gif";
                 break;
+                
             case 0x4D:
                 
                 mimeType = @"image/tiff";
                 break;
+                
             default:
                 break;
         }
@@ -207,20 +203,5 @@
     }];
     
 }
-
-#pragma mark-- 头像上传
-//- (void)me_UpdateHeadImageWithFileData:(NSData *)data parame:(id)parem imageName:(NSString *)imageName callBack:(ResultBlock)block errorBack:(ResultBlock)errorBack  {
-//    NSString *urlString=[NSString stringWithFormat:BaseUrl@"userupdateUserIn"];
-//    AFHTTPRequestOperationManager *manager=[AFHTTPRequestOperationManager manager];
-//    [manager POST:urlString parameters:parem constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-//        NSString *newImageName = [NSString stringWithFormat:@"%@.png",imageName];
-//        [formData appendPartWithFileData:data name:@"doc" fileName:newImageName mimeType:@"image/png"];
-//    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        block(responseObject, nil);
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        errorBack(nil, error);
-//
-//    }];
-//}
 
 @end

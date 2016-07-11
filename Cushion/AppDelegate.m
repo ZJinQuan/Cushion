@@ -9,8 +9,9 @@
 #import "AppDelegate.h"
 #import "LoginViewController.h"
 #import "TabBarViewController.h"
+#import "WXApi.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<WXApiDelegate>
 
 @end
 
@@ -32,7 +33,49 @@
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
     
+    
+    [WXApi registerApp:@"wx65c7a1a1441cb1da"];
+    
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    return  [WXApi handleOpenURL:url delegate:self];
+}
+
+- (void)onResp:(BaseResp *)resp {
+    
+    //把返回的类型转换成与发送时相对于的返回类型,这里为SendMessageToWXResp
+    SendMessageToWXResp *sendResp = (SendMessageToWXResp *)resp;
+    
+    //使用UIAlertView 显示回调信息
+    NSString *str = [NSString stringWithFormat:@"%d",sendResp.errCode];
+    
+    switch (sendResp.errCode) {
+        case 0:
+            
+            str = @"分享成功";
+            
+            break;
+        case -1:
+            
+            str = @"分享失败";
+            
+            break;
+        case -2:
+            
+            str = @"分享取消";
+            
+            break;
+            
+        default:
+            break;
+    }
+    
+    UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"回调信息" message:str delegate:self cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
+    
+    [alertview show];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

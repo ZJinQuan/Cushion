@@ -10,11 +10,12 @@
 #import "ThatDayCell.h"
 #import "ChartCell.h"
 #import "WhoShockViewController.h"
-
+#import "WXApiObject.h"
+#import "WXApi.h"
+#import "MyShareCell.h"
 
 @interface MyViewController ()<UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate,XSChartDataSource,XSChartDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *messageTableView;
-@property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 
 @property(nonatomic,strong)NSArray *data;
 
@@ -29,17 +30,14 @@
     //移除手势
     [[NSNotificationCenter defaultCenter] postNotificationName:@"removeGestures" object:nil];
     
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clickShock) name:@"ShockMe" object:nil];
+    
     _data=@[@1,@6,@3,@4,@9,@6,@12];
     
+    [self.messageTableView registerNib:[UINib nibWithNibName:@"MyShareCell" bundle:nil] forCellReuseIdentifier:@"myShareCell"];
     [self.messageTableView registerNib:[UINib nibWithNibName:@"ThatDayCell" bundle:nil] forCellReuseIdentifier:@"thatDayCell"];
     [self.messageTableView registerNib:[UINib nibWithNibName:@"ChartCell" bundle:nil] forCellReuseIdentifier:@"chartCell"];
-    
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
-    NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:[NSString stringWithFormat:@"iconImage.png"]];
-    
-    if ([UIImage imageWithContentsOfFile:filePath] != nil) {
-        _iconImage.image = [UIImage imageWithContentsOfFile:filePath];
-    }
 }
 
 -(void) clickShare{
@@ -49,12 +47,90 @@
     
 }
 
-- (IBAction)clickShock:(id)sender {
+- (void)clickShock {
     
     WhoShockViewController *whoVC = [[WhoShockViewController alloc] init];
     whoVC.title = @"谁震了我";
     
     [self.navigationController pushViewController:whoVC animated:YES];
+}
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    switch (buttonIndex) {
+        case 0:{
+            
+            
+            [self shareWeiXin:1 andImage:[self captureScrollView:_messageTableView]];
+        }
+            break;
+        case 1:
+            [self shareWeiXin:0 andImage:[self captureScrollView:_messageTableView]];
+            break;
+            
+        default:
+            break;
+    }
+    
+}
+
+//截屏
+- (UIImage *)captureScrollView:(UIScrollView *)scrollView{
+    UIImage* image = nil;
+    UIGraphicsBeginImageContext(scrollView.contentSize);
+    
+    {
+        CGPoint savedContentOffset = scrollView.contentOffset;
+        CGRect savedFrame = scrollView.frame;
+        scrollView.contentOffset = CGPointZero;
+        scrollView.frame = CGRectMake(0, 0, scrollView.contentSize.width, scrollView.contentSize.height);
+        
+        [scrollView.layer renderInContext: UIGraphicsGetCurrentContext()];
+        image = UIGraphicsGetImageFromCurrentImageContext();
+        
+        scrollView.contentOffset = savedContentOffset;
+        scrollView.frame = savedFrame;
+    }
+    
+    UIGraphicsEndImageContext();
+    
+    if (image != nil) {
+        return image;
+    }
+    return nil;
+}
+
+-(void) shareWeiXin:(int) scene andImage: (UIImage *) image{
+    
+    //创建发送对象实例
+    SendMessageToWXReq *sendReq = [[SendMessageToWXReq alloc] init];
+    sendReq.bText = NO;
+    sendReq.scene = scene;
+    
+    //创建分享内容对象
+    WXMediaMessage *urlMessage = [WXMediaMessage message];
+
+    WXImageObject *imageObj = [WXImageObject object];
+    
+    UIImage *shareImage = image;
+    
+    NSData *data ;
+    
+    if (UIImagePNGRepresentation(shareImage) == nil) {
+        data = UIImageJPEGRepresentation(shareImage, 1);
+    } else {
+        data = UIImagePNGRepresentation(shareImage);
+    }
+    
+    imageObj.imageData = data;
+    
+    //完成发送对象实例
+    urlMessage.mediaObject = imageObj;
+    
+    sendReq.message = urlMessage;
+    
+    //发送分享信息
+    [WXApi sendReq:sendReq];
 }
 
 #pragma mark XSChartDataSource and XSChartDelegate
@@ -95,7 +171,7 @@
 
 #pragma mark UITableViewDelegate and UITableViewDataSource
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 10;
+    return 0.1;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
@@ -103,6 +179,11 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (indexPath.row == 0) {
+        return 128;
+    }
+    
     return 200;
 }
 
@@ -113,7 +194,7 @@
     btn.centerX = view.centerX;
     btn.centerY = view.centerY;
     
-    [btn setTitle:@"分享给你好友" forState:UIControlStateNormal];
+    [btn setTitle:@"分享到微信" forState:UIControlStateNormal];
     [btn setImage:[UIImage imageNamed:@"icon_share"] forState:UIControlStateNormal];
     btn.titleLabel.font = [UIFont systemFontOfSize:14];
     [btn setTitleColor:RGBA(8, 167, 23, 1) forState:UIControlStateNormal];
@@ -129,13 +210,30 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 2;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     switch (indexPath.row) {
         case 0:{
+            
+            MyShareCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myShareCell"];
+            
+            NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+            NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:[NSString stringWithFormat:@"iconImage.png"]];
+            
+            if ([UIImage imageWithContentsOfFile:filePath] != nil) {
+                cell.iconImage.image = [UIImage imageWithContentsOfFile:filePath];
+            }
+            
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            
+            return cell;
+            
+        }
+            break;
+        case 1:{
             
             ThatDayCell *cell = [tableView dequeueReusableCellWithIdentifier:@"thatDayCell"];
             
@@ -145,7 +243,8 @@
             
         }
             break;
-        case 1:{
+            
+        case 2:{
             
             ChartCell *cell = [tableView dequeueReusableCellWithIdentifier:@"chartCell"];
             
