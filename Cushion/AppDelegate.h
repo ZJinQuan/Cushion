@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ByteModel.h"
+#import "UserModel.h"
 
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
@@ -20,5 +21,6 @@
 
 @property (nonatomic, strong) ByteModel *byte;
 
+@property (nonatomic, strong) UserModel *user;
 @end
 

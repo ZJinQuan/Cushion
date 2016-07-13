@@ -24,10 +24,23 @@
     
     _byte = [[ByteModel alloc] init];
     
+    _user = [[UserModel alloc] init];
     
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:[[LoginViewController alloc] init]];
     
-    self.window.rootViewController = navVC;
+    NSString *userId = [[NSUserDefaults standardUserDefaults] objectForKey:@"user_userId"];
+    
+    NSLog(@"%@",userId);
+    
+    if (userId) {
+        
+        self.window.rootViewController = [[TabBarViewController alloc] init];
+        
+    }else{
+     
+        UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:[[LoginViewController alloc] init]];
+        
+        self.window.rootViewController = navVC;
+    }
     
     [self.window makeKeyAndVisible];
     

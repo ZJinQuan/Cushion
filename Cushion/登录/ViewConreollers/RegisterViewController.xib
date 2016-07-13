@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController">
             <connections>
+                <outlet property="iconButton" destination="uHh-gt-sId" id="2bi-Xs-7Ws"/>
                 <outlet property="nameText" destination="kZd-ak-APK" id="YHQ-rd-p9N"/>
                 <outlet property="passWord" destination="qQ0-eo-Jbs" id="vwY-N9-1qc"/>
                 <outlet property="phoneNum" destination="l1g-f7-Bsm" id="LfR-kb-A7R"/>
@@ -28,7 +29,7 @@
                         <constraint firstAttribute="height" constant="30" id="sfz-9z-qDX"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="15"/>
@@ -108,6 +109,9 @@
                         <constraint firstAttribute="width" constant="76" id="ugJ-yr-YbO"/>
                     </constraints>
                     <state key="normal" backgroundImage="icon_photo.png"/>
+                    <connections>
+                        <action selector="clickIconImageBtn:" destination="-1" eventType="touchUpInside" id="WEH-pA-fSt"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VbJ-9H-oDQ">
                     <rect key="frame" x="40" y="320" width="240" height="35"/>

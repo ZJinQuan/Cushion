@@ -147,6 +147,8 @@
 		14DD0CC81D1923370079D68D /* FriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14DD0CC51D1923370079D68D /* FriendsViewController.xib */; };
 		14DD0CD11D1924280079D68D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DD0CCF1D1924280079D68D /* LoginViewController.m */; };
 		14DD0CD21D1924280079D68D /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14DD0CD01D1924280079D68D /* LoginViewController.xib */; };
+		14DF8FA51D33710E0059FF0F /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DF8FA41D33710E0059FF0F /* UserModel.m */; };
+		14DF8FA81D3377640059FF0F /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DF8FA71D3377640059FF0F /* BaseModel.m */; };
 		14E085DD1D2B4651005F452C /* SystemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E085DB1D2B4651005F452C /* SystemViewController.m */; };
 		14E085DE1D2B4651005F452C /* SystemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E085DC1D2B4651005F452C /* SystemViewController.xib */; };
 		14E085E21D2B478D005F452C /* AnalysisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E085E01D2B478D005F452C /* AnalysisViewController.m */; };
@@ -410,6 +412,10 @@
 		14DD0CCE1D1924280079D68D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		14DD0CCF1D1924280079D68D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		14DD0CD01D1924280079D68D /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		14DF8FA31D33710E0059FF0F /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		14DF8FA41D33710E0059FF0F /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		14DF8FA61D3377640059FF0F /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		14DF8FA71D3377640059FF0F /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		14E085DA1D2B4651005F452C /* SystemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemViewController.h; sourceTree = "<group>"; };
 		14E085DB1D2B4651005F452C /* SystemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemViewController.m; sourceTree = "<group>"; };
 		14E085DC1D2B4651005F452C /* SystemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SystemViewController.xib; sourceTree = "<group>"; };
@@ -1016,6 +1022,8 @@
 		14DD0CCC1D1923E80079D68D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				14DF8FA31D33710E0059FF0F /* UserModel.h */,
+				14DF8FA41D33710E0059FF0F /* UserModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1050,6 +1058,8 @@
 		14E434D31D2360BF005E8B0A /* 工具类 */ = {
 			isa = PBXGroup;
 			children = (
+				14DF8FA61D3377640059FF0F /* BaseModel.h */,
+				14DF8FA71D3377640059FF0F /* BaseModel.m */,
 				14E434D41D236107005E8B0A /* HttpTool.h */,
 				14E434D51D236107005E8B0A /* HttpTool.m */,
 			);
@@ -1247,7 +1257,7 @@
 				TargetAttributes = {
 					14DD0C601D18DF0A0079D68D = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = DJUJFVVC2U;
+						DevelopmentTeam = F9Y8YBL6HN;
 					};
 					14DD0C791D18DF0A0079D68D = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -1427,6 +1437,7 @@
 				14F47CF01D1BC80600B81C99 /* DriveCell.m in Sources */,
 				14F47D251D1BEA8C00B81C99 /* RightCell.m in Sources */,
 				1441807D1D20CE230067CF52 /* MessageCell.m in Sources */,
+				14DF8FA51D33710E0059FF0F /* UserModel.m in Sources */,
 				14D2225C1D2A13FD00C57C6E /* PersonalViewController.m in Sources */,
 				14E434DC1D23664D005E8B0A /* MBProgressHUD+Add.m in Sources */,
 				14DD0CA11D18E1240079D68D /* UIView+Extension.m in Sources */,
@@ -1447,6 +1458,7 @@
 				14E085F11D2B5B62005F452C /* SetupCell.m in Sources */,
 				14D227F61D1CE2080020B9B2 /* SedentaryViewController.m in Sources */,
 				14108EF61D1A9442008A91C6 /* CircleView.m in Sources */,
+				14DF8FA81D3377640059FF0F /* BaseModel.m in Sources */,
 				14D227F11D1CCE3D0020B9B2 /* CorrectViewController.m in Sources */,
 				14E57B3B1D2625C900956608 /* BabyRhythm.m in Sources */,
 				14E57B381D2625C900956608 /* BabyDefine.m in Sources */,
@@ -1638,7 +1650,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Cushion/WeiXinSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.QUAN.Cushion00;
+				PRODUCT_BUNDLE_IDENTIFIER = com.femtoapp.cushion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1658,7 +1670,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Cushion/WeiXinSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.QUAN.Cushion00;
+				PRODUCT_BUNDLE_IDENTIFIER = com.femtoapp.cushion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

@@ -60,7 +60,6 @@
     switch (buttonIndex) {
         case 0:{
             
-            
             [self shareWeiXin:1 andImage:[self captureScrollView:_messageTableView]];
         }
             break;

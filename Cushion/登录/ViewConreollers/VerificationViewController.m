@@ -60,39 +60,24 @@
         
     }else{
         
-        /*
-         
-         http://115.28.77.44/UMat/userregist
-         传入值
-         doc    图片
-         user.ios   int    (1为ios   0为android)
-         user.token   String
-         user.name    String
-         user.passWord  String
-         返回结果
-         
-         result    message      userId
-         0    注册成功       user.id
-         
-         */
-        
         NSString *url = BaseUrl@"userregist";
         
         NSMutableDictionary *params = [NSMutableDictionary dictionary];
         
-//        [params setObject:<#(nonnull id)#> forKey:<#(nonnull id<NSCopying>)#>]
         [params setValue:@(1) forKey:@"user.ios"];
         [params setObject:@"" forKey:@"user.token"];
         [params setObject:self.phomeN forKey:@"user.name"];
-        [params setObject:@"" forKey:@"user.passWord"];
+        [params setObject:self.passWrod forKey:@"user.passWord"];
         
-        [[HttpTool sharedManager] POST:url params:params result:^(id responseObj, NSError *error) {
+        [[HttpTool sharedManager] POSTImage:url params:params image:self.iconImage result:^(id responseObj, NSError *error) {
+          
+            NSLog(@"%@",responseObj[@"message"]);
+            
+            
+            [self.navigationController popToRootViewControllerAnimated:YES];
             
         }];
         
-        
-       [self.navigationController popToRootViewControllerAnimated:YES];
     }
-    
 }
 @end

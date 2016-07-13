@@ -10,6 +10,7 @@
 #import "RegisterViewController.h"
 #import "ForgetViewController.h"
 #import "TabBarViewController.h"
+#import "HttpTool.h"
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *userName;
@@ -34,7 +35,39 @@
 }
 - (IBAction)clickLoginBtn:(id)sender {
     
-    [UIApplication sharedApplication].keyWindow.rootViewController = [[TabBarViewController alloc] init];
+    NSString *url = BaseUrl@"useruserlogin";
+    
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    
+    [params setObject:_userName.text forKey:@"name"];
+    [params setObject:_passWord.text forKey:@"password"];
+    [params setValue:@(1) forKey:@"ios"];
+    [params setObject:@"" forKey:@"token"];
+    
+    [[HttpTool sharedManager] POST:url params:params result:^(id responseObj, NSError *error) {
+        
+        NSDictionary *dict = responseObj;
+        
+        if ([[dict objectForKey:@"result"] isEqual: @"0"]) {
+            
+            [[NSUserDefaults standardUserDefaults] setObject:dict[@"name"] forKey:@"user_name"];
+            [[NSUserDefaults standardUserDefaults] setObject:dict[@"phone"] forKey:@"user_phone"];
+            [[NSUserDefaults standardUserDefaults] setObject:dict[@"url"] forKey:@"user_url"];
+            [[NSUserDefaults standardUserDefaults] setObject:dict[@"userId"] forKey:@"user_userId"];
+//            [[NSUserDefaults standardUserDefaults] setObject:dict[@"userName"] forKey:@"user_userName"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            
+            [UIApplication sharedApplication].keyWindow.rootViewController = [[TabBarViewController alloc] init];
+
+        }else{
+            
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:@"%@",[dict objectForKey:@"message"]] delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            
+            [alertView show];
+            
+        }
+
+    }];
     
 }
 - (IBAction)clickRegister:(id)sender {

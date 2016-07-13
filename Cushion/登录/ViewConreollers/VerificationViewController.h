@@ -13,4 +13,5 @@
 @property (nonatomic, copy) NSString *phomeN;
 @property (nonatomic, copy) NSString *passWrod;
 
+@property (nonatomic, strong) UIImage *iconImage;
 @end

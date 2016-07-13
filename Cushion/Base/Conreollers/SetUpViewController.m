@@ -9,6 +9,7 @@
 #import "SetUpViewController.h"
 #import "SetupCell.h"
 #import "ConnectViewController.h"
+#import "LoginViewController.h"
 
 @interface SetUpViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *setupTableView;
@@ -44,8 +45,26 @@
     [btn setTitle:@"退出登录" forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     
+    [btn addTarget:self action:@selector(clickBackLogin) forControlEvents:UIControlEventTouchUpInside];
+    
     [view addSubview:btn];
     return view;
+}
+
+-(void)clickBackLogin{
+
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    
+    [userDefault removeObjectForKey:@"user_name"];
+    [userDefault removeObjectForKey:@"user_phone"];
+    [userDefault removeObjectForKey:@"user_url"];
+    [userDefault removeObjectForKey:@"user_userId"];
+//    [userDefault removeObjectForKey:@"user_userName"];
+    
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:[[LoginViewController alloc] init]];
+    
+    [UIApplication sharedApplication].keyWindow.rootViewController = navVC;
+    
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

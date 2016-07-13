@@ -99,10 +99,12 @@
         
         NSLog(@"%@  %@",url, params);
         
-        NSLog(@"===%@", responseObject);
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:nil];
         
-        NSDictionary * dict = responseObject;
-        //        NSArray * dataArr = dict[@"resultData"];
+        NSLog(@"===%@", dict);
+        
+        NSString *responseString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        
         if(resultBlock){
             
             resultBlock(dict, nil);
@@ -146,7 +148,7 @@
                 
             case 0xFF:
                 
-                mimeType = @"image/jpeg";
+                mimeType = @"image/jpg";
                 break;
                 
             case 0x89:
@@ -168,14 +170,16 @@
                 break;
         }
         // 拼装Body
-        [formData appendPartWithFileData:iconData name:@"headimage" fileName:[NSString stringWithFormat:@"photo.jpg"] mimeType:mimeType];
+        [formData appendPartWithFileData:iconData name:@"doc" fileName:[NSString stringWithFormat:@"photo.jpg"] mimeType:mimeType];
         
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        NSDictionary * dict = responseObject;
-        NSLog(@"dict = %@", dict);
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:nil];
+        
+        NSLog(@"%@  %@",url, params);
+        NSLog(@"===%@", dict);
         
         if(resultBlock){
             
