@@ -159,6 +159,17 @@
 		14E085ED1D2B57F4005F452C /* AnalysisCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E085EB1D2B57F4005F452C /* AnalysisCell.xib */; };
 		14E085F11D2B5B62005F452C /* SetupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E085EF1D2B5B62005F452C /* SetupCell.m */; };
 		14E085F21D2B5B62005F452C /* SetupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E085F01D2B5B62005F452C /* SetupCell.xib */; };
+		14E125B71D35E47500E6BEB4 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E125B31D35E47500E6BEB4 /* libcurl.a */; };
+		14E125B81D35E47500E6BEB4 /* libFaceLandTrack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E125B41D35E47500E6BEB4 /* libFaceLandTrack.a */; };
+		14E125B91D35E47500E6BEB4 /* libYDGLOperationKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E125B51D35E47500E6BEB4 /* libYDGLOperationKit.a */; };
+		14E125BA1D35E47500E6BEB4 /* YDGLOperationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E125B61D35E47500E6BEB4 /* YDGLOperationKit.framework */; };
+		14E125C41D35E5C400E6BEB4 /* LVECatpureSessionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E125C31D35E5C400E6BEB4 /* LVECatpureSessionHelper.m */; };
+		14E125C61D35EB8800E6BEB4 /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E125C51D35EB8800E6BEB4 /* libc++.1.tbd */; };
+		14E125C81D35EBA400E6BEB4 /* libz.1.1.3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E125C71D35EBA400E6BEB4 /* libz.1.1.3.tbd */; };
+		14E125CA1D35EBC700E6BEB4 /* libz.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E125C91D35EBC700E6BEB4 /* libz.1.tbd */; };
+		14E125CE1D35F61300E6BEB4 /* colorreco.bin in Resources */ = {isa = PBXBuildFile; fileRef = 14E125CB1D35F61300E6BEB4 /* colorreco.bin */; };
+		14E125CF1D35F61300E6BEB4 /* colorreco.lic in Resources */ = {isa = PBXBuildFile; fileRef = 14E125CC1D35F61300E6BEB4 /* colorreco.lic */; };
+		14E125D01D35F61300E6BEB4 /* colorrecoios.key in Resources */ = {isa = PBXBuildFile; fileRef = 14E125CD1D35F61300E6BEB4 /* colorrecoios.key */; };
 		14E434CD1D235FB0005E8B0A /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E434C11D235FB0005E8B0A /* AFHTTPSessionManager.m */; };
 		14E434CE1D235FB0005E8B0A /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E434C41D235FB0005E8B0A /* AFNetworkReachabilityManager.m */; };
 		14E434CF1D235FB0005E8B0A /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E434C61D235FB0005E8B0A /* AFSecurityPolicy.m */; };
@@ -431,6 +442,42 @@
 		14E085EE1D2B5B62005F452C /* SetupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupCell.h; sourceTree = "<group>"; };
 		14E085EF1D2B5B62005F452C /* SetupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupCell.m; sourceTree = "<group>"; };
 		14E085F01D2B5B62005F452C /* SetupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetupCell.xib; sourceTree = "<group>"; };
+		14E1259B1D35E47500E6BEB4 /* esTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = esTransform.h; sourceTree = "<group>"; };
+		14E1259C1D35E47500E6BEB4 /* ShaderLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderLoader.h; sourceTree = "<group>"; };
+		14E1259D1D35E47500E6BEB4 /* YDDrawModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDDrawModel.h; sourceTree = "<group>"; };
+		14E1259E1D35E47500E6BEB4 /* YDGLOperationBaseNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDGLOperationBaseNode.h; sourceTree = "<group>"; };
+		14E1259F1D35E47500E6BEB4 /* YDGLOperationBlendNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDGLOperationBlendNode.h; sourceTree = "<group>"; };
+		14E125A01D35E47500E6BEB4 /* YDGLOperationCGContextSourceNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDGLOperationCGContextSourceNode.h; sourceTree = "<group>"; };
+		14E125A11D35E47500E6BEB4 /* YDGLOperationColorConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDGLOperationColorConversion.h; sourceTree = "<group>"; };
+		14E125A21D35E47500E6BEB4 /* YDGLOperationContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDGLOperationContext.h; sourceTree = "<group>"; };
+		14E125A31D35E47500E6BEB4 /* YDGLOperationCVPixelBufferSourceNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDGLOperationCVPixelBufferSourceNode.h; sourceTree = "<group>"; };
+		14E125A41D35E47500E6BEB4 /* YDGLOperationI420SourceNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDGLOperationI420SourceNode.h; sourceTree = "<group>"; };
+		14E125A51D35E47500E6BEB4 /* YDGLOperationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDGLOperationKit.h; sourceTree = "<group>"; };
+		14E125A61D35E47500E6BEB4 /* YDGLOperationMaskFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDGLOperationMaskFilter.h; sourceTree = "<group>"; };
+		14E125A71D35E47500E6BEB4 /* YDGLOperationNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDGLOperationNode.h; sourceTree = "<group>"; };
+		14E125A81D35E47500E6BEB4 /* YDGLOperationNodeDisplayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDGLOperationNodeDisplayView.h; sourceTree = "<group>"; };
+		14E125A91D35E47500E6BEB4 /* YDGLOperationNodeLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDGLOperationNodeLayer.h; sourceTree = "<group>"; };
+		14E125AA1D35E47500E6BEB4 /* YDGLOperationNodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDGLOperationNodeView.h; sourceTree = "<group>"; };
+		14E125AB1D35E47500E6BEB4 /* YDGLOperationNV12SourceNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDGLOperationNV12SourceNode.h; sourceTree = "<group>"; };
+		14E125AC1D35E47500E6BEB4 /* YDGLOperationSourceNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDGLOperationSourceNode.h; sourceTree = "<group>"; };
+		14E125AD1D35E47500E6BEB4 /* YDGLOperationThreeInputNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDGLOperationThreeInputNode.h; sourceTree = "<group>"; };
+		14E125AE1D35E47500E6BEB4 /* YDGLOperationTwoInputNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDGLOperationTwoInputNode.h; sourceTree = "<group>"; };
+		14E125AF1D35E47500E6BEB4 /* YDGLOperationUIImageSourceNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDGLOperationUIImageSourceNode.h; sourceTree = "<group>"; };
+		14E125B01D35E47500E6BEB4 /* YDGLOperationYUVSourceNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDGLOperationYUVSourceNode.h; sourceTree = "<group>"; };
+		14E125B11D35E47500E6BEB4 /* YDGLTransformUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDGLTransformUtil.h; sourceTree = "<group>"; };
+		14E125B31D35E47500E6BEB4 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcurl.a; sourceTree = "<group>"; };
+		14E125B41D35E47500E6BEB4 /* libFaceLandTrack.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFaceLandTrack.a; sourceTree = "<group>"; };
+		14E125B51D35E47500E6BEB4 /* libYDGLOperationKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libYDGLOperationKit.a; sourceTree = "<group>"; };
+		14E125B61D35E47500E6BEB4 /* YDGLOperationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YDGLOperationKit.framework; sourceTree = "<group>"; };
+		14E125C11D35E5C400E6BEB4 /* FaceLandTrack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FaceLandTrack.hpp; sourceTree = "<group>"; };
+		14E125C21D35E5C400E6BEB4 /* LVECatpureSessionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LVECatpureSessionHelper.h; sourceTree = "<group>"; };
+		14E125C31D35E5C400E6BEB4 /* LVECatpureSessionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LVECatpureSessionHelper.m; sourceTree = "<group>"; };
+		14E125C51D35EB8800E6BEB4 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
+		14E125C71D35EBA400E6BEB4 /* libz.1.1.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.1.3.tbd; path = usr/lib/libz.1.1.3.tbd; sourceTree = SDKROOT; };
+		14E125C91D35EBC700E6BEB4 /* libz.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.tbd; path = usr/lib/libz.1.tbd; sourceTree = SDKROOT; };
+		14E125CB1D35F61300E6BEB4 /* colorreco.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = colorreco.bin; sourceTree = "<group>"; };
+		14E125CC1D35F61300E6BEB4 /* colorreco.lic */ = {isa = PBXFileReference; lastKnownFileType = file; path = colorreco.lic; sourceTree = "<group>"; };
+		14E125CD1D35F61300E6BEB4 /* colorrecoios.key */ = {isa = PBXFileReference; lastKnownFileType = file; path = colorrecoios.key; sourceTree = "<group>"; };
 		14E434C01D235FB0005E8B0A /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		14E434C11D235FB0005E8B0A /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		14E434C21D235FB0005E8B0A /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -519,8 +566,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14E125CA1D35EBC700E6BEB4 /* libz.1.tbd in Frameworks */,
+				14E125C81D35EBA400E6BEB4 /* libz.1.1.3.tbd in Frameworks */,
+				14E125C61D35EB8800E6BEB4 /* libc++.1.tbd in Frameworks */,
 				141A22E51D2F8DF700E04E27 /* CoreTelephony.framework in Frameworks */,
+				14E125BA1D35E47500E6BEB4 /* YDGLOperationKit.framework in Frameworks */,
+				14E125B91D35E47500E6BEB4 /* libYDGLOperationKit.a in Frameworks */,
+				14E125B71D35E47500E6BEB4 /* libcurl.a in Frameworks */,
 				141A22E31D2F8D8000E04E27 /* libc++.tbd in Frameworks */,
+				14E125B81D35E47500E6BEB4 /* libFaceLandTrack.a in Frameworks */,
 				141A22E11D2F886000E04E27 /* libsqlite3.0.tbd in Frameworks */,
 				141A22DF1D2F885000E04E27 /* libz.tbd in Frameworks */,
 				141A22DD1D2F881400E04E27 /* SystemConfiguration.framework in Frameworks */,
@@ -721,6 +775,9 @@
 		14DD0C581D18DF0A0079D68D = {
 			isa = PBXGroup;
 			children = (
+				14E125C91D35EBC700E6BEB4 /* libz.1.tbd */,
+				14E125C71D35EBA400E6BEB4 /* libz.1.1.3.tbd */,
+				14E125C51D35EB8800E6BEB4 /* libc++.1.tbd */,
 				141A22E41D2F8DF700E04E27 /* CoreTelephony.framework */,
 				141A22E21D2F8D8000E04E27 /* libc++.tbd */,
 				141A22E01D2F886000E04E27 /* libsqlite3.0.tbd */,
@@ -749,6 +806,7 @@
 				14DD0C671D18DF0A0079D68D /* AppDelegate.h */,
 				14DD0C681D18DF0A0079D68D /* AppDelegate.m */,
 				14DD0C9D1D18E0820079D68D /* CushionPch.pch */,
+				14E125991D35E43F00E6BEB4 /* FaceSDK */,
 				141A22D61D2F877700E04E27 /* WeiXinSDK */,
 				14F47D0E1D1BE8CF00B81C99 /* Base */,
 				14DD0CC91D1923580079D68D /* 登录 */,
@@ -768,6 +826,9 @@
 		14DD0C641D18DF0A0079D68D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				14E125CB1D35F61300E6BEB4 /* colorreco.bin */,
+				14E125CC1D35F61300E6BEB4 /* colorreco.lic */,
+				14E125CD1D35F61300E6BEB4 /* colorrecoios.key */,
 				14DD0C651D18DF0A0079D68D /* main.m */,
 			);
 			name = "Supporting Files";
@@ -817,6 +878,7 @@
 				14DD0CA71D18E4DD0079D68D /* ViewConreollers */,
 				14DD0CA61D18E4DD0079D68D /* Model */,
 				14DD0CA81D18E4DD0079D68D /* Views */,
+				14E125C01D35E58A00E6BEB4 /* Others */,
 			);
 			path = "驾驶";
 			sourceTree = "<group>";
@@ -1033,6 +1095,66 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		14E125991D35E43F00E6BEB4 /* FaceSDK */ = {
+			isa = PBXGroup;
+			children = (
+				14E1259A1D35E47500E6BEB4 /* Headers */,
+				14E125B21D35E47500E6BEB4 /* lib */,
+			);
+			path = FaceSDK;
+			sourceTree = "<group>";
+		};
+		14E1259A1D35E47500E6BEB4 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				14E1259B1D35E47500E6BEB4 /* esTransform.h */,
+				14E1259C1D35E47500E6BEB4 /* ShaderLoader.h */,
+				14E1259D1D35E47500E6BEB4 /* YDDrawModel.h */,
+				14E1259E1D35E47500E6BEB4 /* YDGLOperationBaseNode.h */,
+				14E1259F1D35E47500E6BEB4 /* YDGLOperationBlendNode.h */,
+				14E125A01D35E47500E6BEB4 /* YDGLOperationCGContextSourceNode.h */,
+				14E125A11D35E47500E6BEB4 /* YDGLOperationColorConversion.h */,
+				14E125A21D35E47500E6BEB4 /* YDGLOperationContext.h */,
+				14E125A31D35E47500E6BEB4 /* YDGLOperationCVPixelBufferSourceNode.h */,
+				14E125A41D35E47500E6BEB4 /* YDGLOperationI420SourceNode.h */,
+				14E125A51D35E47500E6BEB4 /* YDGLOperationKit.h */,
+				14E125A61D35E47500E6BEB4 /* YDGLOperationMaskFilter.h */,
+				14E125A71D35E47500E6BEB4 /* YDGLOperationNode.h */,
+				14E125A81D35E47500E6BEB4 /* YDGLOperationNodeDisplayView.h */,
+				14E125A91D35E47500E6BEB4 /* YDGLOperationNodeLayer.h */,
+				14E125AA1D35E47500E6BEB4 /* YDGLOperationNodeView.h */,
+				14E125AB1D35E47500E6BEB4 /* YDGLOperationNV12SourceNode.h */,
+				14E125AC1D35E47500E6BEB4 /* YDGLOperationSourceNode.h */,
+				14E125AD1D35E47500E6BEB4 /* YDGLOperationThreeInputNode.h */,
+				14E125AE1D35E47500E6BEB4 /* YDGLOperationTwoInputNode.h */,
+				14E125AF1D35E47500E6BEB4 /* YDGLOperationUIImageSourceNode.h */,
+				14E125B01D35E47500E6BEB4 /* YDGLOperationYUVSourceNode.h */,
+				14E125B11D35E47500E6BEB4 /* YDGLTransformUtil.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		14E125B21D35E47500E6BEB4 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				14E125B31D35E47500E6BEB4 /* libcurl.a */,
+				14E125B41D35E47500E6BEB4 /* libFaceLandTrack.a */,
+				14E125B51D35E47500E6BEB4 /* libYDGLOperationKit.a */,
+				14E125B61D35E47500E6BEB4 /* YDGLOperationKit.framework */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		14E125C01D35E58A00E6BEB4 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				14E125C11D35E5C400E6BEB4 /* FaceLandTrack.hpp */,
+				14E125C21D35E5C400E6BEB4 /* LVECatpureSessionHelper.h */,
+				14E125C31D35E5C400E6BEB4 /* LVECatpureSessionHelper.m */,
+			);
+			path = Others;
 			sourceTree = "<group>";
 		};
 		14E434BF1D235FB0005E8B0A /* AFNetworking */ = {
@@ -1322,6 +1444,7 @@
 				14D227FC1D1D13D40020B9B2 /* RemindCell.xib in Resources */,
 				14D228151D1D4A520020B9B2 /* WarnedCell.xib in Resources */,
 				14D228011D1D19E60020B9B2 /* WeightViewController.xib in Resources */,
+				14E125CE1D35F61300E6BEB4 /* colorreco.bin in Resources */,
 				14C8FA561D1A9C3B002A4ABB /* icon_news@2x.png in Resources */,
 				14C8FA701D1A9C3B002A4ABB /* circle@2x.png in Resources */,
 				14C8FA3D1D1A9C3B002A4ABB /* bg_photo4@2x.png in Resources */,
@@ -1351,6 +1474,7 @@
 				14F47D201D1BE8CF00B81C99 /* RightViewController.xib in Resources */,
 				14C8FA4F1D1A9C3B002A4ABB /* icon_sleep_warn@2x.png in Resources */,
 				14F47D1E1D1BE8CF00B81C99 /* LeftViewController.xib in Resources */,
+				14E125D01D35F61300E6BEB4 /* colorrecoios.key in Resources */,
 				14C8FA591D1A9C3B002A4ABB /* icon_photo@2x.png in Resources */,
 				14C8FA431D1A9C3B002A4ABB /* defoilt4@2x.png in Resources */,
 				14D227F71D1CE2080020B9B2 /* SedentaryViewController.xib in Resources */,
@@ -1362,6 +1486,7 @@
 				14C8FA6B1D1A9C3B002A4ABB /* home_icon@2x.png in Resources */,
 				14C8FA641D1A9C3B002A4ABB /* icon_add@2x.png in Resources */,
 				14C8FA3B1D1A9C3B002A4ABB /* bg_photo2@2x.png in Resources */,
+				14E125CF1D35F61300E6BEB4 /* colorreco.lic in Resources */,
 				14C8FA4D1D1A9C3B002A4ABB /* icon_se@2x.png in Resources */,
 				14A1214C1D226B310018BA49 /* TopScollCell.xib in Resources */,
 				14C8FA751D1A9C3B002A4ABB /* sit_s@2x.png in Resources */,
@@ -1432,6 +1557,7 @@
 				144180731D20BF150067CF52 /* MyViewController.m in Sources */,
 				14F47D1C1D1BE8CF00B81C99 /* BaseViewController.m in Sources */,
 				14E434D61D236107005E8B0A /* HttpTool.m in Sources */,
+				14E125C41D35E5C400E6BEB4 /* LVECatpureSessionHelper.m in Sources */,
 				14E57B3C1D2625C900956608 /* BabySpeaker.m in Sources */,
 				14F47D1D1D1BE8CF00B81C99 /* LeftViewController.m in Sources */,
 				14F47CF01D1BC80600B81C99 /* DriveCell.m in Sources */,
@@ -1642,13 +1768,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Cushion/FaceSDK/lib",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Cushion/CushionPch.pch";
 				INFOPLIST_FILE = Cushion/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Cushion/WeiXinSDK",
+					"$(PROJECT_DIR)/Cushion/FaceSDK/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.femtoapp.cushion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1662,13 +1794,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Cushion/FaceSDK/lib",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Cushion/CushionPch.pch";
 				INFOPLIST_FILE = Cushion/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Cushion/WeiXinSDK",
+					"$(PROJECT_DIR)/Cushion/FaceSDK/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.femtoapp.cushion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
