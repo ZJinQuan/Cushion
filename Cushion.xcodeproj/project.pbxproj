@@ -54,6 +54,8 @@
 		14A121551D2273E60018BA49 /* PostureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A121531D2273E60018BA49 /* PostureCell.m */; };
 		14A121561D2273E60018BA49 /* PostureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14A121541D2273E60018BA49 /* PostureCell.xib */; };
 		14AB8A4B1D2135210000ACE0 /* XSChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB8A4A1D2135210000ACE0 /* XSChart.m */; };
+		14AF14641D3F81B900508BBB /* LookAtCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF14621D3F81B900508BBB /* LookAtCell.m */; };
+		14AF14651D3F81B900508BBB /* LookAtCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14AF14631D3F81B900508BBB /* LookAtCell.xib */; };
 		14C8FA381D1A9C3B002A4ABB /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14C8F9F21D1A9C3A002A4ABB /* bg@2x.png */; };
 		14C8FA391D1A9C3B002A4ABB /* bg_my@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14C8F9F31D1A9C3A002A4ABB /* bg_my@2x.png */; };
 		14C8FA3A1D1A9C3B002A4ABB /* bg_photo1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14C8F9F41D1A9C3A002A4ABB /* bg_photo1@2x.png */; };
@@ -309,6 +311,9 @@
 		14A121541D2273E60018BA49 /* PostureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostureCell.xib; sourceTree = "<group>"; };
 		14AB8A491D2135210000ACE0 /* XSChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSChart.h; sourceTree = "<group>"; };
 		14AB8A4A1D2135210000ACE0 /* XSChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSChart.m; sourceTree = "<group>"; };
+		14AF14611D3F81B900508BBB /* LookAtCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LookAtCell.h; sourceTree = "<group>"; };
+		14AF14621D3F81B900508BBB /* LookAtCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LookAtCell.m; sourceTree = "<group>"; };
+		14AF14631D3F81B900508BBB /* LookAtCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LookAtCell.xib; sourceTree = "<group>"; };
 		14C8F9F21D1A9C3A002A4ABB /* bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg@2x.png"; sourceTree = "<group>"; };
 		14C8F9F31D1A9C3A002A4ABB /* bg_my@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_my@2x.png"; sourceTree = "<group>"; };
 		14C8F9F41D1A9C3A002A4ABB /* bg_photo1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_photo1@2x.png"; sourceTree = "<group>"; };
@@ -1045,6 +1050,9 @@
 				141A22E61D2FA9A500E04E27 /* MyShareCell.h */,
 				141A22E71D2FA9A500E04E27 /* MyShareCell.m */,
 				141A22E81D2FA9A500E04E27 /* MyShareCell.xib */,
+				14AF14611D3F81B900508BBB /* LookAtCell.h */,
+				14AF14621D3F81B900508BBB /* LookAtCell.m */,
+				14AF14631D3F81B900508BBB /* LookAtCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1431,6 +1439,7 @@
 				14A121561D2273E60018BA49 /* PostureCell.xib in Resources */,
 				14C8FA521D1A9C3B002A4ABB /* btn_next@2x.png in Resources */,
 				14D2225D1D2A13FD00C57C6E /* PersonalViewController.xib in Resources */,
+				14AF14651D3F81B900508BBB /* LookAtCell.xib in Resources */,
 				14A1213D1D2259630018BA49 /* WeightCell.xib in Resources */,
 				14C8FA581D1A9C3B002A4ABB /* icon_setting@2x.png in Resources */,
 				14E085F21D2B5B62005F452C /* SetupCell.xib in Resources */,
@@ -1582,6 +1591,7 @@
 				14E434CE1D235FB0005E8B0A /* AFNetworkReachabilityManager.m in Sources */,
 				14F47CDC1D1B923200B81C99 /* VerificationViewController.m in Sources */,
 				14E085F11D2B5B62005F452C /* SetupCell.m in Sources */,
+				14AF14641D3F81B900508BBB /* LookAtCell.m in Sources */,
 				14D227F61D1CE2080020B9B2 /* SedentaryViewController.m in Sources */,
 				14108EF61D1A9442008A91C6 /* CircleView.m in Sources */,
 				14DF8FA81D3377640059FF0F /* BaseModel.m in Sources */,

@@ -12,7 +12,10 @@
 
 #define channelOnPeropheralView @"peripheralView"
 
-@interface BlueConnectViewController ()
+@interface BlueConnectViewController (){
+    CGFloat angle;
+}
+@property (weak, nonatomic) IBOutlet UIImageView *scanImage;
 
 @end
 
@@ -22,7 +25,7 @@
     [super viewDidLoad];
     
     [self.navigationController setNavigationBarHidden:YES];
-    
+    angle = 0;
     //初始化
     self.services = [[NSMutableArray alloc]init];
     [self babyDelegate];
@@ -31,6 +34,19 @@
     [self performSelector:@selector(loadData) withObject:nil afterDelay:2];
     [SVProgressHUD showInfoWithStatus:@"准备连接设备"];
     
+    [self startAnimation];
+}
+
+- (void)startAnimation{
+    
+    CGAffineTransform endAngle = CGAffineTransformMakeRotation(angle * (M_PI / 180.0f));
+    
+    [UIView animateWithDuration:0.01 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+        self.scanImage.transform = endAngle;
+    } completion:^(BOOL finished) {
+        angle += 2;
+        [self startAnimation];
+    }];
 }
 
 //babyDelegate

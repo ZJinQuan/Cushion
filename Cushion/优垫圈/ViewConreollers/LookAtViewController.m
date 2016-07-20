@@ -9,6 +9,8 @@
 #import "LookAtViewController.h"
 #import "ThatDayCell.h"
 #import "ChartCell.h"
+#import <AudioToolbox/AudioToolbox.h>
+#import "LookAtCell.h"
 
 @interface LookAtViewController ()<UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate,XSChartDataSource,XSChartDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *messageTableView;
@@ -37,6 +39,7 @@
     
     self.navigationItem.rightBarButtonItem = right;
     
+    [self.messageTableView registerNib:[UINib nibWithNibName:@"LookAtCell" bundle:nil] forCellReuseIdentifier:@"lookAtCell"];
     [self.messageTableView registerNib:[UINib nibWithNibName:@"ThatDayCell" bundle:nil] forCellReuseIdentifier:@"thatDayCell"];
     [self.messageTableView registerNib:[UINib nibWithNibName:@"ChartCell" bundle:nil] forCellReuseIdentifier:@"chartCell"];
     
@@ -52,6 +55,8 @@
     
     AppDelegate *app = kAppDelegate;
 
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    
     if (app.peripheral != nil) {
         
         Byte bytes[2];
@@ -108,7 +113,7 @@
 
 #pragma mark UITableViewDelegate and UITableViewDataSource
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 10;
+    return 0.1;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
@@ -116,6 +121,11 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (indexPath.row == 0) {
+        return 150;
+    }
+    
     return 200;
 }
 
@@ -141,13 +151,20 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 2;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     switch (indexPath.row) {
         case 0:{
+            
+            LookAtCell *cell = [tableView dequeueReusableCellWithIdentifier:@"lookAtCell"];
+            
+            return cell;
+        }
+            break;
+        case 1:{
             
             ThatDayCell *cell = [tableView dequeueReusableCellWithIdentifier:@"thatDayCell"];
             
@@ -157,7 +174,7 @@
             
         }
             break;
-        case 1:{
+        case 2:{
             
             ChartCell *cell = [tableView dequeueReusableCellWithIdentifier:@"chartCell"];
             

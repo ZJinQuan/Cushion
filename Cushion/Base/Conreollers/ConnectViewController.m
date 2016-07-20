@@ -49,7 +49,7 @@
 -(void)viewDidAppear:(BOOL)animated{
     NSLog(@"viewDidAppear");
     //停止之前的连接
-    [baby cancelAllPeripheralsConnection];
+//    [baby cancelAllPeripheralsConnection];
     //设置委托后直接可以使用，无需等待CBCentralManagerStatePoweredOn状态。
     baby.scanForPeripherals().begin();
     //baby.scanForPeripherals().begin().stop(10);
@@ -222,6 +222,9 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     //停止扫描
     [baby cancelScan];
+    
+    //停止之前的连接
+    [baby cancelAllPeripheralsConnection];
     
     [self.connectView deselectRowAtIndexPath:indexPath animated:YES];
     BlueConnectViewController *vc = [[BlueConnectViewController alloc]init];

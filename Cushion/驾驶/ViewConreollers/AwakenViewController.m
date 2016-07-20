@@ -37,6 +37,7 @@ static int height_s=640;
 @property(nonatomic)YDGLOperationCGContextSourceNode *drawableSource;
 @property(nonatomic)YDGLOperationNodeLayer *drawableLayer;
 
+@property (nonatomic, assign) int closeTime;
 
 @end
 
@@ -77,10 +78,10 @@ static int height_s=640;
 
 -(void)viewDidAppear:(BOOL)animated{
     
-    [super viewDidAppear:animated];
-    
+//    [super viewDidAppear:animated];
+//    
 //    [_captureSessionHelper startRunning];
-    
+//    
 }
 
 //-(void)dealloc{
@@ -266,9 +267,27 @@ static int height_s=640;
 //        float score=FaceAlignTrackProcess_ColorReco(ptr_image,width_s,height_s,facebox,landmark,pose);
 //        // NSLog(@"+++++++Tracking get score is %f \n,score");
 //        
-//        float sum22=GetEyeStatus(ptr_image,width_s,height_s,landmark,eyestatus);
+//        float sum22 = GetEyeStatus(ptr_image,width_s,height_s,landmark,eyestatus);
 //        
-//        NSLog(@"++++++++----Tracking get score is %f and eye status is %f\n",score,sum22);
+////        NSLog(@"++++++++----Tracking get score is %f and eye status is %f\n",score,sum22);
+//        
+//        
+//        
+//        if (sum22 <= 0) {//闭眼
+//            
+//            NSLog(@"--------------------闭眼");
+//            
+//            _closeTime ++;
+//            
+//            if (_closeTime >= 20) {
+//                
+//            }
+//            
+//        }else{ //睁眼
+//            
+//            NSLog(@"睁眼");
+//            _closeTime = 0;
+//        }
 //        
 //        if(score>-1.5f)
 //        {
@@ -305,10 +324,10 @@ static int height_s=640;
 //    
 //}
 //
-
-- (IBAction)clickCallNavigation:(UIButton *)sender {
-    
-
-}
+//
+//- (IBAction)clickCallNavigation:(UIButton *)sender {
+//    
+//
+//}
 
 @end
