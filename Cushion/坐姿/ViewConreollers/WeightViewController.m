@@ -18,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UITableView *weightTableView;
 
 @property(nonatomic,strong)NSArray *data;
+
+@property (nonatomic, strong) AppDelegate *app;
 @end
 
 @implementation WeightViewController
@@ -25,6 +27,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    _app = kAppDelegate;
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"removeGestures" object:nil];
 
@@ -93,7 +97,7 @@
         
         lab.textAlignment = NSTextAlignmentCenter;
         
-        lab.text = @"2016年6月1日";
+        lab.text = _app.currentTime;
         
         lab.textColor = RGBA(1, 195, 169, 1);
         

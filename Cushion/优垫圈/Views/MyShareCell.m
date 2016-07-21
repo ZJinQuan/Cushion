@@ -8,6 +8,10 @@
 
 #import "MyShareCell.h"
 
+@interface MyShareCell ()
+
+@end
+
 @implementation MyShareCell
 
 - (void)awakeFromNib {

@@ -20,12 +20,15 @@
 
 @property(nonatomic,strong)NSArray *data;
 
+@property (nonatomic, strong) AppDelegate *app;
 @end
 
 @implementation LookAtViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _app = kAppDelegate;
     
     _iconImage.image = [UIImage imageNamed:_iconStr];
     _nameLab.text = _nameStr;
@@ -160,7 +163,7 @@
         case 0:{
             
             LookAtCell *cell = [tableView dequeueReusableCellWithIdentifier:@"lookAtCell"];
-            
+            cell.timeLab.text = _app.currentTime;
             return cell;
         }
             break;

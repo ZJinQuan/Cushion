@@ -325,9 +325,9 @@ static int height_s=640;
 //}
 //
 //
-//- (IBAction)clickCallNavigation:(UIButton *)sender {
-//    
-//
-//}
+- (IBAction)clickCallNavigation:(UIButton *)sender {
+    
+
+}
 
 @end

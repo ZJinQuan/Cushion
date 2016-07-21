@@ -49,7 +49,18 @@
     
     [WXApi registerApp:@"wx65c7a1a1441cb1da"];
     
+    [self getCurrentTime];
+    
     return YES;
+}
+
+-(NSString *)getCurrentTime{
+
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy年MM月dd日"];
+    _currentTime = [formatter stringFromDate:[NSDate date]];
+
+    return _currentTime;
 }
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url

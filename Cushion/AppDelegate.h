@@ -22,5 +22,7 @@
 @property (nonatomic, strong) ByteModel *byte;
 
 @property (nonatomic, strong) UserModel *user;
+
+@property (nonatomic, copy) NSString *currentTime;
 @end
 

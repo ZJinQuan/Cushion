@@ -21,16 +21,6 @@
 
 @implementation CorrectViewController
 
--(AppDelegate *)app{
-    
-    if (_app == nil) {
-        
-        _app = kAppDelegate;
-        
-    }
-    return _app;
-}
-
 -(void)viewDidAppear:(BOOL)animated{
     
     [super viewDidAppear:animated];
@@ -40,6 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.app = kAppDelegate;
     
     _data=@[@91,@79,@70,@100,@99,@90,@89];
     
@@ -121,7 +112,7 @@
         
         lab.textAlignment = NSTextAlignmentCenter;
         
-        lab.text = @"2016年6月1日";
+        lab.text = _app.currentTime;
         
         lab.textColor = RGBA(1, 195, 169, 1);
         

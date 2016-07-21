@@ -105,6 +105,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="iconImage" destination="AT0-Jh-0PX" id="PuF-gZ-90n"/>
+                <outlet property="timeLab" destination="xAW-DE-U34" id="X1o-1o-OkI"/>
             </connections>
             <point key="canvasLocation" x="558" y="478"/>
         </tableViewCell>

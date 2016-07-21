@@ -19,6 +19,8 @@
 
 @property(nonatomic,strong)NSArray *data;
 
+@property (nonatomic, strong) AppDelegate *app;
+
 @end
 
 @implementation MyViewController
@@ -26,6 +28,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    _app = kAppDelegate;
     
     //移除手势
     [[NSNotificationCenter defaultCenter] postNotificationName:@"removeGestures" object:nil];
@@ -218,6 +222,8 @@
         case 0:{
             
             MyShareCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myShareCell"];
+            
+            cell.timeLab.text = _app.currentTime;
             
             NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
             NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:[NSString stringWithFormat:@"iconImage.png"]];

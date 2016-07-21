@@ -10,4 +10,5 @@
 
 @interface LookAtCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *timeLab;
 @end

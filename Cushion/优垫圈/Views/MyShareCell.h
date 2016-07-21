@@ -11,4 +11,5 @@
 @interface MyShareCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 
+@property (weak, nonatomic) IBOutlet UILabel *timeLab;
 @end

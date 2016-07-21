@@ -17,18 +17,15 @@
 #define TIMER_DURATION 5
 #define AQI_FULL 24
 
-@interface SedentaryViewController ()<UITableViewDelegate, UITableViewDataSource,XSChartDataSource,XSChartDelegate>{
-    DACircularProgressView *progressView;
-    DALabeledCircularProgressView *labeledProgressView;
-    int start;
-    int aqi;
-}
-@property (weak, nonatomic) IBOutlet UIView *topView;
+@interface SedentaryViewController ()<UITableViewDelegate, UITableViewDataSource,XSChartDataSource,XSChartDelegate>
+
 @property (weak, nonatomic) IBOutlet UITableView *bottonTableView;
 
 @property (nonatomic,retain )NSTimer *timer;
 
 @property(nonatomic,strong)NSArray *data;
+
+@property (nonatomic, strong) AppDelegate *app;
 
 @end
 
@@ -38,11 +35,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    _app = kAppDelegate;
+    
     _data=@[@1,@6,@3,@4,@9,@6,@12];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"removeGestures" object:nil];
     
-    [self setProgressView];
     
     [self.bottonTableView registerNib:[UINib nibWithNibName:@"RemindCell" bundle:nil] forCellReuseIdentifier:@"remindCell"];
     [self.bottonTableView registerNib:[UINib nibWithNibName:@"ChartCell" bundle:nil] forCellReuseIdentifier:@"chartCell"];
@@ -74,7 +72,7 @@
         
         lab.textAlignment = NSTextAlignmentCenter;
         
-        lab.text = @"2016年6月1日";
+        lab.text = _app.currentTime;
         
         lab.textColor = RGBA(1, 195, 169, 1);
         
@@ -195,52 +193,6 @@
 -(void)chart:(XSChart *)view didClickPointAtIndex:(NSInteger)index
 {
     NSLog(@"click at index:%ld",(long)index);
-}
-
-
-#pragma mark - 进度条
--(void)setProgressView{
-    
-    aqi = 7;
-    //初始化进度条视图
-    progressView = [[DACircularProgressView alloc] initWithFrame:_topView.bounds];
-    //    progressView.roundedCorners = YES;
-    //设置颜色
-    progressView.trackTintColor = RGBA(232, 234, 234, 1);
-    progressView.progressTintColor= RGBA(242, 163, 42, 1);
-    
-    progressView.thicknessRatio = 0.2;
-    
-    //设置进度
-    [progressView setProgress:(CGFloat)aqi/AQI_FULL animated:YES initialDelay:0.5];
-    
-    labeledProgressView= [[DALabeledCircularProgressView alloc] initWithFrame:_topView.bounds];
-    labeledProgressView.progressLabel.textColor=[UIColor blackColor];
-    labeledProgressView.label.text = @"当日累计久坐";
-    [self.topView addSubview:labeledProgressView];
-    [self.topView addSubview:progressView];
-    
-    [self startAnimation];
-    
-}
-
-- (void)startAnimation{
-    
-    self.timer= [NSTimer scheduledTimerWithTimeInterval:(CGFloat)TIMER_DURATION/aqi
-                                                 target:self
-                                               selector:@selector(progressChange)
-                                               userInfo:nil
-                                                repeats:YES];
-}
-
-- (void)progressChange{
-    
-    labeledProgressView.progressLabel.text = [NSString stringWithFormat:@"%d小时", aqi];
-    labeledProgressView.progressLabel.font = [UIFont systemFontOfSize:45];
-    if (start >= aqi) {
-        [self.timer invalidate];
-        self.timer = nil;
-    }
 }
 
 

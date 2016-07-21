@@ -113,6 +113,9 @@
                     <constraint firstItem="BuI-F0-xzi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="zdt-5j-zi3"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="timeLab" destination="Egc-xT-a0y" id="San-SJ-HHQ"/>
+            </connections>
         </tableViewCell>
     </objects>
     <resources>
