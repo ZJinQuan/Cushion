@@ -16,6 +16,10 @@
 @property (weak, nonatomic) IBOutlet UITableView *remindTableView;
 
 @property(nonatomic,strong)NSArray *data;
+
+@property (nonatomic, strong) AppDelegate *app;
+
+@property (weak, nonatomic) IBOutlet UILabel *timeLab;
 @end
 
 @implementation RemindViewController
@@ -23,6 +27,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _app = kAppDelegate;
+    
+    _timeLab.text = _app.currentTime;
     //移除手势
     [[NSNotificationCenter defaultCenter] postNotificationName:@"removeGestures" object:nil];
     
