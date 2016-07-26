@@ -20,6 +20,7 @@
 #import "AnalysisViewController.h"
 #import "SetUpViewController.h"
 #import "LookAtViewController.h"
+#import "HttpTool.h"
 
 CGFloat const gestureMinimumTranslation = 20.0 ;
 
@@ -140,7 +141,37 @@ typedef enum : NSInteger {
     
     //更换头像通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updataIcon:) name:@"updataIcon" object:nil];
+    
+    [self userInfo];
+    
 }
+
+-(void) userInfo{
+    
+    
+    
+    NSString *Userid = [[NSUserDefaults standardUserDefaults] objectForKey:@"user_userId"];
+    
+    NSString *url = BaseUrl@"usergetUserInfo";
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    
+    [params setObject:Userid forKey:@"user.id"];
+    
+    [[HttpTool sharedManager] GET:url params:params result:^(id responseObj, NSError *error) {
+        
+        NSDictionary *dict = responseObj;
+        
+        NSLog(@"%@", dict);
+        
+        [[NSUserDefaults standardUserDefaults] setObject:dict[@"username"] forKey:@"username"];
+        [[NSUserDefaults standardUserDefaults] setObject:dict[@"phone"] forKey:@"user_phone"];
+        [[NSUserDefaults standardUserDefaults] setObject:dict[@"image"] forKey:@"user_url"];
+        [[NSUserDefaults standardUserDefaults] setObject:dict[@"sex"] forKey:@"user_sex"];
+        [[NSUserDefaults standardUserDefaults] setObject:dict[@"age"] forKey:@"user_age"];
+    }];
+    
+}
+
 
 //跳转界面
 -(void) clickInterface: (NSNotification *)notf{

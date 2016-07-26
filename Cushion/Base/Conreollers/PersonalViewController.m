@@ -7,6 +7,8 @@
 //
 
 #import "PersonalViewController.h"
+#import "HttpTool.h"
+#import "AFHTTPSessionManager.h"
 
 @interface PersonalViewController ()<UIAlertViewDelegate,UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -34,6 +36,16 @@
         _iconImage.image = [UIImage imageWithContentsOfFile:filePath];
     }
 
+    NSUserDefaults *userdefaults = [NSUserDefaults standardUserDefaults];
+    
+    NSString *name = [userdefaults objectForKey:@"username"];
+    NSString *phone = [userdefaults objectForKey:@"user_phone"];
+    NSString *image = [userdefaults objectForKey:@"user_url"];
+    NSString *sex = [userdefaults objectForKey:@"user_sex"];
+    NSString *age = [userdefaults objectForKey:@"user_age"];
+    
+    
+    NSLog(@"%@\n%@\n%@\n%@\n%@", name, phone, image, sex, age);
 }
 
 - (IBAction)clickEditBtn:(UIButton *)sender {
@@ -137,6 +149,48 @@
             if (text.text.length > 1) {
                 
                 _nameLab.text = text.text;
+                
+                NSString *Userid = [[NSUserDefaults standardUserDefaults] objectForKey:@"user_userId"];
+                
+                NSString *url = BaseUrl@"userupdateUserName";
+                NSMutableDictionary *params = [NSMutableDictionary dictionary];
+                
+                [params setObject:text.text forKey:@"username"];
+                [params setObject:Userid forKey:@"id"];
+
+                
+                [[HttpTool sharedManager] GET:url params:params result:^(id responseObj, NSError *error) {
+                    
+                    NSDictionary * dict = responseObj;
+                    
+                    NSLog(@"%@",(NSDictionary *)responseObj[@"message"]);
+                    
+                    [[NSUserDefaults standardUserDefaults] setObject:dict[@"username"] forKey:@"username"];
+                    
+                }];
+
+                
+//                AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+//                manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+//                manager.responseSerializer = [AFJSONResponseSerializer serializer];
+//                manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+//                
+//                [manager.requestSerializer setValue:@"application/x-www-form-urlencoded; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+//                
+//                [manager GET:url parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+//                    
+//                } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//                    
+//                    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:nil];
+//                    
+//                    [[NSUserDefaults standardUserDefaults] setObject:dict[@"username"] forKey:@"username"];
+//                    
+//                } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//                    
+//                }];
+                
+                
+                
             }
             
         }

@@ -38,6 +38,12 @@
     if (self = [super init]) {
         manager = [AFHTTPSessionManager manager];
         manager.requestSerializer.timeoutInterval = 15;
+        
+        manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+        manager.responseSerializer = [AFJSONResponseSerializer serializer];
+        manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+        
+        [manager.requestSerializer setValue:@"application/x-www-form-urlencoded; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
     }
     return self;
 }
@@ -51,9 +57,6 @@
 -(void)GET:(NSString *)url params:(id)params result:(ResultBlock)resultBlock{
     
 //    manager.requestSerializer.timeoutInterval = 30;
-    
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     
     [manager GET:url parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         
@@ -89,9 +92,7 @@
 //POST请求
 - (void)POST:(NSString *)url params:(id)params result:(ResultBlock)resultBlock{
     
-    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
-    manager.responseSerializer = [AFJSONResponseSerializer serializer];
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    
     
     [manager POST:url parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
         
